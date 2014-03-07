@@ -1,0 +1,1156 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07424F7218ACDFFB00501318 /* MNSClientsTestsConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6818ACDFFB00501318 /* MNSClientsTestsConstants.m */; };
+		07424F7318ACDFFB00501318 /* MNSComponentRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6918ACDFFB00501318 /* MNSComponentRestClientTests.m */; };
+		07424F7418ACDFFB00501318 /* MNSIssueRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6A18ACDFFB00501318 /* MNSIssueRestClientTests.m */; };
+		07424F7518ACDFFB00501318 /* MNSMetaDataRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6B18ACDFFB00501318 /* MNSMetaDataRestClientTests.m */; };
+		07424F7618ACDFFB00501318 /* MNSProjectRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6C18ACDFFB00501318 /* MNSProjectRestClientTests.m */; };
+		07424F7718ACDFFB00501318 /* MNSProjectRolesRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6D18ACDFFB00501318 /* MNSProjectRolesRestClientTests.m */; };
+		07424F7818ACDFFB00501318 /* MNSSearchRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6E18ACDFFB00501318 /* MNSSearchRestClientTests.m */; };
+		07424F7918ACDFFB00501318 /* MNSSessionRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6F18ACDFFB00501318 /* MNSSessionRestClientTests.m */; };
+		07424F7A18ACDFFB00501318 /* MNSUserRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F7018ACDFFB00501318 /* MNSUserRestClientTests.m */; };
+		07424F7B18ACDFFB00501318 /* MNSVersionRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F7118ACDFFB00501318 /* MNSVersionRestClientTests.m */; };
+		07424F7F18ACE01100501318 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F7D18ACE01100501318 /* Constant.m */; };
+		0742509018ACE0B700501318 /* MNSAttachmentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504218ACE0B700501318 /* MNSAttachmentBuilder.m */; };
+		0742509118ACE0B700501318 /* MNSBasicComponentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504418ACE0B700501318 /* MNSBasicComponentBuilder.m */; };
+		0742509218ACE0B700501318 /* MNSBasicIssueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504618ACE0B700501318 /* MNSBasicIssueBuilder.m */; };
+		0742509318ACE0B700501318 /* MNSBasicIssueTypeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504818ACE0B700501318 /* MNSBasicIssueTypeBuilder.m */; };
+		0742509418ACE0B700501318 /* MNSBasicPriorityBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504A18ACE0B700501318 /* MNSBasicPriorityBuilder.m */; };
+		0742509518ACE0B700501318 /* MNSBasicProjectRoleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504C18ACE0B700501318 /* MNSBasicProjectRoleBuilder.m */; };
+		0742509618ACE0B700501318 /* MNSBasicResolutionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504E18ACE0B700501318 /* MNSBasicResolutionBuilder.m */; };
+		0742509718ACE0B700501318 /* MNSBasicUserBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505018ACE0B700501318 /* MNSBasicUserBuilder.m */; };
+		0742509818ACE0B700501318 /* MNSBasicVotesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505218ACE0B700501318 /* MNSBasicVotesBuilder.m */; };
+		0742509918ACE0B700501318 /* MNSBasicWatchersBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505418ACE0B700501318 /* MNSBasicWatchersBuilder.m */; };
+		0742509A18ACE0B700501318 /* MNSBuilderTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505718ACE0B700501318 /* MNSBuilderTools.m */; };
+		0742509B18ACE0B700501318 /* MNSChangelogGroupBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505918ACE0B700501318 /* MNSChangelogGroupBuilder.m */; };
+		0742509C18ACE0B700501318 /* MNSChangelogItemBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505B18ACE0B700501318 /* MNSChangelogItemBuilder.m */; };
+		0742509D18ACE0B700501318 /* MNSCommentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505D18ACE0B700501318 /* MNSCommentBuilder.m */; };
+		0742509E18ACE0B700501318 /* MNSComponentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742505F18ACE0B700501318 /* MNSComponentBuilder.m */; };
+		0742509F18ACE0B700501318 /* MNSExpandablePropertyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506118ACE0B700501318 /* MNSExpandablePropertyBuilder.m */; };
+		074250A018ACE0B700501318 /* MNSFieldBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506318ACE0B700501318 /* MNSFieldBuilder.m */; };
+		074250A118ACE0B700501318 /* MNSFieldSchemaBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506518ACE0B700501318 /* MNSFieldSchemaBuilder.m */; };
+		074250A218ACE0B700501318 /* MNSFilterBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506718ACE0B700501318 /* MNSFilterBuilder.m */; };
+		074250A318ACE0B700501318 /* MNSIssueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506918ACE0B700501318 /* MNSIssueBuilder.m */; };
+		074250A418ACE0B700501318 /* MNSIssueBuilderFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506B18ACE0B700501318 /* MNSIssueBuilderFeed.m */; };
+		074250A518ACE0B700501318 /* MNSIssueLinkBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506D18ACE0B700501318 /* MNSIssueLinkBuilder.m */; };
+		074250A618ACE0B700501318 /* MNSIssueLinksTypeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742506F18ACE0B700501318 /* MNSIssueLinksTypeBuilder.m */; };
+		074250A718ACE0B700501318 /* MNSIssueLinkTypeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507118ACE0B700501318 /* MNSIssueLinkTypeBuilder.m */; };
+		074250A818ACE0B700501318 /* MNSIssueTypeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507318ACE0B700501318 /* MNSIssueTypeBuilder.m */; };
+		074250A918ACE0B700501318 /* MNSPriorityBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507518ACE0B700501318 /* MNSPriorityBuilder.m */; };
+		074250AA18ACE0B700501318 /* MNSProjectBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507718ACE0B700501318 /* MNSProjectBuilder.m */; };
+		074250AB18ACE0B700501318 /* MNSProjectRoleBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507918ACE0B700501318 /* MNSProjectRoleBuilder.m */; };
+		074250AC18ACE0B700501318 /* MNSResolutionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507B18ACE0B700501318 /* MNSResolutionBuilder.m */; };
+		074250AD18ACE0B700501318 /* MNSRoleActorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507D18ACE0B700501318 /* MNSRoleActorBuilder.m */; };
+		074250AE18ACE0B700501318 /* MNSSearchResultBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742507F18ACE0B700501318 /* MNSSearchResultBuilder.m */; };
+		074250AF18ACE0B700501318 /* MNSServerInfoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508118ACE0B700501318 /* MNSServerInfoBuilder.m */; };
+		074250B018ACE0B700501318 /* MNSSessionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508318ACE0B700501318 /* MNSSessionBuilder.m */; };
+		074250B118ACE0B700501318 /* MNSStatusBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508518ACE0B700501318 /* MNSStatusBuilder.m */; };
+		074250B218ACE0B700501318 /* MNSSubtaskBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508718ACE0B700501318 /* MNSSubtaskBuilder.m */; };
+		074250B318ACE0B700501318 /* MNSTimeTrackingBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508918ACE0B700501318 /* MNSTimeTrackingBuilder.m */; };
+		074250B418ACE0B700501318 /* MNSUserBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508B18ACE0B700501318 /* MNSUserBuilder.m */; };
+		074250B518ACE0B700501318 /* MNSVersionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508D18ACE0B700501318 /* MNSVersionBuilder.m */; };
+		074250B618ACE0B700501318 /* MNSWorklogBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742508F18ACE0B700501318 /* MNSWorklogBuilder.m */; };
+		074250CD18ACE0D100501318 /* MNSComponentRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250B818ACE0D100501318 /* MNSComponentRestClient.m */; };
+		074250CE18ACE0D100501318 /* MNSIssueRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250BA18ACE0D100501318 /* MNSIssueRestClient.m */; };
+		074250CF18ACE0D100501318 /* MNSJiraRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250BC18ACE0D100501318 /* MNSJiraRestClient.m */; };
+		074250D018ACE0D100501318 /* MNSJiraRestClientFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250BE18ACE0D100501318 /* MNSJiraRestClientFactory.m */; };
+		074250D118ACE0D100501318 /* MNSMetadataRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250C018ACE0D100501318 /* MNSMetadataRestClient.m */; };
+		074250D218ACE0D100501318 /* MNSProjectRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250C218ACE0D100501318 /* MNSProjectRestClient.m */; };
+		074250D318ACE0D100501318 /* MNSProjectRolesRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250C418ACE0D100501318 /* MNSProjectRolesRestClient.m */; };
+		074250D418ACE0D100501318 /* MNSSearchRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250C618ACE0D100501318 /* MNSSearchRestClient.m */; };
+		074250D518ACE0D100501318 /* MNSSessionRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250C818ACE0D100501318 /* MNSSessionRestClient.m */; };
+		074250D618ACE0D100501318 /* MNSUserRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250CA18ACE0D100501318 /* MNSUserRestClient.m */; };
+		074250D718ACE0D100501318 /* MNSVersionRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250CC18ACE0D100501318 /* MNSVersionRestClient.m */; };
+		074250DA18ACE0E000501318 /* MNSGenericRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250D918ACE0E000501318 /* MNSGenericRestClient.m */; };
+		0742513918ACE0FA00501318 /* MNSAddressableNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250DC18ACE0FA00501318 /* MNSAddressableNamedEntity.m */; };
+		0742513A18ACE0FA00501318 /* MNSAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250DE18ACE0FA00501318 /* MNSAttachment.m */; };
+		0742513B18ACE0FA00501318 /* MNSBasicComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250E018ACE0FA00501318 /* MNSBasicComponent.m */; };
+		0742513C18ACE0FA00501318 /* MNSBasicIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250E218ACE0FA00501318 /* MNSBasicIssue.m */; };
+		0742513D18ACE0FA00501318 /* MNSBasicIssueType.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250E418ACE0FA00501318 /* MNSBasicIssueType.m */; };
+		0742513E18ACE0FA00501318 /* MNSBasicPriority.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250E618ACE0FA00501318 /* MNSBasicPriority.m */; };
+		0742513F18ACE0FA00501318 /* MNSBasicProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250E818ACE0FA00501318 /* MNSBasicProject.m */; };
+		0742514018ACE0FA00501318 /* MNSBasicProjectRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250EA18ACE0FA00501318 /* MNSBasicProjectRole.m */; };
+		0742514118ACE0FA00501318 /* MNSBasicResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250EC18ACE0FA00501318 /* MNSBasicResolution.m */; };
+		0742514218ACE0FA00501318 /* MNSBasicStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250EE18ACE0FA00501318 /* MNSBasicStatus.m */; };
+		0742514318ACE0FA00501318 /* MNSBasicUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250F018ACE0FA00501318 /* MNSBasicUser.m */; };
+		0742514418ACE0FA00501318 /* MNSBasicVotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250F218ACE0FA00501318 /* MNSBasicVotes.m */; };
+		0742514518ACE0FA00501318 /* MNSBasicWatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250F418ACE0FA00501318 /* MNSBasicWatchers.m */; };
+		0742514618ACE0FA00501318 /* MNSChangelogGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250F618ACE0FA00501318 /* MNSChangelogGroup.m */; };
+		0742514718ACE0FA00501318 /* MNSChangelogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250F818ACE0FA00501318 /* MNSChangelogItem.m */; };
+		0742514818ACE0FA00501318 /* MNSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250FA18ACE0FA00501318 /* MNSComment.m */; };
+		0742514918ACE0FA00501318 /* MNSComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250FC18ACE0FA00501318 /* MNSComponent.m */; };
+		0742514A18ACE0FA00501318 /* MNSComponentInputWithProjectKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 074250FE18ACE0FA00501318 /* MNSComponentInputWithProjectKey.m */; };
+		0742514B18ACE0FA00501318 /* MNSExpandableProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510018ACE0FA00501318 /* MNSExpandableProperty.m */; };
+		0742514C18ACE0FA00501318 /* MNSField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510218ACE0FA00501318 /* MNSField.m */; };
+		0742514D18ACE0FA00501318 /* MNSFieldSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510418ACE0FA00501318 /* MNSFieldSchema.m */; };
+		0742514E18ACE0FA00501318 /* MNSFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510618ACE0FA00501318 /* MNSFilter.m */; };
+		0742514F18ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510818ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.m */; };
+		0742515018ACE0FA00501318 /* MNSIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510A18ACE0FA00501318 /* MNSIssue.m */; };
+		0742515118ACE0FA00501318 /* MNSIssueField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510C18ACE0FA00501318 /* MNSIssueField.m */; };
+		0742515218ACE0FA00501318 /* MNSIssueFieldID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742510E18ACE0FA00501318 /* MNSIssueFieldID.m */; };
+		0742515318ACE0FA00501318 /* MNSIssueLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511018ACE0FA00501318 /* MNSIssueLink.m */; };
+		0742515418ACE0FA00501318 /* MNSIssueLinksType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511218ACE0FA00501318 /* MNSIssueLinksType.m */; };
+		0742515518ACE0FA00501318 /* MNSIssueLinkType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511418ACE0FA00501318 /* MNSIssueLinkType.m */; };
+		0742515618ACE0FA00501318 /* MNSIssueType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511618ACE0FA00501318 /* MNSIssueType.m */; };
+		0742515718ACE0FA00501318 /* MNSLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511818ACE0FA00501318 /* MNSLoginInfo.m */; };
+		0742515818ACE0FA00501318 /* MNSPriority.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511A18ACE0FA00501318 /* MNSPriority.m */; };
+		0742515918ACE0FA00501318 /* MNSProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511C18ACE0FA00501318 /* MNSProject.m */; };
+		0742515A18ACE0FA00501318 /* MNSProjectRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742511E18ACE0FA00501318 /* MNSProjectRole.m */; };
+		0742515B18ACE0FA00501318 /* MNSResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512018ACE0FA00501318 /* MNSResolution.m */; };
+		0742515C18ACE0FA00501318 /* MNSRoleActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512218ACE0FA00501318 /* MNSRoleActor.m */; };
+		0742515D18ACE0FA00501318 /* MNSSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512418ACE0FA00501318 /* MNSSearchResult.m */; };
+		0742515E18ACE0FA00501318 /* MNSServerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512618ACE0FA00501318 /* MNSServerInfo.m */; };
+		0742515F18ACE0FA00501318 /* MNSSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512818ACE0FA00501318 /* MNSSession.m */; };
+		0742516018ACE0FA00501318 /* MNSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512A18ACE0FA00501318 /* MNSStatus.m */; };
+		0742516118ACE0FA00501318 /* MNSSubtask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512C18ACE0FA00501318 /* MNSSubtask.m */; };
+		0742516218ACE0FA00501318 /* MNSTimeTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742512E18ACE0FA00501318 /* MNSTimeTracking.m */; };
+		0742516318ACE0FA00501318 /* MNSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742513018ACE0FA00501318 /* MNSUser.m */; };
+		0742516418ACE0FA00501318 /* MNSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742513218ACE0FA00501318 /* MNSVersion.m */; };
+		0742516518ACE0FA00501318 /* MNSVersionRelatedIssuesCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742513418ACE0FA00501318 /* MNSVersionRelatedIssuesCount.m */; };
+		0742516618ACE0FA00501318 /* MNSVisibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742513618ACE0FA00501318 /* MNSVisibility.m */; };
+		0742516718ACE0FA00501318 /* MNSWorklog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742513818ACE0FA00501318 /* MNSWorklog.m */; };
+		0742517318ACE10900501318 /* MNSComplexIssueInputFieldValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742516918ACE10900501318 /* MNSComplexIssueInputFieldValue.m */; };
+		0742517418ACE10900501318 /* MNSComponentInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742516B18ACE10900501318 /* MNSComponentInput.m */; };
+		0742517518ACE10900501318 /* MNSFieldInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742516D18ACE10900501318 /* MNSFieldInput.m */; };
+		0742517618ACE10900501318 /* MNSIssueInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742517018ACE10900501318 /* MNSIssueInput.m */; };
+		0742517718ACE10900501318 /* MNSVersionInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742517218ACE10900501318 /* MNSVersionInput.m */; };
+		0742517A18ACE11B00501318 /* MNSRequestAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742517918ACE11B00501318 /* MNSRequestAuthenticator.m */; };
+		07CB724B18AA3E3F00D4806C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBC717189928620099B936 /* Foundation.framework */; };
+		07CB725818AA3E3F00D4806C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBC736189928620099B936 /* XCTest.framework */; };
+		07CB725918AA3E3F00D4806C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBC717189928620099B936 /* Foundation.framework */; };
+		07CB725A18AA3E3F00D4806C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBC71B189928620099B936 /* UIKit.framework */; };
+		07CB725D18AA3E3F00D4806C /* libMNSJiraRESTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB724A18AA3E3F00D4806C /* libMNSJiraRESTClient.a */; };
+		38FA7E410C154BE48705EEEB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B1587840864F60A8477F42 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07CB725B18AA3E3F00D4806C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CBBC70C189928620099B936 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07CB724918AA3E3F00D4806C;
+			remoteInfo = MNSJiraRestObjectiveCClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07CB724818AA3E3F00D4806C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07424F6518ACDFEF00501318 /* MNSJiraRESTClientTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MNSJiraRESTClientTests-Info.plist"; path = "Tests/MNSJiraRESTClientTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		07424F6718ACDFFB00501318 /* MNSClientsTestsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSClientsTestsConstants.h; path = Tests/Client/MNSClientsTestsConstants.h; sourceTree = SOURCE_ROOT; };
+		07424F6818ACDFFB00501318 /* MNSClientsTestsConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSClientsTestsConstants.m; path = Tests/Client/MNSClientsTestsConstants.m; sourceTree = SOURCE_ROOT; };
+		07424F6918ACDFFB00501318 /* MNSComponentRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComponentRestClientTests.m; path = Tests/Client/MNSComponentRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F6A18ACDFFB00501318 /* MNSIssueRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueRestClientTests.m; path = Tests/Client/MNSIssueRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F6B18ACDFFB00501318 /* MNSMetaDataRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSMetaDataRestClientTests.m; path = Tests/Client/MNSMetaDataRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F6C18ACDFFB00501318 /* MNSProjectRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProjectRestClientTests.m; path = Tests/Client/MNSProjectRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F6D18ACDFFB00501318 /* MNSProjectRolesRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProjectRolesRestClientTests.m; path = Tests/Client/MNSProjectRolesRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F6E18ACDFFB00501318 /* MNSSearchRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSearchRestClientTests.m; path = Tests/Client/MNSSearchRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F6F18ACDFFB00501318 /* MNSSessionRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSessionRestClientTests.m; path = Tests/Client/MNSSessionRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F7018ACDFFB00501318 /* MNSUserRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSUserRestClientTests.m; path = Tests/Client/MNSUserRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F7118ACDFFB00501318 /* MNSVersionRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVersionRestClientTests.m; path = Tests/Client/MNSVersionRestClientTests.m; sourceTree = SOURCE_ROOT; };
+		07424F7C18ACE01100501318 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = MNSJiraRESTClient/Constant.h; sourceTree = SOURCE_ROOT; };
+		07424F7D18ACE01100501318 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = MNSJiraRESTClient/Constant.m; sourceTree = SOURCE_ROOT; };
+		07424F7E18ACE01100501318 /* MNSJiraRESTClient-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MNSJiraRESTClient-Prefix.pch"; path = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		0742504118ACE0B700501318 /* MNSAttachmentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSAttachmentBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSAttachmentBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742504218ACE0B700501318 /* MNSAttachmentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSAttachmentBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSAttachmentBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742504318ACE0B700501318 /* MNSBasicComponentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicComponentBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicComponentBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742504418ACE0B700501318 /* MNSBasicComponentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicComponentBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicComponentBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742504518ACE0B700501318 /* MNSBasicIssueBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicIssueBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicIssueBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742504618ACE0B700501318 /* MNSBasicIssueBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicIssueBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicIssueBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742504718ACE0B700501318 /* MNSBasicIssueTypeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicIssueTypeBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicIssueTypeBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742504818ACE0B700501318 /* MNSBasicIssueTypeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicIssueTypeBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicIssueTypeBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742504918ACE0B700501318 /* MNSBasicPriorityBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicPriorityBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicPriorityBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742504A18ACE0B700501318 /* MNSBasicPriorityBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicPriorityBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicPriorityBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742504B18ACE0B700501318 /* MNSBasicProjectRoleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicProjectRoleBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicProjectRoleBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742504C18ACE0B700501318 /* MNSBasicProjectRoleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicProjectRoleBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicProjectRoleBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742504D18ACE0B700501318 /* MNSBasicResolutionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicResolutionBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicResolutionBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742504E18ACE0B700501318 /* MNSBasicResolutionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicResolutionBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicResolutionBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742504F18ACE0B700501318 /* MNSBasicUserBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicUserBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicUserBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505018ACE0B700501318 /* MNSBasicUserBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicUserBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicUserBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742505118ACE0B700501318 /* MNSBasicVotesBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicVotesBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicVotesBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505218ACE0B700501318 /* MNSBasicVotesBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicVotesBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicVotesBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742505318ACE0B700501318 /* MNSBasicWatchersBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicWatchersBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBasicWatchersBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505418ACE0B700501318 /* MNSBasicWatchersBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicWatchersBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSBasicWatchersBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742505518ACE0B700501318 /* MNSBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505618ACE0B700501318 /* MNSBuilderTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBuilderTools.h; path = MNSJiraRESTClient/Source/Builder/MNSBuilderTools.h; sourceTree = SOURCE_ROOT; };
+		0742505718ACE0B700501318 /* MNSBuilderTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBuilderTools.m; path = MNSJiraRESTClient/Source/Builder/MNSBuilderTools.m; sourceTree = SOURCE_ROOT; };
+		0742505818ACE0B700501318 /* MNSChangelogGroupBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSChangelogGroupBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSChangelogGroupBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505918ACE0B700501318 /* MNSChangelogGroupBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSChangelogGroupBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSChangelogGroupBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742505A18ACE0B700501318 /* MNSChangelogItemBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSChangelogItemBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSChangelogItemBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505B18ACE0B700501318 /* MNSChangelogItemBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSChangelogItemBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSChangelogItemBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742505C18ACE0B700501318 /* MNSCommentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSCommentBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSCommentBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505D18ACE0B700501318 /* MNSCommentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSCommentBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSCommentBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742505E18ACE0B700501318 /* MNSComponentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSComponentBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSComponentBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742505F18ACE0B700501318 /* MNSComponentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComponentBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSComponentBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742506018ACE0B700501318 /* MNSExpandablePropertyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSExpandablePropertyBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSExpandablePropertyBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742506118ACE0B700501318 /* MNSExpandablePropertyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSExpandablePropertyBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSExpandablePropertyBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742506218ACE0B700501318 /* MNSFieldBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSFieldBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSFieldBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742506318ACE0B700501318 /* MNSFieldBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSFieldBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSFieldBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742506418ACE0B700501318 /* MNSFieldSchemaBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSFieldSchemaBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSFieldSchemaBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742506518ACE0B700501318 /* MNSFieldSchemaBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSFieldSchemaBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSFieldSchemaBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742506618ACE0B700501318 /* MNSFilterBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSFilterBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSFilterBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742506718ACE0B700501318 /* MNSFilterBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSFilterBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSFilterBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742506818ACE0B700501318 /* MNSIssueBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSIssueBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742506918ACE0B700501318 /* MNSIssueBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSIssueBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742506A18ACE0B700501318 /* MNSIssueBuilderFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueBuilderFeed.h; path = MNSJiraRESTClient/Source/Builder/MNSIssueBuilderFeed.h; sourceTree = SOURCE_ROOT; };
+		0742506B18ACE0B700501318 /* MNSIssueBuilderFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueBuilderFeed.m; path = MNSJiraRESTClient/Source/Builder/MNSIssueBuilderFeed.m; sourceTree = SOURCE_ROOT; };
+		0742506C18ACE0B700501318 /* MNSIssueLinkBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueLinkBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSIssueLinkBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742506D18ACE0B700501318 /* MNSIssueLinkBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueLinkBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSIssueLinkBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742506E18ACE0B700501318 /* MNSIssueLinksTypeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueLinksTypeBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSIssueLinksTypeBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742506F18ACE0B700501318 /* MNSIssueLinksTypeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueLinksTypeBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSIssueLinksTypeBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507018ACE0B700501318 /* MNSIssueLinkTypeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueLinkTypeBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSIssueLinkTypeBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507118ACE0B700501318 /* MNSIssueLinkTypeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueLinkTypeBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSIssueLinkTypeBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507218ACE0B700501318 /* MNSIssueTypeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueTypeBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSIssueTypeBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507318ACE0B700501318 /* MNSIssueTypeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueTypeBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSIssueTypeBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507418ACE0B700501318 /* MNSPriorityBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSPriorityBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSPriorityBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507518ACE0B700501318 /* MNSPriorityBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSPriorityBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSPriorityBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507618ACE0B700501318 /* MNSProjectBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSProjectBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSProjectBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507718ACE0B700501318 /* MNSProjectBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProjectBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSProjectBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507818ACE0B700501318 /* MNSProjectRoleBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSProjectRoleBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSProjectRoleBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507918ACE0B700501318 /* MNSProjectRoleBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProjectRoleBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSProjectRoleBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507A18ACE0B700501318 /* MNSResolutionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSResolutionBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSResolutionBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507B18ACE0B700501318 /* MNSResolutionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSResolutionBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSResolutionBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507C18ACE0B700501318 /* MNSRoleActorBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSRoleActorBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSRoleActorBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507D18ACE0B700501318 /* MNSRoleActorBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSRoleActorBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSRoleActorBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742507E18ACE0B700501318 /* MNSSearchResultBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSearchResultBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSSearchResultBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742507F18ACE0B700501318 /* MNSSearchResultBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSearchResultBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSSearchResultBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508018ACE0B700501318 /* MNSServerInfoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSServerInfoBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSServerInfoBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508118ACE0B700501318 /* MNSServerInfoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSServerInfoBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSServerInfoBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508218ACE0B700501318 /* MNSSessionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSessionBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSSessionBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508318ACE0B700501318 /* MNSSessionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSessionBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSSessionBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508418ACE0B700501318 /* MNSStatusBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSStatusBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSStatusBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508518ACE0B700501318 /* MNSStatusBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSStatusBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSStatusBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508618ACE0B700501318 /* MNSSubtaskBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSubtaskBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSSubtaskBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508718ACE0B700501318 /* MNSSubtaskBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSubtaskBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSSubtaskBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508818ACE0B700501318 /* MNSTimeTrackingBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSTimeTrackingBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSTimeTrackingBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508918ACE0B700501318 /* MNSTimeTrackingBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSTimeTrackingBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSTimeTrackingBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508A18ACE0B700501318 /* MNSUserBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSUserBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSUserBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508B18ACE0B700501318 /* MNSUserBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSUserBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSUserBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508C18ACE0B700501318 /* MNSVersionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSVersionBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSVersionBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508D18ACE0B700501318 /* MNSVersionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVersionBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSVersionBuilder.m; sourceTree = SOURCE_ROOT; };
+		0742508E18ACE0B700501318 /* MNSWorklogBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSWorklogBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSWorklogBuilder.h; sourceTree = SOURCE_ROOT; };
+		0742508F18ACE0B700501318 /* MNSWorklogBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSWorklogBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSWorklogBuilder.m; sourceTree = SOURCE_ROOT; };
+		074250B718ACE0D100501318 /* MNSComponentRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSComponentRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSComponentRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250B818ACE0D100501318 /* MNSComponentRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComponentRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSComponentRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250B918ACE0D100501318 /* MNSIssueRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSIssueRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250BA18ACE0D100501318 /* MNSIssueRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSIssueRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250BB18ACE0D100501318 /* MNSJiraRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSJiraRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSJiraRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250BC18ACE0D100501318 /* MNSJiraRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSJiraRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSJiraRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250BD18ACE0D100501318 /* MNSJiraRestClientFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSJiraRestClientFactory.h; path = MNSJiraRESTClient/Source/Client/MNSJiraRestClientFactory.h; sourceTree = SOURCE_ROOT; };
+		074250BE18ACE0D100501318 /* MNSJiraRestClientFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSJiraRestClientFactory.m; path = MNSJiraRESTClient/Source/Client/MNSJiraRestClientFactory.m; sourceTree = SOURCE_ROOT; };
+		074250BF18ACE0D100501318 /* MNSMetadataRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSMetadataRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSMetadataRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250C018ACE0D100501318 /* MNSMetadataRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSMetadataRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSMetadataRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250C118ACE0D100501318 /* MNSProjectRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSProjectRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSProjectRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250C218ACE0D100501318 /* MNSProjectRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProjectRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSProjectRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250C318ACE0D100501318 /* MNSProjectRolesRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSProjectRolesRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSProjectRolesRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250C418ACE0D100501318 /* MNSProjectRolesRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProjectRolesRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSProjectRolesRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250C518ACE0D100501318 /* MNSSearchRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSearchRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSSearchRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250C618ACE0D100501318 /* MNSSearchRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSearchRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSSearchRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250C718ACE0D100501318 /* MNSSessionRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSessionRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSSessionRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250C818ACE0D100501318 /* MNSSessionRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSessionRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSSessionRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250C918ACE0D100501318 /* MNSUserRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSUserRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSUserRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250CA18ACE0D100501318 /* MNSUserRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSUserRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSUserRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250CB18ACE0D100501318 /* MNSVersionRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSVersionRestClient.h; path = MNSJiraRESTClient/Source/Client/MNSVersionRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250CC18ACE0D100501318 /* MNSVersionRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVersionRestClient.m; path = MNSJiraRESTClient/Source/Client/MNSVersionRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250D818ACE0E000501318 /* MNSGenericRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSGenericRestClient.h; path = MNSJiraRESTClient/Source/Core/MNSGenericRestClient.h; sourceTree = SOURCE_ROOT; };
+		074250D918ACE0E000501318 /* MNSGenericRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSGenericRestClient.m; path = MNSJiraRESTClient/Source/Core/MNSGenericRestClient.m; sourceTree = SOURCE_ROOT; };
+		074250DB18ACE0FA00501318 /* MNSAddressableNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSAddressableNamedEntity.h; path = MNSJiraRESTClient/Source/Model/MNSAddressableNamedEntity.h; sourceTree = SOURCE_ROOT; };
+		074250DC18ACE0FA00501318 /* MNSAddressableNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSAddressableNamedEntity.m; path = MNSJiraRESTClient/Source/Model/MNSAddressableNamedEntity.m; sourceTree = SOURCE_ROOT; };
+		074250DD18ACE0FA00501318 /* MNSAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSAttachment.h; path = MNSJiraRESTClient/Source/Model/MNSAttachment.h; sourceTree = SOURCE_ROOT; };
+		074250DE18ACE0FA00501318 /* MNSAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSAttachment.m; path = MNSJiraRESTClient/Source/Model/MNSAttachment.m; sourceTree = SOURCE_ROOT; };
+		074250DF18ACE0FA00501318 /* MNSBasicComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicComponent.h; path = MNSJiraRESTClient/Source/Model/MNSBasicComponent.h; sourceTree = SOURCE_ROOT; };
+		074250E018ACE0FA00501318 /* MNSBasicComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicComponent.m; path = MNSJiraRESTClient/Source/Model/MNSBasicComponent.m; sourceTree = SOURCE_ROOT; };
+		074250E118ACE0FA00501318 /* MNSBasicIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicIssue.h; path = MNSJiraRESTClient/Source/Model/MNSBasicIssue.h; sourceTree = SOURCE_ROOT; };
+		074250E218ACE0FA00501318 /* MNSBasicIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicIssue.m; path = MNSJiraRESTClient/Source/Model/MNSBasicIssue.m; sourceTree = SOURCE_ROOT; };
+		074250E318ACE0FA00501318 /* MNSBasicIssueType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicIssueType.h; path = MNSJiraRESTClient/Source/Model/MNSBasicIssueType.h; sourceTree = SOURCE_ROOT; };
+		074250E418ACE0FA00501318 /* MNSBasicIssueType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicIssueType.m; path = MNSJiraRESTClient/Source/Model/MNSBasicIssueType.m; sourceTree = SOURCE_ROOT; };
+		074250E518ACE0FA00501318 /* MNSBasicPriority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicPriority.h; path = MNSJiraRESTClient/Source/Model/MNSBasicPriority.h; sourceTree = SOURCE_ROOT; };
+		074250E618ACE0FA00501318 /* MNSBasicPriority.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicPriority.m; path = MNSJiraRESTClient/Source/Model/MNSBasicPriority.m; sourceTree = SOURCE_ROOT; };
+		074250E718ACE0FA00501318 /* MNSBasicProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicProject.h; path = MNSJiraRESTClient/Source/Model/MNSBasicProject.h; sourceTree = SOURCE_ROOT; };
+		074250E818ACE0FA00501318 /* MNSBasicProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicProject.m; path = MNSJiraRESTClient/Source/Model/MNSBasicProject.m; sourceTree = SOURCE_ROOT; };
+		074250E918ACE0FA00501318 /* MNSBasicProjectRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicProjectRole.h; path = MNSJiraRESTClient/Source/Model/MNSBasicProjectRole.h; sourceTree = SOURCE_ROOT; };
+		074250EA18ACE0FA00501318 /* MNSBasicProjectRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicProjectRole.m; path = MNSJiraRESTClient/Source/Model/MNSBasicProjectRole.m; sourceTree = SOURCE_ROOT; };
+		074250EB18ACE0FA00501318 /* MNSBasicResolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicResolution.h; path = MNSJiraRESTClient/Source/Model/MNSBasicResolution.h; sourceTree = SOURCE_ROOT; };
+		074250EC18ACE0FA00501318 /* MNSBasicResolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicResolution.m; path = MNSJiraRESTClient/Source/Model/MNSBasicResolution.m; sourceTree = SOURCE_ROOT; };
+		074250ED18ACE0FA00501318 /* MNSBasicStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicStatus.h; path = MNSJiraRESTClient/Source/Model/MNSBasicStatus.h; sourceTree = SOURCE_ROOT; };
+		074250EE18ACE0FA00501318 /* MNSBasicStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicStatus.m; path = MNSJiraRESTClient/Source/Model/MNSBasicStatus.m; sourceTree = SOURCE_ROOT; };
+		074250EF18ACE0FA00501318 /* MNSBasicUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicUser.h; path = MNSJiraRESTClient/Source/Model/MNSBasicUser.h; sourceTree = SOURCE_ROOT; };
+		074250F018ACE0FA00501318 /* MNSBasicUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicUser.m; path = MNSJiraRESTClient/Source/Model/MNSBasicUser.m; sourceTree = SOURCE_ROOT; };
+		074250F118ACE0FA00501318 /* MNSBasicVotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicVotes.h; path = MNSJiraRESTClient/Source/Model/MNSBasicVotes.h; sourceTree = SOURCE_ROOT; };
+		074250F218ACE0FA00501318 /* MNSBasicVotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicVotes.m; path = MNSJiraRESTClient/Source/Model/MNSBasicVotes.m; sourceTree = SOURCE_ROOT; };
+		074250F318ACE0FA00501318 /* MNSBasicWatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSBasicWatchers.h; path = MNSJiraRESTClient/Source/Model/MNSBasicWatchers.h; sourceTree = SOURCE_ROOT; };
+		074250F418ACE0FA00501318 /* MNSBasicWatchers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSBasicWatchers.m; path = MNSJiraRESTClient/Source/Model/MNSBasicWatchers.m; sourceTree = SOURCE_ROOT; };
+		074250F518ACE0FA00501318 /* MNSChangelogGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSChangelogGroup.h; path = MNSJiraRESTClient/Source/Model/MNSChangelogGroup.h; sourceTree = SOURCE_ROOT; };
+		074250F618ACE0FA00501318 /* MNSChangelogGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSChangelogGroup.m; path = MNSJiraRESTClient/Source/Model/MNSChangelogGroup.m; sourceTree = SOURCE_ROOT; };
+		074250F718ACE0FA00501318 /* MNSChangelogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSChangelogItem.h; path = MNSJiraRESTClient/Source/Model/MNSChangelogItem.h; sourceTree = SOURCE_ROOT; };
+		074250F818ACE0FA00501318 /* MNSChangelogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSChangelogItem.m; path = MNSJiraRESTClient/Source/Model/MNSChangelogItem.m; sourceTree = SOURCE_ROOT; };
+		074250F918ACE0FA00501318 /* MNSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSComment.h; path = MNSJiraRESTClient/Source/Model/MNSComment.h; sourceTree = SOURCE_ROOT; };
+		074250FA18ACE0FA00501318 /* MNSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComment.m; path = MNSJiraRESTClient/Source/Model/MNSComment.m; sourceTree = SOURCE_ROOT; };
+		074250FB18ACE0FA00501318 /* MNSComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSComponent.h; path = MNSJiraRESTClient/Source/Model/MNSComponent.h; sourceTree = SOURCE_ROOT; };
+		074250FC18ACE0FA00501318 /* MNSComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComponent.m; path = MNSJiraRESTClient/Source/Model/MNSComponent.m; sourceTree = SOURCE_ROOT; };
+		074250FD18ACE0FA00501318 /* MNSComponentInputWithProjectKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSComponentInputWithProjectKey.h; path = MNSJiraRESTClient/Source/Model/MNSComponentInputWithProjectKey.h; sourceTree = SOURCE_ROOT; };
+		074250FE18ACE0FA00501318 /* MNSComponentInputWithProjectKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComponentInputWithProjectKey.m; path = MNSJiraRESTClient/Source/Model/MNSComponentInputWithProjectKey.m; sourceTree = SOURCE_ROOT; };
+		074250FF18ACE0FA00501318 /* MNSExpandableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSExpandableProperty.h; path = MNSJiraRESTClient/Source/Model/MNSExpandableProperty.h; sourceTree = SOURCE_ROOT; };
+		0742510018ACE0FA00501318 /* MNSExpandableProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSExpandableProperty.m; path = MNSJiraRESTClient/Source/Model/MNSExpandableProperty.m; sourceTree = SOURCE_ROOT; };
+		0742510118ACE0FA00501318 /* MNSField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSField.h; path = MNSJiraRESTClient/Source/Model/MNSField.h; sourceTree = SOURCE_ROOT; };
+		0742510218ACE0FA00501318 /* MNSField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSField.m; path = MNSJiraRESTClient/Source/Model/MNSField.m; sourceTree = SOURCE_ROOT; };
+		0742510318ACE0FA00501318 /* MNSFieldSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSFieldSchema.h; path = MNSJiraRESTClient/Source/Model/MNSFieldSchema.h; sourceTree = SOURCE_ROOT; };
+		0742510418ACE0FA00501318 /* MNSFieldSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSFieldSchema.m; path = MNSJiraRESTClient/Source/Model/MNSFieldSchema.m; sourceTree = SOURCE_ROOT; };
+		0742510518ACE0FA00501318 /* MNSFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSFilter.h; path = MNSJiraRESTClient/Source/Model/MNSFilter.h; sourceTree = SOURCE_ROOT; };
+		0742510618ACE0FA00501318 /* MNSFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSFilter.m; path = MNSJiraRESTClient/Source/Model/MNSFilter.m; sourceTree = SOURCE_ROOT; };
+		0742510718ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSGetCreateIssueMetadataOptions.h; path = MNSJiraRESTClient/Source/Model/MNSGetCreateIssueMetadataOptions.h; sourceTree = SOURCE_ROOT; };
+		0742510818ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSGetCreateIssueMetadataOptions.m; path = MNSJiraRESTClient/Source/Model/MNSGetCreateIssueMetadataOptions.m; sourceTree = SOURCE_ROOT; };
+		0742510918ACE0FA00501318 /* MNSIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssue.h; path = MNSJiraRESTClient/Source/Model/MNSIssue.h; sourceTree = SOURCE_ROOT; };
+		0742510A18ACE0FA00501318 /* MNSIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssue.m; path = MNSJiraRESTClient/Source/Model/MNSIssue.m; sourceTree = SOURCE_ROOT; };
+		0742510B18ACE0FA00501318 /* MNSIssueField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueField.h; path = MNSJiraRESTClient/Source/Model/MNSIssueField.h; sourceTree = SOURCE_ROOT; };
+		0742510C18ACE0FA00501318 /* MNSIssueField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueField.m; path = MNSJiraRESTClient/Source/Model/MNSIssueField.m; sourceTree = SOURCE_ROOT; };
+		0742510D18ACE0FA00501318 /* MNSIssueFieldID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueFieldID.h; path = MNSJiraRESTClient/Source/Model/MNSIssueFieldID.h; sourceTree = SOURCE_ROOT; };
+		0742510E18ACE0FA00501318 /* MNSIssueFieldID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueFieldID.m; path = MNSJiraRESTClient/Source/Model/MNSIssueFieldID.m; sourceTree = SOURCE_ROOT; };
+		0742510F18ACE0FA00501318 /* MNSIssueLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueLink.h; path = MNSJiraRESTClient/Source/Model/MNSIssueLink.h; sourceTree = SOURCE_ROOT; };
+		0742511018ACE0FA00501318 /* MNSIssueLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueLink.m; path = MNSJiraRESTClient/Source/Model/MNSIssueLink.m; sourceTree = SOURCE_ROOT; };
+		0742511118ACE0FA00501318 /* MNSIssueLinksType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueLinksType.h; path = MNSJiraRESTClient/Source/Model/MNSIssueLinksType.h; sourceTree = SOURCE_ROOT; };
+		0742511218ACE0FA00501318 /* MNSIssueLinksType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueLinksType.m; path = MNSJiraRESTClient/Source/Model/MNSIssueLinksType.m; sourceTree = SOURCE_ROOT; };
+		0742511318ACE0FA00501318 /* MNSIssueLinkType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueLinkType.h; path = MNSJiraRESTClient/Source/Model/MNSIssueLinkType.h; sourceTree = SOURCE_ROOT; };
+		0742511418ACE0FA00501318 /* MNSIssueLinkType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueLinkType.m; path = MNSJiraRESTClient/Source/Model/MNSIssueLinkType.m; sourceTree = SOURCE_ROOT; };
+		0742511518ACE0FA00501318 /* MNSIssueType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueType.h; path = MNSJiraRESTClient/Source/Model/MNSIssueType.h; sourceTree = SOURCE_ROOT; };
+		0742511618ACE0FA00501318 /* MNSIssueType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueType.m; path = MNSJiraRESTClient/Source/Model/MNSIssueType.m; sourceTree = SOURCE_ROOT; };
+		0742511718ACE0FA00501318 /* MNSLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSLoginInfo.h; path = MNSJiraRESTClient/Source/Model/MNSLoginInfo.h; sourceTree = SOURCE_ROOT; };
+		0742511818ACE0FA00501318 /* MNSLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSLoginInfo.m; path = MNSJiraRESTClient/Source/Model/MNSLoginInfo.m; sourceTree = SOURCE_ROOT; };
+		0742511918ACE0FA00501318 /* MNSPriority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSPriority.h; path = MNSJiraRESTClient/Source/Model/MNSPriority.h; sourceTree = SOURCE_ROOT; };
+		0742511A18ACE0FA00501318 /* MNSPriority.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSPriority.m; path = MNSJiraRESTClient/Source/Model/MNSPriority.m; sourceTree = SOURCE_ROOT; };
+		0742511B18ACE0FA00501318 /* MNSProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSProject.h; path = MNSJiraRESTClient/Source/Model/MNSProject.h; sourceTree = SOURCE_ROOT; };
+		0742511C18ACE0FA00501318 /* MNSProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProject.m; path = MNSJiraRESTClient/Source/Model/MNSProject.m; sourceTree = SOURCE_ROOT; };
+		0742511D18ACE0FA00501318 /* MNSProjectRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSProjectRole.h; path = MNSJiraRESTClient/Source/Model/MNSProjectRole.h; sourceTree = SOURCE_ROOT; };
+		0742511E18ACE0FA00501318 /* MNSProjectRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSProjectRole.m; path = MNSJiraRESTClient/Source/Model/MNSProjectRole.m; sourceTree = SOURCE_ROOT; };
+		0742511F18ACE0FA00501318 /* MNSResolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSResolution.h; path = MNSJiraRESTClient/Source/Model/MNSResolution.h; sourceTree = SOURCE_ROOT; };
+		0742512018ACE0FA00501318 /* MNSResolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSResolution.m; path = MNSJiraRESTClient/Source/Model/MNSResolution.m; sourceTree = SOURCE_ROOT; };
+		0742512118ACE0FA00501318 /* MNSRoleActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSRoleActor.h; path = MNSJiraRESTClient/Source/Model/MNSRoleActor.h; sourceTree = SOURCE_ROOT; };
+		0742512218ACE0FA00501318 /* MNSRoleActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSRoleActor.m; path = MNSJiraRESTClient/Source/Model/MNSRoleActor.m; sourceTree = SOURCE_ROOT; };
+		0742512318ACE0FA00501318 /* MNSSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSearchResult.h; path = MNSJiraRESTClient/Source/Model/MNSSearchResult.h; sourceTree = SOURCE_ROOT; };
+		0742512418ACE0FA00501318 /* MNSSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSearchResult.m; path = MNSJiraRESTClient/Source/Model/MNSSearchResult.m; sourceTree = SOURCE_ROOT; };
+		0742512518ACE0FA00501318 /* MNSServerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSServerInfo.h; path = MNSJiraRESTClient/Source/Model/MNSServerInfo.h; sourceTree = SOURCE_ROOT; };
+		0742512618ACE0FA00501318 /* MNSServerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSServerInfo.m; path = MNSJiraRESTClient/Source/Model/MNSServerInfo.m; sourceTree = SOURCE_ROOT; };
+		0742512718ACE0FA00501318 /* MNSSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSession.h; path = MNSJiraRESTClient/Source/Model/MNSSession.h; sourceTree = SOURCE_ROOT; };
+		0742512818ACE0FA00501318 /* MNSSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSession.m; path = MNSJiraRESTClient/Source/Model/MNSSession.m; sourceTree = SOURCE_ROOT; };
+		0742512918ACE0FA00501318 /* MNSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSStatus.h; path = MNSJiraRESTClient/Source/Model/MNSStatus.h; sourceTree = SOURCE_ROOT; };
+		0742512A18ACE0FA00501318 /* MNSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSStatus.m; path = MNSJiraRESTClient/Source/Model/MNSStatus.m; sourceTree = SOURCE_ROOT; };
+		0742512B18ACE0FA00501318 /* MNSSubtask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSSubtask.h; path = MNSJiraRESTClient/Source/Model/MNSSubtask.h; sourceTree = SOURCE_ROOT; };
+		0742512C18ACE0FA00501318 /* MNSSubtask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSubtask.m; path = MNSJiraRESTClient/Source/Model/MNSSubtask.m; sourceTree = SOURCE_ROOT; };
+		0742512D18ACE0FA00501318 /* MNSTimeTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSTimeTracking.h; path = MNSJiraRESTClient/Source/Model/MNSTimeTracking.h; sourceTree = SOURCE_ROOT; };
+		0742512E18ACE0FA00501318 /* MNSTimeTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSTimeTracking.m; path = MNSJiraRESTClient/Source/Model/MNSTimeTracking.m; sourceTree = SOURCE_ROOT; };
+		0742512F18ACE0FA00501318 /* MNSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSUser.h; path = MNSJiraRESTClient/Source/Model/MNSUser.h; sourceTree = SOURCE_ROOT; };
+		0742513018ACE0FA00501318 /* MNSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSUser.m; path = MNSJiraRESTClient/Source/Model/MNSUser.m; sourceTree = SOURCE_ROOT; };
+		0742513118ACE0FA00501318 /* MNSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSVersion.h; path = MNSJiraRESTClient/Source/Model/MNSVersion.h; sourceTree = SOURCE_ROOT; };
+		0742513218ACE0FA00501318 /* MNSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVersion.m; path = MNSJiraRESTClient/Source/Model/MNSVersion.m; sourceTree = SOURCE_ROOT; };
+		0742513318ACE0FA00501318 /* MNSVersionRelatedIssuesCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSVersionRelatedIssuesCount.h; path = MNSJiraRESTClient/Source/Model/MNSVersionRelatedIssuesCount.h; sourceTree = SOURCE_ROOT; };
+		0742513418ACE0FA00501318 /* MNSVersionRelatedIssuesCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVersionRelatedIssuesCount.m; path = MNSJiraRESTClient/Source/Model/MNSVersionRelatedIssuesCount.m; sourceTree = SOURCE_ROOT; };
+		0742513518ACE0FA00501318 /* MNSVisibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSVisibility.h; path = MNSJiraRESTClient/Source/Model/MNSVisibility.h; sourceTree = SOURCE_ROOT; };
+		0742513618ACE0FA00501318 /* MNSVisibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVisibility.m; path = MNSJiraRESTClient/Source/Model/MNSVisibility.m; sourceTree = SOURCE_ROOT; };
+		0742513718ACE0FA00501318 /* MNSWorklog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSWorklog.h; path = MNSJiraRESTClient/Source/Model/MNSWorklog.h; sourceTree = SOURCE_ROOT; };
+		0742513818ACE0FA00501318 /* MNSWorklog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSWorklog.m; path = MNSJiraRESTClient/Source/Model/MNSWorklog.m; sourceTree = SOURCE_ROOT; };
+		0742516818ACE10900501318 /* MNSComplexIssueInputFieldValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSComplexIssueInputFieldValue.h; path = MNSJiraRESTClient/Source/Model/Inputs/MNSComplexIssueInputFieldValue.h; sourceTree = SOURCE_ROOT; };
+		0742516918ACE10900501318 /* MNSComplexIssueInputFieldValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComplexIssueInputFieldValue.m; path = MNSJiraRESTClient/Source/Model/Inputs/MNSComplexIssueInputFieldValue.m; sourceTree = SOURCE_ROOT; };
+		0742516A18ACE10900501318 /* MNSComponentInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSComponentInput.h; path = MNSJiraRESTClient/Source/Model/Inputs/MNSComponentInput.h; sourceTree = SOURCE_ROOT; };
+		0742516B18ACE10900501318 /* MNSComponentInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSComponentInput.m; path = MNSJiraRESTClient/Source/Model/Inputs/MNSComponentInput.m; sourceTree = SOURCE_ROOT; };
+		0742516C18ACE10900501318 /* MNSFieldInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSFieldInput.h; path = MNSJiraRESTClient/Source/Model/Inputs/MNSFieldInput.h; sourceTree = SOURCE_ROOT; };
+		0742516D18ACE10900501318 /* MNSFieldInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSFieldInput.m; path = MNSJiraRESTClient/Source/Model/Inputs/MNSFieldInput.m; sourceTree = SOURCE_ROOT; };
+		0742516E18ACE10900501318 /* MNSIdentifiableEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIdentifiableEntity.h; path = MNSJiraRESTClient/Source/Model/Inputs/MNSIdentifiableEntity.h; sourceTree = SOURCE_ROOT; };
+		0742516F18ACE10900501318 /* MNSIssueInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSIssueInput.h; path = MNSJiraRESTClient/Source/Model/Inputs/MNSIssueInput.h; sourceTree = SOURCE_ROOT; };
+		0742517018ACE10900501318 /* MNSIssueInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSIssueInput.m; path = MNSJiraRESTClient/Source/Model/Inputs/MNSIssueInput.m; sourceTree = SOURCE_ROOT; };
+		0742517118ACE10900501318 /* MNSVersionInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSVersionInput.h; path = MNSJiraRESTClient/Source/Model/Inputs/MNSVersionInput.h; sourceTree = SOURCE_ROOT; };
+		0742517218ACE10900501318 /* MNSVersionInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVersionInput.m; path = MNSJiraRESTClient/Source/Model/Inputs/MNSVersionInput.m; sourceTree = SOURCE_ROOT; };
+		0742517818ACE11B00501318 /* MNSRequestAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSRequestAuthenticator.h; path = MNSJiraRESTClient/Source/Auth/MNSRequestAuthenticator.h; sourceTree = SOURCE_ROOT; };
+		0742517918ACE11B00501318 /* MNSRequestAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSRequestAuthenticator.m; path = MNSJiraRESTClient/Source/Auth/MNSRequestAuthenticator.m; sourceTree = SOURCE_ROOT; };
+		07CB724A18AA3E3F00D4806C /* libMNSJiraRESTClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMNSJiraRESTClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CB725718AA3E3F00D4806C /* MNSJiraRESTClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNSJiraRESTClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBBC717189928620099B936 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0CBBC719189928620099B936 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0CBBC71B189928620099B936 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0CBBC736189928620099B936 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2F6A1F026937482BADE039E7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		90E41E1B120A47928556F251 /* libPods-MNSJiraRestObjectiveCClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNSJiraRestObjectiveCClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B1587840864F60A8477F42 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07CB724718AA3E3F00D4806C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB724B18AA3E3F00D4806C /* Foundation.framework in Frameworks */,
+				38FA7E410C154BE48705EEEB /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07CB725418AA3E3F00D4806C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB725818AA3E3F00D4806C /* XCTest.framework in Frameworks */,
+				07CB725A18AA3E3F00D4806C /* UIKit.framework in Frameworks */,
+				07CB725D18AA3E3F00D4806C /* libMNSJiraRESTClient.a in Frameworks */,
+				07CB725918AA3E3F00D4806C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		075AA49B189963A800239D75 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				074250D818ACE0E000501318 /* MNSGenericRestClient.h */,
+				074250D918ACE0E000501318 /* MNSGenericRestClient.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		075AA49C1899642A00239D75 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0742517818ACE11B00501318 /* MNSRequestAuthenticator.h */,
+				0742517918ACE11B00501318 /* MNSRequestAuthenticator.m */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		075AA4A0189964EA00239D75 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				075AA49C1899642A00239D75 /* Auth */,
+				0C6F6D1C189FC45100884362 /* Builder */,
+				308A7218189957D500F66331 /* Client */,
+				075AA49B189963A800239D75 /* Core */,
+				0C3778CD18AA8BA10046C6E5 /* Model */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		075F71F4189FB2C80026C512 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				07424F6718ACDFFB00501318 /* MNSClientsTestsConstants.h */,
+				07424F6818ACDFFB00501318 /* MNSClientsTestsConstants.m */,
+				07424F6918ACDFFB00501318 /* MNSComponentRestClientTests.m */,
+				07424F6A18ACDFFB00501318 /* MNSIssueRestClientTests.m */,
+				07424F6B18ACDFFB00501318 /* MNSMetaDataRestClientTests.m */,
+				07424F6C18ACDFFB00501318 /* MNSProjectRestClientTests.m */,
+				07424F6D18ACDFFB00501318 /* MNSProjectRolesRestClientTests.m */,
+				07424F6E18ACDFFB00501318 /* MNSSearchRestClientTests.m */,
+				07424F6F18ACDFFB00501318 /* MNSSessionRestClientTests.m */,
+				07424F7018ACDFFB00501318 /* MNSUserRestClientTests.m */,
+				07424F7118ACDFFB00501318 /* MNSVersionRestClientTests.m */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		0C3778CD18AA8BA10046C6E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3778CE18AA8BA10046C6E5 /* Inputs */,
+				074250DB18ACE0FA00501318 /* MNSAddressableNamedEntity.h */,
+				074250DC18ACE0FA00501318 /* MNSAddressableNamedEntity.m */,
+				074250DD18ACE0FA00501318 /* MNSAttachment.h */,
+				074250DE18ACE0FA00501318 /* MNSAttachment.m */,
+				074250DF18ACE0FA00501318 /* MNSBasicComponent.h */,
+				074250E018ACE0FA00501318 /* MNSBasicComponent.m */,
+				074250E118ACE0FA00501318 /* MNSBasicIssue.h */,
+				074250E218ACE0FA00501318 /* MNSBasicIssue.m */,
+				074250E318ACE0FA00501318 /* MNSBasicIssueType.h */,
+				074250E418ACE0FA00501318 /* MNSBasicIssueType.m */,
+				074250E518ACE0FA00501318 /* MNSBasicPriority.h */,
+				074250E618ACE0FA00501318 /* MNSBasicPriority.m */,
+				074250E718ACE0FA00501318 /* MNSBasicProject.h */,
+				074250E818ACE0FA00501318 /* MNSBasicProject.m */,
+				074250E918ACE0FA00501318 /* MNSBasicProjectRole.h */,
+				074250EA18ACE0FA00501318 /* MNSBasicProjectRole.m */,
+				074250EB18ACE0FA00501318 /* MNSBasicResolution.h */,
+				074250EC18ACE0FA00501318 /* MNSBasicResolution.m */,
+				074250ED18ACE0FA00501318 /* MNSBasicStatus.h */,
+				074250EE18ACE0FA00501318 /* MNSBasicStatus.m */,
+				074250EF18ACE0FA00501318 /* MNSBasicUser.h */,
+				074250F018ACE0FA00501318 /* MNSBasicUser.m */,
+				074250F118ACE0FA00501318 /* MNSBasicVotes.h */,
+				074250F218ACE0FA00501318 /* MNSBasicVotes.m */,
+				074250F318ACE0FA00501318 /* MNSBasicWatchers.h */,
+				074250F418ACE0FA00501318 /* MNSBasicWatchers.m */,
+				074250F518ACE0FA00501318 /* MNSChangelogGroup.h */,
+				074250F618ACE0FA00501318 /* MNSChangelogGroup.m */,
+				074250F718ACE0FA00501318 /* MNSChangelogItem.h */,
+				074250F818ACE0FA00501318 /* MNSChangelogItem.m */,
+				074250F918ACE0FA00501318 /* MNSComment.h */,
+				074250FA18ACE0FA00501318 /* MNSComment.m */,
+				074250FB18ACE0FA00501318 /* MNSComponent.h */,
+				074250FC18ACE0FA00501318 /* MNSComponent.m */,
+				074250FD18ACE0FA00501318 /* MNSComponentInputWithProjectKey.h */,
+				074250FE18ACE0FA00501318 /* MNSComponentInputWithProjectKey.m */,
+				074250FF18ACE0FA00501318 /* MNSExpandableProperty.h */,
+				0742510018ACE0FA00501318 /* MNSExpandableProperty.m */,
+				0742510118ACE0FA00501318 /* MNSField.h */,
+				0742510218ACE0FA00501318 /* MNSField.m */,
+				0742510318ACE0FA00501318 /* MNSFieldSchema.h */,
+				0742510418ACE0FA00501318 /* MNSFieldSchema.m */,
+				0742510518ACE0FA00501318 /* MNSFilter.h */,
+				0742510618ACE0FA00501318 /* MNSFilter.m */,
+				0742510718ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.h */,
+				0742510818ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.m */,
+				0742510918ACE0FA00501318 /* MNSIssue.h */,
+				0742510A18ACE0FA00501318 /* MNSIssue.m */,
+				0742510B18ACE0FA00501318 /* MNSIssueField.h */,
+				0742510C18ACE0FA00501318 /* MNSIssueField.m */,
+				0742510D18ACE0FA00501318 /* MNSIssueFieldID.h */,
+				0742510E18ACE0FA00501318 /* MNSIssueFieldID.m */,
+				0742510F18ACE0FA00501318 /* MNSIssueLink.h */,
+				0742511018ACE0FA00501318 /* MNSIssueLink.m */,
+				0742511118ACE0FA00501318 /* MNSIssueLinksType.h */,
+				0742511218ACE0FA00501318 /* MNSIssueLinksType.m */,
+				0742511318ACE0FA00501318 /* MNSIssueLinkType.h */,
+				0742511418ACE0FA00501318 /* MNSIssueLinkType.m */,
+				0742511518ACE0FA00501318 /* MNSIssueType.h */,
+				0742511618ACE0FA00501318 /* MNSIssueType.m */,
+				0742511718ACE0FA00501318 /* MNSLoginInfo.h */,
+				0742511818ACE0FA00501318 /* MNSLoginInfo.m */,
+				0742511918ACE0FA00501318 /* MNSPriority.h */,
+				0742511A18ACE0FA00501318 /* MNSPriority.m */,
+				0742511B18ACE0FA00501318 /* MNSProject.h */,
+				0742511C18ACE0FA00501318 /* MNSProject.m */,
+				0742511D18ACE0FA00501318 /* MNSProjectRole.h */,
+				0742511E18ACE0FA00501318 /* MNSProjectRole.m */,
+				0742511F18ACE0FA00501318 /* MNSResolution.h */,
+				0742512018ACE0FA00501318 /* MNSResolution.m */,
+				0742512118ACE0FA00501318 /* MNSRoleActor.h */,
+				0742512218ACE0FA00501318 /* MNSRoleActor.m */,
+				0742512318ACE0FA00501318 /* MNSSearchResult.h */,
+				0742512418ACE0FA00501318 /* MNSSearchResult.m */,
+				0742512518ACE0FA00501318 /* MNSServerInfo.h */,
+				0742512618ACE0FA00501318 /* MNSServerInfo.m */,
+				0742512718ACE0FA00501318 /* MNSSession.h */,
+				0742512818ACE0FA00501318 /* MNSSession.m */,
+				0742512918ACE0FA00501318 /* MNSStatus.h */,
+				0742512A18ACE0FA00501318 /* MNSStatus.m */,
+				0742512B18ACE0FA00501318 /* MNSSubtask.h */,
+				0742512C18ACE0FA00501318 /* MNSSubtask.m */,
+				0742512D18ACE0FA00501318 /* MNSTimeTracking.h */,
+				0742512E18ACE0FA00501318 /* MNSTimeTracking.m */,
+				0742512F18ACE0FA00501318 /* MNSUser.h */,
+				0742513018ACE0FA00501318 /* MNSUser.m */,
+				0742513118ACE0FA00501318 /* MNSVersion.h */,
+				0742513218ACE0FA00501318 /* MNSVersion.m */,
+				0742513318ACE0FA00501318 /* MNSVersionRelatedIssuesCount.h */,
+				0742513418ACE0FA00501318 /* MNSVersionRelatedIssuesCount.m */,
+				0742513518ACE0FA00501318 /* MNSVisibility.h */,
+				0742513618ACE0FA00501318 /* MNSVisibility.m */,
+				0742513718ACE0FA00501318 /* MNSWorklog.h */,
+				0742513818ACE0FA00501318 /* MNSWorklog.m */,
+			);
+			name = Model;
+			path = Source/Model;
+			sourceTree = "<group>";
+		};
+		0C3778CE18AA8BA10046C6E5 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				0742516818ACE10900501318 /* MNSComplexIssueInputFieldValue.h */,
+				0742516918ACE10900501318 /* MNSComplexIssueInputFieldValue.m */,
+				0742516A18ACE10900501318 /* MNSComponentInput.h */,
+				0742516B18ACE10900501318 /* MNSComponentInput.m */,
+				0742516C18ACE10900501318 /* MNSFieldInput.h */,
+				0742516D18ACE10900501318 /* MNSFieldInput.m */,
+				0742516E18ACE10900501318 /* MNSIdentifiableEntity.h */,
+				0742516F18ACE10900501318 /* MNSIssueInput.h */,
+				0742517018ACE10900501318 /* MNSIssueInput.m */,
+				0742517118ACE10900501318 /* MNSVersionInput.h */,
+				0742517218ACE10900501318 /* MNSVersionInput.m */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		0C6F6D1C189FC45100884362 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0742504118ACE0B700501318 /* MNSAttachmentBuilder.h */,
+				0742504218ACE0B700501318 /* MNSAttachmentBuilder.m */,
+				0742504318ACE0B700501318 /* MNSBasicComponentBuilder.h */,
+				0742504418ACE0B700501318 /* MNSBasicComponentBuilder.m */,
+				0742504518ACE0B700501318 /* MNSBasicIssueBuilder.h */,
+				0742504618ACE0B700501318 /* MNSBasicIssueBuilder.m */,
+				0742504718ACE0B700501318 /* MNSBasicIssueTypeBuilder.h */,
+				0742504818ACE0B700501318 /* MNSBasicIssueTypeBuilder.m */,
+				0742504918ACE0B700501318 /* MNSBasicPriorityBuilder.h */,
+				0742504A18ACE0B700501318 /* MNSBasicPriorityBuilder.m */,
+				0742504B18ACE0B700501318 /* MNSBasicProjectRoleBuilder.h */,
+				0742504C18ACE0B700501318 /* MNSBasicProjectRoleBuilder.m */,
+				0742504D18ACE0B700501318 /* MNSBasicResolutionBuilder.h */,
+				0742504E18ACE0B700501318 /* MNSBasicResolutionBuilder.m */,
+				0742504F18ACE0B700501318 /* MNSBasicUserBuilder.h */,
+				0742505018ACE0B700501318 /* MNSBasicUserBuilder.m */,
+				0742505118ACE0B700501318 /* MNSBasicVotesBuilder.h */,
+				0742505218ACE0B700501318 /* MNSBasicVotesBuilder.m */,
+				0742505318ACE0B700501318 /* MNSBasicWatchersBuilder.h */,
+				0742505418ACE0B700501318 /* MNSBasicWatchersBuilder.m */,
+				0742505518ACE0B700501318 /* MNSBuilder.h */,
+				0742505618ACE0B700501318 /* MNSBuilderTools.h */,
+				0742505718ACE0B700501318 /* MNSBuilderTools.m */,
+				0742505818ACE0B700501318 /* MNSChangelogGroupBuilder.h */,
+				0742505918ACE0B700501318 /* MNSChangelogGroupBuilder.m */,
+				0742505A18ACE0B700501318 /* MNSChangelogItemBuilder.h */,
+				0742505B18ACE0B700501318 /* MNSChangelogItemBuilder.m */,
+				0742505C18ACE0B700501318 /* MNSCommentBuilder.h */,
+				0742505D18ACE0B700501318 /* MNSCommentBuilder.m */,
+				0742505E18ACE0B700501318 /* MNSComponentBuilder.h */,
+				0742505F18ACE0B700501318 /* MNSComponentBuilder.m */,
+				0742506018ACE0B700501318 /* MNSExpandablePropertyBuilder.h */,
+				0742506118ACE0B700501318 /* MNSExpandablePropertyBuilder.m */,
+				0742506218ACE0B700501318 /* MNSFieldBuilder.h */,
+				0742506318ACE0B700501318 /* MNSFieldBuilder.m */,
+				0742506418ACE0B700501318 /* MNSFieldSchemaBuilder.h */,
+				0742506518ACE0B700501318 /* MNSFieldSchemaBuilder.m */,
+				0742506618ACE0B700501318 /* MNSFilterBuilder.h */,
+				0742506718ACE0B700501318 /* MNSFilterBuilder.m */,
+				0742506818ACE0B700501318 /* MNSIssueBuilder.h */,
+				0742506918ACE0B700501318 /* MNSIssueBuilder.m */,
+				0742506A18ACE0B700501318 /* MNSIssueBuilderFeed.h */,
+				0742506B18ACE0B700501318 /* MNSIssueBuilderFeed.m */,
+				0742506C18ACE0B700501318 /* MNSIssueLinkBuilder.h */,
+				0742506D18ACE0B700501318 /* MNSIssueLinkBuilder.m */,
+				0742506E18ACE0B700501318 /* MNSIssueLinksTypeBuilder.h */,
+				0742506F18ACE0B700501318 /* MNSIssueLinksTypeBuilder.m */,
+				0742507018ACE0B700501318 /* MNSIssueLinkTypeBuilder.h */,
+				0742507118ACE0B700501318 /* MNSIssueLinkTypeBuilder.m */,
+				0742507218ACE0B700501318 /* MNSIssueTypeBuilder.h */,
+				0742507318ACE0B700501318 /* MNSIssueTypeBuilder.m */,
+				0742507418ACE0B700501318 /* MNSPriorityBuilder.h */,
+				0742507518ACE0B700501318 /* MNSPriorityBuilder.m */,
+				0742507618ACE0B700501318 /* MNSProjectBuilder.h */,
+				0742507718ACE0B700501318 /* MNSProjectBuilder.m */,
+				0742507818ACE0B700501318 /* MNSProjectRoleBuilder.h */,
+				0742507918ACE0B700501318 /* MNSProjectRoleBuilder.m */,
+				0742507A18ACE0B700501318 /* MNSResolutionBuilder.h */,
+				0742507B18ACE0B700501318 /* MNSResolutionBuilder.m */,
+				0742507C18ACE0B700501318 /* MNSRoleActorBuilder.h */,
+				0742507D18ACE0B700501318 /* MNSRoleActorBuilder.m */,
+				0742507E18ACE0B700501318 /* MNSSearchResultBuilder.h */,
+				0742507F18ACE0B700501318 /* MNSSearchResultBuilder.m */,
+				0742508018ACE0B700501318 /* MNSServerInfoBuilder.h */,
+				0742508118ACE0B700501318 /* MNSServerInfoBuilder.m */,
+				0742508218ACE0B700501318 /* MNSSessionBuilder.h */,
+				0742508318ACE0B700501318 /* MNSSessionBuilder.m */,
+				0742508418ACE0B700501318 /* MNSStatusBuilder.h */,
+				0742508518ACE0B700501318 /* MNSStatusBuilder.m */,
+				0742508618ACE0B700501318 /* MNSSubtaskBuilder.h */,
+				0742508718ACE0B700501318 /* MNSSubtaskBuilder.m */,
+				0742508818ACE0B700501318 /* MNSTimeTrackingBuilder.h */,
+				0742508918ACE0B700501318 /* MNSTimeTrackingBuilder.m */,
+				0742508A18ACE0B700501318 /* MNSUserBuilder.h */,
+				0742508B18ACE0B700501318 /* MNSUserBuilder.m */,
+				0742508C18ACE0B700501318 /* MNSVersionBuilder.h */,
+				0742508D18ACE0B700501318 /* MNSVersionBuilder.m */,
+				0742508E18ACE0B700501318 /* MNSWorklogBuilder.h */,
+				0742508F18ACE0B700501318 /* MNSWorklogBuilder.m */,
+			);
+			name = Builder;
+			path = Client;
+			sourceTree = "<group>";
+		};
+		0CBBC70B189928620099B936 = {
+			isa = PBXGroup;
+			children = (
+				0CBBC71D189928620099B936 /* MNSJiraRESTClient */,
+				0CBBC73C189928620099B936 /* MNSJiraRESTClientTests */,
+				0CBBC716189928620099B936 /* Frameworks */,
+				0CBBC715189928620099B936 /* Products */,
+				2F6A1F026937482BADE039E7 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		0CBBC715189928620099B936 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07CB724A18AA3E3F00D4806C /* libMNSJiraRESTClient.a */,
+				07CB725718AA3E3F00D4806C /* MNSJiraRESTClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CBBC716189928620099B936 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CBBC717189928620099B936 /* Foundation.framework */,
+				0CBBC719189928620099B936 /* CoreGraphics.framework */,
+				0CBBC71B189928620099B936 /* UIKit.framework */,
+				0CBBC736189928620099B936 /* XCTest.framework */,
+				A6B1587840864F60A8477F42 /* libPods.a */,
+				90E41E1B120A47928556F251 /* libPods-MNSJiraRestObjectiveCClientTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CBBC71D189928620099B936 /* MNSJiraRESTClient */ = {
+			isa = PBXGroup;
+			children = (
+				075AA4A0189964EA00239D75 /* Source */,
+				0CBBC71E189928620099B936 /* Supporting Files */,
+			);
+			name = MNSJiraRESTClient;
+			path = MNSJiraRestObjectiveCClient;
+			sourceTree = "<group>";
+		};
+		0CBBC71E189928620099B936 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07424F7C18ACE01100501318 /* Constant.h */,
+				07424F7D18ACE01100501318 /* Constant.m */,
+				07424F7E18ACE01100501318 /* MNSJiraRESTClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CBBC73C189928620099B936 /* MNSJiraRESTClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				07424F6518ACDFEF00501318 /* MNSJiraRESTClientTests-Info.plist */,
+				075F71F4189FB2C80026C512 /* Client */,
+			);
+			name = MNSJiraRESTClientTests;
+			path = MNSJiraRestObjectiveCClientTests;
+			sourceTree = "<group>";
+		};
+		308A7218189957D500F66331 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				074250B718ACE0D100501318 /* MNSComponentRestClient.h */,
+				074250B818ACE0D100501318 /* MNSComponentRestClient.m */,
+				074250B918ACE0D100501318 /* MNSIssueRestClient.h */,
+				074250BA18ACE0D100501318 /* MNSIssueRestClient.m */,
+				074250BB18ACE0D100501318 /* MNSJiraRestClient.h */,
+				074250BC18ACE0D100501318 /* MNSJiraRestClient.m */,
+				074250BD18ACE0D100501318 /* MNSJiraRestClientFactory.h */,
+				074250BE18ACE0D100501318 /* MNSJiraRestClientFactory.m */,
+				074250BF18ACE0D100501318 /* MNSMetadataRestClient.h */,
+				074250C018ACE0D100501318 /* MNSMetadataRestClient.m */,
+				074250C118ACE0D100501318 /* MNSProjectRestClient.h */,
+				074250C218ACE0D100501318 /* MNSProjectRestClient.m */,
+				074250C318ACE0D100501318 /* MNSProjectRolesRestClient.h */,
+				074250C418ACE0D100501318 /* MNSProjectRolesRestClient.m */,
+				074250C518ACE0D100501318 /* MNSSearchRestClient.h */,
+				074250C618ACE0D100501318 /* MNSSearchRestClient.m */,
+				074250C718ACE0D100501318 /* MNSSessionRestClient.h */,
+				074250C818ACE0D100501318 /* MNSSessionRestClient.m */,
+				074250C918ACE0D100501318 /* MNSUserRestClient.h */,
+				074250CA18ACE0D100501318 /* MNSUserRestClient.m */,
+				074250CB18ACE0D100501318 /* MNSVersionRestClient.h */,
+				074250CC18ACE0D100501318 /* MNSVersionRestClient.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07CB724918AA3E3F00D4806C /* MNSJiraRESTClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07CB726618AA3E3F00D4806C /* Build configuration list for PBXNativeTarget "MNSJiraRESTClient" */;
+			buildPhases = (
+				07CB724618AA3E3F00D4806C /* Sources */,
+				07CB724718AA3E3F00D4806C /* Frameworks */,
+				07CB724818AA3E3F00D4806C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MNSJiraRESTClient;
+			productName = MNSJiraRestObjectiveCClient;
+			productReference = 07CB724A18AA3E3F00D4806C /* libMNSJiraRESTClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		07CB725618AA3E3F00D4806C /* MNSJiraRESTClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07CB726918AA3E3F00D4806C /* Build configuration list for PBXNativeTarget "MNSJiraRESTClientTests" */;
+			buildPhases = (
+				07CB725318AA3E3F00D4806C /* Sources */,
+				07CB725418AA3E3F00D4806C /* Frameworks */,
+				07CB725518AA3E3F00D4806C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07CB725C18AA3E3F00D4806C /* PBXTargetDependency */,
+			);
+			name = MNSJiraRESTClientTests;
+			productName = MNSJiraRestObjectiveCClientTests;
+			productReference = 07CB725718AA3E3F00D4806C /* MNSJiraRESTClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CBBC70C189928620099B936 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MNS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Medianet;
+			};
+			buildConfigurationList = 0CBBC70F189928620099B936 /* Build configuration list for PBXProject "MNSJiraRESTClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0CBBC70B189928620099B936;
+			productRefGroup = 0CBBC715189928620099B936 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07CB724918AA3E3F00D4806C /* MNSJiraRESTClient */,
+				07CB725618AA3E3F00D4806C /* MNSJiraRESTClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07CB725518AA3E3F00D4806C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07CB724618AA3E3F00D4806C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0742513F18ACE0FA00501318 /* MNSBasicProject.m in Sources */,
+				074250B218ACE0B700501318 /* MNSSubtaskBuilder.m in Sources */,
+				074250D418ACE0D100501318 /* MNSSearchRestClient.m in Sources */,
+				0742514F18ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.m in Sources */,
+				074250D318ACE0D100501318 /* MNSProjectRolesRestClient.m in Sources */,
+				0742509718ACE0B700501318 /* MNSBasicUserBuilder.m in Sources */,
+				074250D618ACE0D100501318 /* MNSUserRestClient.m in Sources */,
+				074250A118ACE0B700501318 /* MNSFieldSchemaBuilder.m in Sources */,
+				0742517718ACE10900501318 /* MNSVersionInput.m in Sources */,
+				0742515D18ACE0FA00501318 /* MNSSearchResult.m in Sources */,
+				0742516318ACE0FA00501318 /* MNSUser.m in Sources */,
+				0742509818ACE0B700501318 /* MNSBasicVotesBuilder.m in Sources */,
+				074250AF18ACE0B700501318 /* MNSServerInfoBuilder.m in Sources */,
+				0742515918ACE0FA00501318 /* MNSProject.m in Sources */,
+				074250B118ACE0B700501318 /* MNSStatusBuilder.m in Sources */,
+				0742517318ACE10900501318 /* MNSComplexIssueInputFieldValue.m in Sources */,
+				074250AD18ACE0B700501318 /* MNSRoleActorBuilder.m in Sources */,
+				0742514418ACE0FA00501318 /* MNSBasicVotes.m in Sources */,
+				074250B418ACE0B700501318 /* MNSUserBuilder.m in Sources */,
+				0742509318ACE0B700501318 /* MNSBasicIssueTypeBuilder.m in Sources */,
+				074250A418ACE0B700501318 /* MNSIssueBuilderFeed.m in Sources */,
+				0742514118ACE0FA00501318 /* MNSBasicResolution.m in Sources */,
+				0742515A18ACE0FA00501318 /* MNSProjectRole.m in Sources */,
+				0742509618ACE0B700501318 /* MNSBasicResolutionBuilder.m in Sources */,
+				0742515118ACE0FA00501318 /* MNSIssueField.m in Sources */,
+				0742509C18ACE0B700501318 /* MNSChangelogItemBuilder.m in Sources */,
+				0742515018ACE0FA00501318 /* MNSIssue.m in Sources */,
+				0742509F18ACE0B700501318 /* MNSExpandablePropertyBuilder.m in Sources */,
+				0742514B18ACE0FA00501318 /* MNSExpandableProperty.m in Sources */,
+				074250DA18ACE0E000501318 /* MNSGenericRestClient.m in Sources */,
+				0742509218ACE0B700501318 /* MNSBasicIssueBuilder.m in Sources */,
+				0742513E18ACE0FA00501318 /* MNSBasicPriority.m in Sources */,
+				0742514D18ACE0FA00501318 /* MNSFieldSchema.m in Sources */,
+				074250D518ACE0D100501318 /* MNSSessionRestClient.m in Sources */,
+				0742516118ACE0FA00501318 /* MNSSubtask.m in Sources */,
+				0742514818ACE0FA00501318 /* MNSComment.m in Sources */,
+				0742515F18ACE0FA00501318 /* MNSSession.m in Sources */,
+				0742509418ACE0B700501318 /* MNSBasicPriorityBuilder.m in Sources */,
+				074250B618ACE0B700501318 /* MNSWorklogBuilder.m in Sources */,
+				0742515818ACE0FA00501318 /* MNSPriority.m in Sources */,
+				0742509E18ACE0B700501318 /* MNSComponentBuilder.m in Sources */,
+				0742509D18ACE0B700501318 /* MNSCommentBuilder.m in Sources */,
+				074250B518ACE0B700501318 /* MNSVersionBuilder.m in Sources */,
+				0742516018ACE0FA00501318 /* MNSStatus.m in Sources */,
+				074250A918ACE0B700501318 /* MNSPriorityBuilder.m in Sources */,
+				0742515518ACE0FA00501318 /* MNSIssueLinkType.m in Sources */,
+				0742515B18ACE0FA00501318 /* MNSResolution.m in Sources */,
+				0742517618ACE10900501318 /* MNSIssueInput.m in Sources */,
+				0742516618ACE0FA00501318 /* MNSVisibility.m in Sources */,
+				074250A218ACE0B700501318 /* MNSFilterBuilder.m in Sources */,
+				0742517418ACE10900501318 /* MNSComponentInput.m in Sources */,
+				0742513B18ACE0FA00501318 /* MNSBasicComponent.m in Sources */,
+				074250D018ACE0D100501318 /* MNSJiraRestClientFactory.m in Sources */,
+				074250A618ACE0B700501318 /* MNSIssueLinksTypeBuilder.m in Sources */,
+				0742514218ACE0FA00501318 /* MNSBasicStatus.m in Sources */,
+				0742515E18ACE0FA00501318 /* MNSServerInfo.m in Sources */,
+				0742515318ACE0FA00501318 /* MNSIssueLink.m in Sources */,
+				0742514518ACE0FA00501318 /* MNSBasicWatchers.m in Sources */,
+				0742509018ACE0B700501318 /* MNSAttachmentBuilder.m in Sources */,
+				0742514C18ACE0FA00501318 /* MNSField.m in Sources */,
+				0742516718ACE0FA00501318 /* MNSWorklog.m in Sources */,
+				0742517518ACE10900501318 /* MNSFieldInput.m in Sources */,
+				0742517A18ACE11B00501318 /* MNSRequestAuthenticator.m in Sources */,
+				0742515C18ACE0FA00501318 /* MNSRoleActor.m in Sources */,
+				074250B318ACE0B700501318 /* MNSTimeTrackingBuilder.m in Sources */,
+				074250D718ACE0D100501318 /* MNSVersionRestClient.m in Sources */,
+				0742516418ACE0FA00501318 /* MNSVersion.m in Sources */,
+				074250A718ACE0B700501318 /* MNSIssueLinkTypeBuilder.m in Sources */,
+				074250AC18ACE0B700501318 /* MNSResolutionBuilder.m in Sources */,
+				0742515718ACE0FA00501318 /* MNSLoginInfo.m in Sources */,
+				0742509918ACE0B700501318 /* MNSBasicWatchersBuilder.m in Sources */,
+				074250D118ACE0D100501318 /* MNSMetadataRestClient.m in Sources */,
+				0742514618ACE0FA00501318 /* MNSChangelogGroup.m in Sources */,
+				074250A818ACE0B700501318 /* MNSIssueTypeBuilder.m in Sources */,
+				0742515618ACE0FA00501318 /* MNSIssueType.m in Sources */,
+				0742516218ACE0FA00501318 /* MNSTimeTracking.m in Sources */,
+				074250A018ACE0B700501318 /* MNSFieldBuilder.m in Sources */,
+				074250A318ACE0B700501318 /* MNSIssueBuilder.m in Sources */,
+				074250A518ACE0B700501318 /* MNSIssueLinkBuilder.m in Sources */,
+				0742515418ACE0FA00501318 /* MNSIssueLinksType.m in Sources */,
+				074250CF18ACE0D100501318 /* MNSJiraRestClient.m in Sources */,
+				0742513A18ACE0FA00501318 /* MNSAttachment.m in Sources */,
+				0742514318ACE0FA00501318 /* MNSBasicUser.m in Sources */,
+				0742513C18ACE0FA00501318 /* MNSBasicIssue.m in Sources */,
+				0742513918ACE0FA00501318 /* MNSAddressableNamedEntity.m in Sources */,
+				0742509B18ACE0B700501318 /* MNSChangelogGroupBuilder.m in Sources */,
+				0742514718ACE0FA00501318 /* MNSChangelogItem.m in Sources */,
+				074250CE18ACE0D100501318 /* MNSIssueRestClient.m in Sources */,
+				0742514E18ACE0FA00501318 /* MNSFilter.m in Sources */,
+				0742514A18ACE0FA00501318 /* MNSComponentInputWithProjectKey.m in Sources */,
+				0742509118ACE0B700501318 /* MNSBasicComponentBuilder.m in Sources */,
+				0742509A18ACE0B700501318 /* MNSBuilderTools.m in Sources */,
+				074250AB18ACE0B700501318 /* MNSProjectRoleBuilder.m in Sources */,
+				0742516518ACE0FA00501318 /* MNSVersionRelatedIssuesCount.m in Sources */,
+				074250AE18ACE0B700501318 /* MNSSearchResultBuilder.m in Sources */,
+				0742514018ACE0FA00501318 /* MNSBasicProjectRole.m in Sources */,
+				0742515218ACE0FA00501318 /* MNSIssueFieldID.m in Sources */,
+				074250D218ACE0D100501318 /* MNSProjectRestClient.m in Sources */,
+				074250CD18ACE0D100501318 /* MNSComponentRestClient.m in Sources */,
+				0742514918ACE0FA00501318 /* MNSComponent.m in Sources */,
+				0742513D18ACE0FA00501318 /* MNSBasicIssueType.m in Sources */,
+				074250B018ACE0B700501318 /* MNSSessionBuilder.m in Sources */,
+				074250AA18ACE0B700501318 /* MNSProjectBuilder.m in Sources */,
+				0742509518ACE0B700501318 /* MNSBasicProjectRoleBuilder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07CB725318AA3E3F00D4806C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07424F7918ACDFFB00501318 /* MNSSessionRestClientTests.m in Sources */,
+				07424F7418ACDFFB00501318 /* MNSIssueRestClientTests.m in Sources */,
+				07424F7218ACDFFB00501318 /* MNSClientsTestsConstants.m in Sources */,
+				07424F7F18ACE01100501318 /* Constant.m in Sources */,
+				07424F7818ACDFFB00501318 /* MNSSearchRestClientTests.m in Sources */,
+				07424F7B18ACDFFB00501318 /* MNSVersionRestClientTests.m in Sources */,
+				07424F7518ACDFFB00501318 /* MNSMetaDataRestClientTests.m in Sources */,
+				07424F7618ACDFFB00501318 /* MNSProjectRestClientTests.m in Sources */,
+				07424F7A18ACDFFB00501318 /* MNSUserRestClientTests.m in Sources */,
+				07424F7718ACDFFB00501318 /* MNSProjectRolesRestClientTests.m in Sources */,
+				07424F7318ACDFFB00501318 /* MNSComponentRestClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07CB725C18AA3E3F00D4806C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07CB724918AA3E3F00D4806C /* MNSJiraRESTClient */;
+			targetProxy = 07CB725B18AA3E3F00D4806C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07CB726718AA3E3F00D4806C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6A1F026937482BADE039E7 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = MNSJiraRESTClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		07CB726818AA3E3F00D4806C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6A1F026937482BADE039E7 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
+				PRODUCT_NAME = MNSJiraRESTClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		07CB726A18AA3E3F00D4806C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6A1F026937482BADE039E7 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/MNSJiraRESTClientTests-Info.plist";
+				PRODUCT_NAME = MNSJiraRESTClientTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07CB726B18AA3E3F00D4806C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6A1F026937482BADE039E7 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
+				INFOPLIST_FILE = "Tests/MNSJiraRESTClientTests-Info.plist";
+				PRODUCT_NAME = MNSJiraRESTClientTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		0CBBC744189928630099B936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0CBBC745189928630099B936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07CB726618AA3E3F00D4806C /* Build configuration list for PBXNativeTarget "MNSJiraRESTClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07CB726718AA3E3F00D4806C /* Debug */,
+				07CB726818AA3E3F00D4806C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07CB726918AA3E3F00D4806C /* Build configuration list for PBXNativeTarget "MNSJiraRESTClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07CB726A18AA3E3F00D4806C /* Debug */,
+				07CB726B18AA3E3F00D4806C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CBBC70F189928620099B936 /* Build configuration list for PBXProject "MNSJiraRESTClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CBBC744189928630099B936 /* Debug */,
+				0CBBC745189928630099B936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CBBC70C189928620099B936 /* Project object */;
+}
