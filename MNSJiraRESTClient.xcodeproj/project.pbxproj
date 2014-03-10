@@ -17,7 +17,7 @@
 		07424F7918ACDFFB00501318 /* MNSSessionRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F6F18ACDFFB00501318 /* MNSSessionRestClientTests.m */; };
 		07424F7A18ACDFFB00501318 /* MNSUserRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F7018ACDFFB00501318 /* MNSUserRestClientTests.m */; };
 		07424F7B18ACDFFB00501318 /* MNSVersionRestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F7118ACDFFB00501318 /* MNSVersionRestClientTests.m */; };
-		07424F7F18ACE01100501318 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F7D18ACE01100501318 /* Constant.m */; };
+		07424F7F18ACE01100501318 /* MNSConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 07424F7D18ACE01100501318 /* MNSConstant.m */; };
 		0742509018ACE0B700501318 /* MNSAttachmentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504218ACE0B700501318 /* MNSAttachmentBuilder.m */; };
 		0742509118ACE0B700501318 /* MNSBasicComponentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504418ACE0B700501318 /* MNSBasicComponentBuilder.m */; };
 		0742509218ACE0B700501318 /* MNSBasicIssueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0742504618ACE0B700501318 /* MNSBasicIssueBuilder.m */; };
@@ -165,8 +165,8 @@
 		07424F6F18ACDFFB00501318 /* MNSSessionRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSSessionRestClientTests.m; path = Tests/Client/MNSSessionRestClientTests.m; sourceTree = SOURCE_ROOT; };
 		07424F7018ACDFFB00501318 /* MNSUserRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSUserRestClientTests.m; path = Tests/Client/MNSUserRestClientTests.m; sourceTree = SOURCE_ROOT; };
 		07424F7118ACDFFB00501318 /* MNSVersionRestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSVersionRestClientTests.m; path = Tests/Client/MNSVersionRestClientTests.m; sourceTree = SOURCE_ROOT; };
-		07424F7C18ACE01100501318 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = MNSJiraRESTClient/Constant.h; sourceTree = SOURCE_ROOT; };
-		07424F7D18ACE01100501318 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = MNSJiraRESTClient/Constant.m; sourceTree = SOURCE_ROOT; };
+		07424F7C18ACE01100501318 /* MNSConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSConstant.h; path = MNSJiraRESTClient/MNSConstant.h; sourceTree = SOURCE_ROOT; };
+		07424F7D18ACE01100501318 /* MNSConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSConstant.m; path = MNSJiraRESTClient/MNSConstant.m; sourceTree = SOURCE_ROOT; };
 		07424F7E18ACE01100501318 /* MNSJiraRESTClient-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MNSJiraRESTClient-Prefix.pch"; path = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		0742504118ACE0B700501318 /* MNSAttachmentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSAttachmentBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSAttachmentBuilder.h; sourceTree = SOURCE_ROOT; };
 		0742504218ACE0B700501318 /* MNSAttachmentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSAttachmentBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSAttachmentBuilder.m; sourceTree = SOURCE_ROOT; };
@@ -716,8 +716,8 @@
 		0CBBC71E189928620099B936 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07424F7C18ACE01100501318 /* Constant.h */,
-				07424F7D18ACE01100501318 /* Constant.m */,
+				07424F7C18ACE01100501318 /* MNSConstant.h */,
+				07424F7D18ACE01100501318 /* MNSConstant.m */,
 				07424F7E18ACE01100501318 /* MNSJiraRESTClient-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -958,7 +958,7 @@
 				07424F7918ACDFFB00501318 /* MNSSessionRestClientTests.m in Sources */,
 				07424F7418ACDFFB00501318 /* MNSIssueRestClientTests.m in Sources */,
 				07424F7218ACDFFB00501318 /* MNSClientsTestsConstants.m in Sources */,
-				07424F7F18ACE01100501318 /* Constant.m in Sources */,
+				07424F7F18ACE01100501318 /* MNSConstant.m in Sources */,
 				07424F7818ACDFFB00501318 /* MNSSearchRestClientTests.m in Sources */,
 				07424F7B18ACDFFB00501318 /* MNSVersionRestClientTests.m in Sources */,
 				07424F7518ACDFFB00501318 /* MNSMetaDataRestClientTests.m in Sources */,

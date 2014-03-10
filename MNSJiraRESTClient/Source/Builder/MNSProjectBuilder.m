@@ -26,12 +26,10 @@
 #import "MNSBasicUserBuilder.h"
 #import "MNSVersionBuilder.h"
 
-
-#define a16x16 @"16x16"
-#define a24x24 @"24x24"
-#define a32x32 @"32x32"
-#define a48x48 @"48x48"
-
+static NSString *const k16x16AvatarImageKey = @"16x16";
+static NSString *const k24x24AvatarImageKey = @"24x24";
+static NSString *const k32x32AvatarImageKey = @"32x32";
+static NSString *const k48x48AvatarImageKey = @"48x48";
 
 @implementation MNSProjectBuilder
 
@@ -83,7 +81,7 @@
         else if ([[sourceDic objectForKey:kAssigneeType] isEqualToString:kUnassigned])
             [projectDto setAssigneeType:UNASSIGNED];
         
-        NSDictionary *avatarUrlsDic = @{a16x16: [[sourceDic objectForKey:kAvatarURLs] objectForKey:a16x16],a24x24: [[sourceDic objectForKey:kAvatarURLs] objectForKey:a24x24], a32x32: [[sourceDic objectForKey:kAvatarURLs] objectForKey:a32x32], a48x48: [[sourceDic objectForKey:kAvatarURLs] objectForKey:a48x48]  };
+        NSDictionary *avatarUrlsDic = @{k16x16AvatarImageKey: [[sourceDic objectForKey:kAvatarURLs] objectForKey:k16x16AvatarImageKey], k24x24AvatarImageKey: [[sourceDic objectForKey:kAvatarURLs] objectForKey:k24x24AvatarImageKey], k32x32AvatarImageKey: [[sourceDic objectForKey:kAvatarURLs] objectForKey:k32x32AvatarImageKey], k48x48AvatarImageKey:[[sourceDic objectForKey:kAvatarURLs] objectForKey:k48x48AvatarImageKey]  };
         
         [projectDto setAvatarUrls:avatarUrlsDic];
         

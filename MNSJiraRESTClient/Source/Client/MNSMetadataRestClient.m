@@ -29,13 +29,12 @@
 #import "MNSResolution.h"
 #import "MNSServerInfo.h"
 
-#define ISSUETYPE_PARAM @"/issuetype"
-#define ISSUELINKTYPE_PARAM @"/issueLinkType"
-#define PRIORITY_PARAM @"/priority"
-#define RESOLUTION_PARAM @"/resolution"
-#define FIELD_PARAM @"/field"
-
-#define SERVER_INFO_RESOURCE_PATH  @"/serverInfo"
+static NSString *const kIssueTypeParameter = @"/issuetype";
+static NSString *const kIssueLinkTypeParameter = @"/issueLinkType";
+static NSString *const kPriorityParameter = @"/priority";
+static NSString *const kResolutionParameter = @"/resolution";
+static NSString *const kFieldParameter = @"/field";
+static NSString *const kServerInfoResourcePath = @"/serverInfo";
 
 @implementation MNSMetadataRestClient
 
@@ -68,7 +67,7 @@
 }
 
 -(void)getIssueTypesSuccess:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-    [self getUrl:[self.baseUri stringByAppendingString:ISSUETYPE_PARAM]
+    [self getUrl:[self.baseUri stringByAppendingString:kIssueTypeParameter]
          success:^(NSArray *response) {
              
              NSMutableArray *issueTypes = [[NSMutableArray alloc] init];
@@ -92,7 +91,7 @@
 }
 
 -(void)getIssueLinkTypesSuccess:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-    [self getUrl:[self.baseUri stringByAppendingString:ISSUELINKTYPE_PARAM]
+    [self getUrl:[self.baseUri stringByAppendingString:kIssueLinkTypeParameter]
          success:^(NSDictionary *response) {
              NSMutableArray *issueLinkTypes = [[NSMutableArray alloc] init];
              NSError* error;
@@ -166,7 +165,7 @@
 }
 
 -(void)getPrioritiesSuccess:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-    [self getUrl:[self.baseUri stringByAppendingString:PRIORITY_PARAM]
+    [self getUrl:[self.baseUri stringByAppendingString:kPriorityParameter]
          success:^(NSArray *response) {
              NSMutableArray *priorityArray = [[NSMutableArray alloc] init];
              NSError* error;
@@ -212,7 +211,7 @@
          }];}
 
 -(void)getResolutionsSuccess:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-    [self getUrl:[self.baseUri stringByAppendingString:RESOLUTION_PARAM]
+    [self getUrl:[self.baseUri stringByAppendingString:kResolutionParameter]
          success:^(NSArray *response) {
              NSMutableArray *resoltionArray = [[NSMutableArray alloc] init];
              NSError* error;
@@ -238,7 +237,7 @@
 }
 
 -(void)getServerInfoSuccess:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-    [self getUrl:[self.baseUri stringByAppendingString:SERVER_INFO_RESOURCE_PATH]
+    [self getUrl:[self.baseUri stringByAppendingString:kServerInfoResourcePath]
          success:^(NSDictionary *response) {
              
              NSError*error;
@@ -260,7 +259,7 @@
 }
 
 -(void)getFieldsSuccess:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-    [self getUrl:[self.baseUri stringByAppendingString:FIELD_PARAM]
+    [self getUrl:[self.baseUri stringByAppendingString:kFieldParameter]
          success:^(NSArray *response) {
              NSMutableArray *fields = [[NSMutableArray alloc] init];
              NSError* error;

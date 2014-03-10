@@ -19,8 +19,6 @@
 #import "MNSResolutionBuilder.h"
 #import "MNSResolution.h"
 
-#define DESCRIPTION @"description"
-
 @implementation MNSResolutionBuilder
 
 +(id)buildWithJSONObject:(id)source error:(NSError *__autoreleasing *)error{

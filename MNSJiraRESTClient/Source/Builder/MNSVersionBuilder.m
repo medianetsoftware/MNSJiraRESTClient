@@ -18,14 +18,6 @@
 #import "MNSVersionBuilder.h"
 #import "MNSVersion.h"
 
-#define ID @"id"
-#define SELF @"self"
-#define NAME @"name"
-#define DESCRIPTION @"description"
-#define ARCHIVED @"archived"
-#define RELEASED @"released"
-#define RELEASEDATE @"releaseDate"
-
 @implementation MNSVersionBuilder
 
 
@@ -36,7 +28,7 @@
     @try {
         
         if (validDictionary(source)) {
-             version = [[MNSVersion alloc] initWithUrl:[source objectForKey:SELF] identifier:[[source objectForKey:ID] intValue] description:[source objectForKey:DESCRIPTION] name:[source objectForKey:NAME] isArchived:[[source objectForKey:ARCHIVED] boolValue] isReleased:[[source objectForKey:RELEASED] boolValue] releaseDate:[source objectForKey:RELEASEDATE]];
+             version = [[MNSVersion alloc] initWithUrl:[source objectForKey:kSelfURL] identifier:[[source objectForKey:kId] intValue] description:[source objectForKey:description] name:[source objectForKey:kName] isArchived:[[source objectForKey:kArchived] boolValue] isReleased:[[source objectForKey:kReleased] boolValue] releaseDate:[source objectForKey:kReleaseDate]];
         }
         else{
             *error = [NSError errorWithDomain:@"Version error" code:0 userInfo:nil];

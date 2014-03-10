@@ -24,9 +24,6 @@
 #import "MNSSessionRestClient.h"
 #import "MNSMetadataRestClient.h"
 
-#define URI_PATH_ISSUE @"/issue"
-#define URI_PATH_ISSUE_CREATEMETA @"/issue/createmeta"
-
 typedef void (^MNSIssueClientGetIssueBlock)(MNSIssue *issue);
 typedef void (^MNSIssueClientGetIssuesBlock)(NSArray *issues);
 typedef void (^ServerInfoIssueRestClientSuccessBlock)(MNSServerInfo *serverinfo);
