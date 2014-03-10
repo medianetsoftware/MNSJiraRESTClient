@@ -18,8 +18,6 @@
 #import "MNSGenericRestClient.h"
 #import "MNSProject.h"
 
-#define PROJECT_URI_PREFIX @"project"
-
 @interface MNSProjectRestClient : MNSGenericRestClient
 
 - (void)getProjectWithKey:(NSString *)key Success:(void (^)(MNSProject *projectDTO))success fail:(MNSRestClientFailBlock)fail;

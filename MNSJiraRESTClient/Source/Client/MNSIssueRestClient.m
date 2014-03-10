@@ -15,14 +15,14 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with MNSJiraRESTClient.  If not, see <http://www.gnu.org/licenses/>.
-#import "MNSIssueRestClient.h"
 
+#import "MNSIssueRestClient.h"
 #import "MNSSessionRestClient.h"
 #import "MNSMetadataRestClient.h"
-
 #import "MNSIssueBuilder.h"
 
-
+static NSString *const kURLPathIssue = @"/issue";
+static NSString *const kURLPathIssueCreateMeta = @"/issue/createmeta";
 
 @interface MNSIssueRestClient () {
 	MNSSessionRestClient *_sessionRestClient;
@@ -45,7 +45,7 @@
 
 
 -(void)createIssue:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-    NSString* issueURL = [self.baseUri stringByAppendingString:URI_PATH_ISSUE];
+    NSString* issueURL = [self.baseUri stringByAppendingString:kURLPathIssue];
     NSDictionary* body = [NSDictionary dictionaryWithObject:[issueInput dictionaryVersion]
                                                      forKey:@"fields"];
     [self postUrl:issueURL bodyJSONObject:body success:^(id response) {
@@ -61,7 +61,7 @@
 
 -(void)getCreateIssueMetadataWithOptions:(MNSGetCreateIssueMetadataOptions *)options success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
-    NSString* issueURL = [self.baseUri stringByAppendingString:URI_PATH_ISSUE_CREATEMETA];
+    NSString* issueURL = [self.baseUri stringByAppendingString:kURLPathIssueCreateMeta];
     if (options) {
         
         if (options.projectIds)
@@ -101,13 +101,12 @@
 
 -(void)getIssue:(NSString*)issueKey success:(MNSIssueClientGetIssueBlock)success fail:(MNSRestClientFailBlock)fail{
     NSArray *defaultExpands = @[@"names", @"schema", @"transitions"];
-    //NSArray *allExpands = @[@"renderedFields", @"names", @"schema", @"transitions", @"operations", @"editmeta", @"changelog"];
     [self getIssue:issueKey withExpands:defaultExpands success:success fail:fail];
 }
 
 -(void)getIssue:(NSString *)issueKey withExpands:(NSArray *)expands success:(MNSIssueClientGetIssueBlock)success fail:(MNSRestClientFailBlock)fail{
     
-    NSString* urlString = [self.baseUri stringByAppendingString:URI_PATH_ISSUE];
+    NSString* urlString = [self.baseUri stringByAppendingString:kURLPathIssue];
     urlString = [urlString stringByAppendingFormat:@"/%@", issueKey];
     
     NSMutableDictionary *parametersInURL;
@@ -136,7 +135,7 @@
 }
 
 -(void)getIssues:(NSArray *)issueKey success:(MNSIssueClientGetIssuesBlock)success fail:(MNSRestClientFailBlock)fail{
-    NSString* url = [self.baseUri stringByAppendingString:URI_PATH_ISSUE];
+    NSString* url = [self.baseUri stringByAppendingString:kURLPathIssue];
     url = [url stringByAppendingFormat:@"/%@",issueKey];
     [self getUrl:url success:^(id response) {
         if (success) {
@@ -155,7 +154,7 @@
     if(!_serverInfo)
         [_metadataRestClient getServerInfoSuccess:^(NSDictionary *response) {
             if (success){
-                MNSServerInfo* serverInfo = (id)response;//TODO coger del response el serverInfo
+                MNSServerInfo* serverInfo = (id)response;
                 success(serverInfo);
             }
         } fail:^(NSError *error) {

@@ -15,8 +15,11 @@
 //
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with MNSJiraRESTClient.  If not, see <http://www.gnu.org/licenses/>.
+
 #import "MNSProjectRestClient.h"
 #import "MNSProjectBuilder.h"
+
+static NSString *const kProjectURLPrefix = @"project";
 
 @implementation MNSProjectRestClient
 
@@ -27,7 +30,7 @@
 
 
 - (void)getProjectWithKey:(NSString*)key Success:(void(^)(MNSProject *projectDTO))success fail:(MNSRestClientFailBlock)fail{
-        NSString *finalUrl = [NSString stringWithFormat:@"%@/%@/%@",self.baseUri, PROJECT_URI_PREFIX,key];
+        NSString *finalUrl = [NSString stringWithFormat:@"%@/%@/%@",self.baseUri, kProjectURLPrefix, key];
         
         [self getUrl:finalUrl success:^(id response) {
             
@@ -73,7 +76,7 @@
 }
 
 - (void)getAllProjectsSuccess:(void(^)(NSArray *projects))success fail:(MNSRestClientFailBlock)fail{
-        NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",self.baseUri, PROJECT_URI_PREFIX];
+        NSString *finalUrl = [NSString stringWithFormat:@"%@/%@",self.baseUri, kProjectURLPrefix];
         
         
         [self getUrl:finalUrl success:^(id response) {

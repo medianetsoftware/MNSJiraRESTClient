@@ -23,13 +23,8 @@
 #import "MNSChangelogGroupBuilder.h"
 #import "MNSChangelogGroup.h"
 
-#define RENDEREDFIELDS_EXPAND @"renderedFields"
-#define NAMES_EXPAND @"names"
-#define SCHEMA_EXPAND @"schema"
-#define TRANSITIONS_EXPAND @"transitions"
-#define OPERATIONS_EXPAND @"operations"
-#define EDITMETA_EXPAND @"editmeta"
-#define CHANGELOG_EXPAND @"changelog"
+static NSString *const kChangelogHistories = @"histories";
+static NSString *const kBuildSchemaType = @"type";
 
 @interface MNSIssueBuilderFeed ()
 @end
@@ -74,20 +69,20 @@
         _expandos = [(NSString*)objectFromDicForkey(source, kExpand) componentsSeparatedByString:@","];
         
         for (NSString* expandable in _expandos) {
-            if ([expandable isEqualToString:RENDEREDFIELDS_EXPAND]) {
-                _renderedFields = (NSDictionary*)objectFromDicForkey(source,RENDEREDFIELDS_EXPAND);
-            }else if ([expandable isEqualToString:NAMES_EXPAND]) {
-                _names = (NSDictionary*)objectFromDicForkey(source, NAMES_EXPAND);
-            }else if ([expandable isEqualToString:SCHEMA_EXPAND]) {
-                _schema = (NSDictionary*)objectFromDicForkey(source, SCHEMA_EXPAND);
-            }else if ([expandable isEqualToString:TRANSITIONS_EXPAND]) {
-                _transitions = (NSArray*)objectFromDicForkey(source, TRANSITIONS_EXPAND);
-            }else if ([expandable isEqualToString:OPERATIONS_EXPAND]) {
-                _operation = (NSDictionary*)objectFromDicForkey(source, OPERATIONS_EXPAND);
-            }else if ([expandable isEqualToString:EDITMETA_EXPAND]) {
-                _editmeta = (NSDictionary*)objectFromDicForkey(source, EDITMETA_EXPAND);
-            }else if ([expandable isEqualToString:CHANGELOG_EXPAND]) {
-                _changelog = (NSDictionary*)objectFromDicForkey(source, CHANGELOG_EXPAND);
+            if ([expandable isEqualToString:kRenderedFieldsExpand]) {
+                _renderedFields = (NSDictionary*)objectFromDicForkey(source, kRenderedFieldsExpand);
+            }else if ([expandable isEqualToString:kNamesExpand]) {
+                _names = (NSDictionary*)objectFromDicForkey(source, kNamesExpand);
+            }else if ([expandable isEqualToString:kSchemaExpand]) {
+                _schema = (NSDictionary*)objectFromDicForkey(source, kSchemaExpand);
+            }else if ([expandable isEqualToString:kTransitionsExpand]) {
+                _transitions = (NSArray*)objectFromDicForkey(source, kTransitionsExpand);
+            }else if ([expandable isEqualToString:kOperationsExpand]) {
+                _operation = (NSDictionary*)objectFromDicForkey(source, kOperationsExpand);
+            }else if ([expandable isEqualToString:kEditmetaExpand]) {
+                _editmeta = (NSDictionary*)objectFromDicForkey(source, kEditmetaExpand);
+            }else if ([expandable isEqualToString:kChangelogExpand]) {
+                _changelog = (NSDictionary*)objectFromDicForkey(source, kChangelogExpand);
             }else{
                 if (objectFromDicForkey(source, expandable)) {
                     if(!_otherExpandables)
@@ -136,7 +131,7 @@
     NSMutableArray *changelog = [NSMutableArray array];
 
     @try {
-        NSArray *changelogGroupsJSON = objectFromDicForkey(_changelog, @"histories");
+        NSArray *changelogGroupsJSON = objectFromDicForkey(_changelog, kChangelogHistories);
         for (NSDictionary *changelogGroupJSON in changelogGroupsJSON){
             NSError* error;
             MNSChangelogGroup *changelogGroup = [MNSChangelogGroupBuilder buildWithJSONObject:changelogGroupJSON error:&error];
@@ -179,7 +174,7 @@
         
         for (NSString *keyID in [_schema allKeys]) {
             NSDictionary *fieldDefinition = [_schema valueForKey:keyID];
-            NSString *type = [fieldDefinition valueForKey:@"type"];
+            NSString *type = [fieldDefinition valueForKey:kBuildSchemaType];
             [schemeFields setObject:type forKey:keyID];
         }
         

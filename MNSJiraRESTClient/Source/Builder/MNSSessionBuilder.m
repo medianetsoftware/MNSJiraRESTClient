@@ -19,14 +19,7 @@
 #import "MNSSessionBuilder.h"
 #import "MNSSession.h"
 
-#define LOGININFO @"loginInfo"
-#define LOGINCOUNT @"loginCount"
-#define PREVIOUSLOGINTIME @"previousLoginTime"
-#define NAME @"name"
-#define SELF @"self"
-
 @implementation MNSSessionBuilder
-
 
 +(id)buildWithJSONObject:(id)source error:(NSError *__autoreleasing *)error{
     
@@ -39,11 +32,11 @@
             
              session = [[MNSSession alloc] init];
             
-            session.loginInfo.loginCount = [[[source objectForKey:LOGININFO] objectForKey:LOGINCOUNT]intValue];
-            session.loginInfo.previousLoginDate = [[source objectForKey:LOGININFO] objectForKey:PREVIOUSLOGINTIME];
+            session.loginInfo.loginCount = [[[source objectForKey:kLoginInfo] objectForKey:kLoginCount]intValue];
+            session.loginInfo.previousLoginDate = [[source objectForKey:kLoginInfo] objectForKey:kPreviousLoginTime];
             
-            session.username = [source objectForKey:NAME];
-            session.userUrl = [source objectForKey:SELF];
+            session.username = [source objectForKey:kName];
+            session.userUrl = [source objectForKey:kSelfURL];
             
             
         } else {

@@ -1,10 +1,20 @@
-
 //
-//  Constant.h
-//  MNSJiraRESTClient
+//  Copyright 2014 MediaNet Software
+//  This file is part of MNSJiraRESTClient.
 //
-//  Created by Rubén Fernández Pol on 12/02/14.
-//  Copyright (c) 2013 Medianet Software. All rights reserved.
+//  MNSJiraRESTClient is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU Lesser General Public License as published by
+//  the Free Software Foundation, either version 3 of the License.
+//
+//  MNSJiraRESTClient is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU Lesser General Public License for more details.
+//
+//  You should have received a copy of the GNU Lesser General Public License
+//  along with MNSJiraRESTClient.  If not, see <http://www.gnu.org/licenses/>.//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
 //
 
 #import <Foundation/Foundation.h>
@@ -109,3 +119,18 @@ FOUNDATION_EXTERN NSString *const kServerTitle;
 FOUNDATION_EXTERN NSString *const kComponents;
 FOUNDATION_EXTERN NSString *const kRoles;
 FOUNDATION_EXTERN NSString *const kVersions;
+FOUNDATION_EXTERN NSString *const kArchived;
+FOUNDATION_EXTERN NSString *const kReleased;
+FOUNDATION_EXTERN NSString *const kReleaseDate;
+FOUNDATION_EXTERN NSString *const kLoginInfo;
+FOUNDATION_EXTERN NSString *const kLoginCount;
+FOUNDATION_EXTERN NSString *const kPreviousLoginTime;
+//Expands:
+FOUNDATION_EXTERN NSString *const kRenderedFieldsExpand;
+FOUNDATION_EXTERN NSString *const kNamesExpand;
+FOUNDATION_EXTERN NSString *const kSchemaExpand;
+FOUNDATION_EXTERN NSString *const kTransitionsExpand;
+FOUNDATION_EXTERN NSString *const kOperationsExpand;
+FOUNDATION_EXTERN NSString *const kEditmetaExpand;
+FOUNDATION_EXTERN NSString *const kChangelogExpand;
+
