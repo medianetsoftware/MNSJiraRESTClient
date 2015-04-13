@@ -25,9 +25,9 @@ static NSString *const kInbound = @"INBOUND";
 - (id)initWithName:(NSString *)name description:(NSString *)description direction:(enum MNSIssueLinkTypeDirection)direction {
 	self = [super init];
 	if (self) {
-		_name = name;
-		_description = description;
-		_direction = direction;
+		self.name = name;
+		self.description = description;
+		self.direction = direction;
 	}
 	return self;
 }
