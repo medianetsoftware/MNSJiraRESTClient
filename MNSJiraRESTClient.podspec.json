@@ -13,7 +13,8 @@
   },
   "social_media_url": "http://www.medianet.es",
   "platforms": {
-    "ios": "6.0"
+    "ios": "8.0",
+    "osx": "10.10"
   },
   "requires_arc": true,
   "source_files": [
