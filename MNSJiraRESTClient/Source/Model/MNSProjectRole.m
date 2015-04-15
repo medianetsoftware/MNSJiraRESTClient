@@ -23,9 +23,9 @@
 - (id)initWithUrl:(NSString *)url name:(NSString *)name description:(NSString *)description ID:(long)ID actors:(NSArray *)actors {
 	self = [super initWithUrl:url name:name];
 	if (self) {
-		_description = description;
-		_ID = ID;
-		_actors = actors;
+		self.description = description;
+		self.ID = ID;
+		self.actors = actors;
 	}
 	return self;
 }
