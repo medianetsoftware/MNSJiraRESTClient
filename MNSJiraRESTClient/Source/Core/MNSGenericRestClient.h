@@ -24,7 +24,7 @@ typedef void (^MNSRestClientSuccessBlock)(id response);
 typedef void (^MNSRestClientFailBlock)(NSError *error);
 
 @interface MNSGenericRestClient : NSObject {
-	AFHTTPRequestOperationManager *_manager;
+	AFHTTPSessionManager *_manager;
 	AFSecurityPolicy *_securityPolicy;
 	AFJSONRequestSerializer *_requestSerializer;
 }
