@@ -175,7 +175,7 @@
 
 - (void)setDueDate:(NSDate *)dueDate {
 	NSDateFormatter *df = [[NSDateFormatter alloc] init];
-	[df setDateFormat:@"YYYY-dd-MM"];
+	[df setDateFormat:@"YYYY-MM-dd"];
 	[self setFieldInput:[MNSFieldInput createWithValue:[df stringFromDate:dueDate] forId:@"duedate"]];
 }
 
