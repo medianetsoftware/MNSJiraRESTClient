@@ -19,7 +19,7 @@
 
 @implementation MNSComponentInput
 
-
+@synthesize description = _description;
 
 - (id)initWithName:(NSString *)name description:(NSString *)description leadUsername:(NSString *)leadUsername assigneetype:(AssigneeType)assigneeType {
 	self = [super init];

@@ -20,4 +20,6 @@
 
 @implementation MNSIssueType
 
+@synthesize description;
+
 @end

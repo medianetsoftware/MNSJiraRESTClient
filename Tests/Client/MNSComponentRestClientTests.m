@@ -99,7 +99,8 @@
         dispatch_semaphore_signal(semaphore);
     } fail:^(NSError *error) {
         dispatch_semaphore_signal(semaphore);
-        XCTFail(@"Error: %@", error.localizedDescription);    }];
+        XCTFail(@"Error: %@", error.localizedDescription);
+	}];
     
     while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];

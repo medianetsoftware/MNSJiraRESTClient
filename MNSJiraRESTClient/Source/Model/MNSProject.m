@@ -19,4 +19,6 @@
 
 @implementation MNSProject
 
+@synthesize description;
+
 @end

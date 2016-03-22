@@ -20,4 +20,6 @@
 
 @implementation MNSPriority
 
+@synthesize description;
+
 @end

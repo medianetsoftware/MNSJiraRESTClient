@@ -20,4 +20,6 @@
 
 @implementation MNSFilter
 
+@synthesize description;
+
 @end

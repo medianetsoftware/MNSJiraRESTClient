@@ -20,6 +20,7 @@
 
 @implementation MNSVersionInput
 
+@synthesize description = _description;
 
 - (id)initWithProjectKey:(NSString *)projectKey description:(NSString *)description name:(NSString *)name isArchived:(BOOL)isArchived isReleased:(BOOL)isReleased releaseDate:(NSDate *)releaseDate {
 	self = [super init];
