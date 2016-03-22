@@ -188,7 +188,7 @@
             
             //TIMETRACKING
             NSDictionary *timeTrackingJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:TIMETRACKING_FIELD]);
-            if (timeTrackingJSON)
+            if (timeTrackingJSON.count > 0)
                 issue.timeTracking = [MNSTimeTrackingBuilder buildWithJSONObject:timeTrackingJSON error:error];
             
             //SUBTASKS

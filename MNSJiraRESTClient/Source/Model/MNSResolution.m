@@ -20,4 +20,6 @@
 
 @implementation MNSResolution
 
+@synthesize description;
+
 @end

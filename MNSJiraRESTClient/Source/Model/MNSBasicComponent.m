@@ -20,6 +20,7 @@
 
 @implementation MNSBasicComponent
 
+@synthesize description = _description;
 
 - (id)initWithIdentifier:(long)identifier url:(NSString *)url name:(NSString *)name description:(NSString *)description {
 	self = [super init];

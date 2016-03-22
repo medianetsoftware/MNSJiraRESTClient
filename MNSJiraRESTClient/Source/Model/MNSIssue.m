@@ -20,6 +20,8 @@
 
 @implementation MNSIssue
 
+@synthesize description;
+
 + (MNSIssue *)createWithBasicIssue:(MNSBasicIssue *)basicIssue {
 	return [[MNSIssue alloc] initWithBasicIssue:basicIssue];
 }

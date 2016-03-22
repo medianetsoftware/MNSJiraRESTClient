@@ -20,6 +20,8 @@
 
 @implementation MNSVersion
 
+@synthesize description = _description;
+
 - (id)initWithUrl:(NSString *)url identifier:(long)identifier description:(NSString *)description name:(NSString *)name isArchived:(BOOL)isArchived isReleased:(BOOL)isReleased releaseDate:(NSString *)releaseDate {
 	self = [super init];
 

@@ -20,6 +20,8 @@
 
 @implementation MNSProjectRole
 
+@synthesize description = _description;
+
 - (id)initWithUrl:(NSString *)url name:(NSString *)name description:(NSString *)description ID:(long)ID actors:(NSArray *)actors {
 	self = [super initWithUrl:url name:name];
 	if (self) {
