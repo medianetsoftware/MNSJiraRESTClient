@@ -24,7 +24,7 @@ The library access point is the class **MNSJiraRestClient**. This class represen
 
 *MNSJiraRestObjectiveCClient* permits anonymous access and private access too.
 
-NOTE: It is currently ussing [AFNetWorking 2.0](http://afnetworking.com/) by CocoaPods. So must run pod install from terminal.
+NOTE: It is currently ussing [AFNetWorking 3.0](http://afnetworking.com/) by CocoaPods. So must run pod install from terminal.
     
 
 # How do I test it?
