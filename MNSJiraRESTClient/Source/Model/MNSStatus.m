@@ -20,4 +20,6 @@
 
 @implementation MNSStatus
 
+@synthesize description;
+
 @end

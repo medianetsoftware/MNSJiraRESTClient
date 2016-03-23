@@ -22,6 +22,8 @@ static NSString *const kInbound = @"INBOUND";
 
 @implementation MNSIssueLinkType
 
+@synthesize description = _description;
+
 - (id)initWithName:(NSString *)name description:(NSString *)description direction:(enum MNSIssueLinkTypeDirection)direction {
 	self = [super init];
 	if (self) {
