@@ -92,7 +92,7 @@
                     if(!issue.attachments) {
                         issue.attachments = [[NSArray alloc] init];
                     }
-                    issue.attachments = [issue.attachments arrayByAddingObject:[MNSAttachmentBuilder buildWithJSONObject:validArray(attachmentsJSON) error:error]];
+                    issue.attachments = [issue.attachments arrayByAddingObject:[MNSAttachmentBuilder buildWithJSONObject:validDictionary(thisAttachment) error:error]];
                 }
             }
             
