@@ -40,9 +40,9 @@
 }
 
 - (void)getUrl:(NSString *)urlString parametersInURL:(NSDictionary *)parametersInURL success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
-	[self doRequestWithURLString:urlString actionVerb:@"GET" body:nil parametersInURL:parametersInURL success: ^(NSURLSessionTask *operation, id response) {
+	[self doRequestWithURLString:urlString actionVerb:@"GET" body:nil parametersInURL:parametersInURL success: ^(id response) {
 		success(response);
-	} failure: ^(NSURLSessionTask *operation, NSError *error) {
+	} failure: ^(NSError *error) {
 		fail(error);
 	}];
 }
@@ -57,9 +57,9 @@
 	NSError *jsonError;
 	NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyJSONObject options:kNilOptions error:&jsonError];
 	if (jsonError == nil) {
-		[self doRequestWithURLString:urlString actionVerb:@"POST" body:jsonData parametersInURL:parametersInURL success: ^(NSURLSessionTask *operation, id response) {
+		[self doRequestWithURLString:urlString actionVerb:@"POST" body:jsonData parametersInURL:parametersInURL success: ^(id response) {
 			success(response);
-		} failure: ^(NSURLSessionTask *operation, NSError *error) {
+		} failure: ^(NSError *error) {
 			fail(error);
 		}];
 	}
@@ -78,9 +78,9 @@
 	NSError *jsonError;
 	NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyJSONObject options:kNilOptions error:&jsonError];
 	if (jsonError == nil) {
-		[self doRequestWithURLString:urlString actionVerb:@"PUT" body:jsonData parametersInURL:parametersInURL success: ^(NSURLSessionTask *operation, id response) {
+		[self doRequestWithURLString:urlString actionVerb:@"PUT" body:jsonData parametersInURL:parametersInURL success: ^(id response) {
 			success(response);
-		} failure: ^(NSURLSessionTask *operation, NSError *error) {
+		} failure: ^(NSError *error) {
 			fail(error);
 		}];
 	}
@@ -96,17 +96,17 @@
 }
 
 - (void)deleteUrl:(NSString *)urlString parametersInURL:(NSDictionary *)parametersInURL success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
-	[self doRequestWithURLString:urlString actionVerb:@"DELETE" body:nil parametersInURL:parametersInURL success: ^(NSURLSessionTask *operation, id response) {
+	[self doRequestWithURLString:urlString actionVerb:@"DELETE" body:nil parametersInURL:parametersInURL success: ^(id response) {
 		success(response);
-	} failure: ^(NSURLSessionTask *operation, NSError *error) {
+	} failure: ^(NSError *error) {
 		fail(error);
 	}];
 }
 
 #pragma mark - Private Imp
 
-- (void)doRequestWithURLString:(NSString *)urlString actionVerb:(NSString *)verb body:(NSData *)body parametersInURL:(NSDictionary *)parametersInURL success:(void (^)(NSURLSessionTask *operation, id responseObject))success
-					   failure:(void (^)(NSURLSessionTask *operation, NSError *error))failure {
+- (void)doRequestWithURLString:(NSString *)urlString actionVerb:(NSString *)verb body:(NSData *)body parametersInURL:(NSDictionary *)parametersInURL
+					   success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
 	//parametters should be added in URL
 	
 	_requestSerializer.HTTPMethodsEncodingParametersInURI = [NSSet setWithObjects:@"GET", @"POST", @"PUT", @"DELETE", nil];
@@ -132,11 +132,10 @@
 	}
 	
 	NSURLSessionDataTask *dataTask = [_manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-		
 		if(error) {
-			failure(dataTask, error);
+			failure(error);
 		} else {
-			success(dataTask, responseObject);
+			success(responseObject);
 		}
 	}];
 	[dataTask resume];
