@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "http://www.medianet.es"
   s.license          = 'GNU'
   s.author           = { "MediaNet" => "comercial@medianet.es" }
-  s.source           = { :git => "https://bitbucket.org/medianet/mns-jira-rest-objectivec-client", :tag => '1.1.0' }
+  s.source           = { :git => "https://github.com/medianetsoftware/MNSJiraRESTClient.git", :tag => '1.1.0' }
   s.social_media_url = 'http://www.medianet.es'
 
   s.platform     = :ios, '7.0'
