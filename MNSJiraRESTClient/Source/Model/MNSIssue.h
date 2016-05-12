@@ -25,6 +25,7 @@
 #import "MNSBasicWatchers.h"
 #import "MNSBasicPriority.h"
 #import "MNSTimeTracking.h"
+#import "MNSBasicResolution.h"
 
 @interface MNSIssue : MNSBasicIssue
 
@@ -35,7 +36,7 @@
 
 @property (nonatomic, copy) NSString *description;
 
-@property (nonatomic, copy) NSString *resolution;
+@property (nonatomic,  strong) MNSBasicResolution *resolution;
 
 @property (nonatomic, strong) NSArray *expandos;
 
