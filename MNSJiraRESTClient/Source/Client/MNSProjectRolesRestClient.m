@@ -48,7 +48,7 @@ static NSString *const kRoleURLPrefix = @"/role/";
 }
 
 -(void)getRoleByProjectURL:(NSString*)projectURL roleID:(NSInteger)roleID success:(void (^)(MNSProjectRole *projectRoleDTO))success fail:(MNSRestClientFailBlock)fail {
-    NSString *url = [NSString stringWithFormat:@"%@%@%d", projectURL, kRoleURLPrefix, roleID];
+    NSString *url = [NSString stringWithFormat:@"%@%@%zd", projectURL, kRoleURLPrefix, roleID];
     [self getUrl:url
          success:^(id response) {
              if (success) {
