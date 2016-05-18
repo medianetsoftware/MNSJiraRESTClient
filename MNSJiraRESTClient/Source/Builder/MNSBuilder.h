@@ -20,7 +20,8 @@
 
 #define validArray(arr) (arr && [arr isKindOfClass:[NSArray class]] && ((NSArray *)arr).count > 0) ? (NSArray *)arr : nil
 #define validDictionary(dic) (dic && [dic isKindOfClass:[NSDictionary class]] && ((NSDictionary *)dic).count > 0) ? (NSDictionary *)dic : nil
-
+#define validDictionaryForKey(dic, key) validDictionary(objectFromDicForkey(dic, key))
+#define validArrayForKey(dic, key) validArray(objectFromDicForkey(dic, key))
 
 @protocol MNSBuilder <NSObject>
 

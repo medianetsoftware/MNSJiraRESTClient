@@ -33,7 +33,7 @@
         if (validDictionary(source)) {
             NSString *timeZone = objectFromDicForkey(source, kTimeZone);
             NSString *emailAddress = objectFromDicForkey(source, kEmailAddress);
-            NSDictionary *avatarURLs = objectFromDicForkey(source, kAvatarURLs);
+            NSDictionary *avatarURLs = validDictionaryForKey(source, kAvatarURLs);
             NSDictionary *groupsDictionary = objectFromDicForkey(source, kGroups);
             MNSExpandableProperty *groups = [MNSExpandablePropertyBuilder buildWithJSONObject:groupsDictionary error:error keyString:kExpandablePropertyKeyString];
             user = [[MNSUser alloc] initWithUrl:basicUser.selfUrl name:basicUser.name displayName:basicUser.displayName];

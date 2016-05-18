@@ -38,12 +38,16 @@
             worklog.selfUrl = objectFromDicForkey(source, kSelfURL);
             worklog.issueUri = issueURL;
             
-            NSDictionary *authorJSON = objectFromDicForkey(source, kAuthor);
-            worklog.author = [MNSBasicUserBuilder buildWithJSONObject:authorJSON error:error];
-            
-            NSDictionary *updateAuthorJSON = objectFromDicForkey(source, kUpdateAuthor);
-            worklog.updateAuthor = [MNSBasicUserBuilder buildWithJSONObject:updateAuthorJSON error:error];
-            
+            NSDictionary *authorJSON = validDictionaryForKey(source, kAuthor);
+			if (authorJSON) {
+				worklog.author = [MNSBasicUserBuilder buildWithJSONObject:authorJSON error:error];
+			}
+			
+            NSDictionary *updateAuthorJSON = validDictionaryForKey(source, kUpdateAuthor);
+			if (updateAuthorJSON) {
+				worklog.updateAuthor = [MNSBasicUserBuilder buildWithJSONObject:updateAuthorJSON error:error];
+
+			}
             worklog.comment = objectFromDicForkey(source, kComment);
             
             NSString *creationDateString = objectFromDicForkey(source, kCreated);
