@@ -68,9 +68,9 @@
             issue = [MNSIssue createWithBasicIssue:basicIssue];
             
             //COMMENTS
-            id commentsContainerJSON = objectFromDicForkey(issueBuilderFeed.fields, kComment);
-            if (validDictionary(commentsContainerJSON)) {
-                NSArray* commentsJSON = validArray(objectFromDicForkey(commentsContainerJSON, @"comments"));
+            id commentsContainerJSON = validDictionaryForKey(issueBuilderFeed.fields, kComment);
+            if (commentsContainerJSON) {
+                NSArray *commentsJSON = validArrayForKey(commentsContainerJSON, @"comments");
                 NSMutableArray *comments = [NSMutableArray array];
                 for (id thisComment in commentsJSON) {
                     MNSComment *comment = [MNSCommentBuilder buildWithJSONObject:validDictionary(thisComment) error:error];
@@ -86,8 +86,8 @@
             issue.description = (NSString*)objectFromDicForkey(issueBuilderFeed.fields, kDescription);
             
             //ATTACHMENTS
-            id attachmentsJSON = objectFromDicForkey(issueBuilderFeed.fields, kAttechment);
-            if (validArray(attachmentsJSON)) {
+            id attachmentsJSON = validArrayForKey(issueBuilderFeed.fields, kAttechment);
+            if (attachmentsJSON) {
                 for (id thisAttachment in attachmentsJSON) {
                     if(!issue.attachments) {
                         issue.attachments = [[NSArray alloc] init];
@@ -100,9 +100,10 @@
             issue.issueFields = [issueBuilderFeed issueFields];
             
             //ISSUETYPE
-            if (objectFromDicForkey(issueBuilderFeed.fields,kIssuetype ))
+			if (validDictionaryForKey(issueBuilderFeed.fields,kIssuetype)) {
                 issue.issueType = [MNSBasicIssueTypeBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields,kIssuetype ) error:error];
-            
+			}
+			
             //CREATIONDATE
             issue.creationDate = [MNSBuilderTools dateFromString:objectFromDicForkey(issueBuilderFeed.fields, kCreated)];
             
@@ -113,39 +114,46 @@
             issue.dueDate = [MNSBuilderTools dateFromString:objectFromDicForkey(issueBuilderFeed.fields, kDueDate)];
             
             //PRIORITY
-            if (objectFromDicForkey(issueBuilderFeed.fields, kPriority))
+			if (validDictionaryForKey(issueBuilderFeed.fields, kPriority)) {
                 issue.priority = [MNSBasicPriorityBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kPriority) error:error];
-            
+			}
+			
             //RESOLUTION
-            if (objectFromDicForkey(issueBuilderFeed.fields, kResolution) && ![objectFromDicForkey(issueBuilderFeed.fields, kResolution) isKindOfClass:[NSNull class]])
+			if (validDictionaryForKey(issueBuilderFeed.fields, kResolution)) {
                 issue.resolution = [MNSBasicResolutionBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kResolution) error:error];
-            
+			}
+			
             //ASSIGNEE
-            if (objectFromDicForkey(issueBuilderFeed.fields, kAssignee))
+			if (validDictionaryForKey(issueBuilderFeed.fields, kAssignee)) {
                 issue.assignee = [MNSBasicUserBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kAssignee) error:error];
-            
+			}
+			
             //REPORTER
-            if (objectFromDicForkey(issueBuilderFeed.fields, kReporter))
+			if (validDictionaryForKey(issueBuilderFeed.fields, kReporter)) {
                 issue.reporter = [MNSBasicUserBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kReporter) error:error];
-            
+			}
+			
             //ISSUELINKS
-            NSArray *issueLinksContainerJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:LINKS_FIELD]);
-            NSMutableArray *issueLinks = [NSMutableArray array];
-            for (NSDictionary *issueLinkJSON in issueLinksContainerJSON) {
-                MNSIssueLink *issueLink = [MNSIssueLinkBuilder buildWithJSONObject:validDictionary(issueLinkJSON) error:error]; 
-                [issueLinks addObject:issueLink];
-            }
-            issue.issueLinks = issueLinks;
-            
+            NSArray *issueLinksContainerJSON = validArrayForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:LINKS_FIELD]);
+			if (issueLinksContainerJSON) {
+				NSMutableArray *issueLinks = [NSMutableArray array];
+				for (NSDictionary *issueLinkJSON in issueLinksContainerJSON) {
+					MNSIssueLink *issueLink = [MNSIssueLinkBuilder buildWithJSONObject:validDictionary(issueLinkJSON) error:error];
+					[issueLinks addObject:issueLink];
+				}
+				issue.issueLinks = issueLinks;
+			}
+			
             //VOTES
-            NSDictionary *votesJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:VOTES_FIELD]);
-            if (votesJSON)
+            NSDictionary *votesJSON = validDictionaryForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:VOTES_FIELD]);
+			if (votesJSON) {
                 issue.votes = [MNSBasicVotesBuilder buildWithJSONObject:votesJSON error:error];
-            
+			}
+			
             //WORKLOGS
-            id worklogContainerJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:WORKLOG_FIELD]);
-            if (validDictionary(worklogContainerJSON)) {
-                NSArray *worklogsJSON = validArray(objectFromDicForkey(worklogContainerJSON, @"worklogs"));
+            id worklogContainerJSON = validDictionaryForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:WORKLOG_FIELD]);
+            if (worklogContainerJSON) {
+                NSArray *worklogsJSON = validArrayForKey(worklogContainerJSON, @"worklogs");
                 NSMutableArray *worklogs = [NSMutableArray array];
                 for (id thisWorklog in worklogsJSON) {
                     MNSWorklog *worklog = [MNSWorklogBuilder buildWithJSONObject:validDictionary(thisWorklog) error:error issuefURL:issue.selfUrl]; //TODO error
@@ -155,56 +163,65 @@
             }
             
             //WATCHERS
-            NSDictionary *watchersJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:WATCHER_FIELD]);
+            NSDictionary *watchersJSON = validDictionaryForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:WATCHER_FIELD]);
             if (watchersJSON)
                 issue.watchers = [MNSBasicWatchersBuilder buildWithJSONObject:watchersJSON error:error];
             
             //FIXVERSIONS
-            NSArray *fixVersionsContainerJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:FIX_VERSIONS_FIELD]);
-            NSMutableArray *fixVersions = [NSMutableArray array];
-            for (NSDictionary *fixVersionJSON in fixVersionsContainerJSON) {
-                MNSVersion *version = [MNSVersionBuilder buildWithJSONObject:validDictionary(fixVersionJSON) error:error];
-                [fixVersions addObject:version];
-            }
-            issue.fixVersions = fixVersions;
-            
+            NSArray *fixVersionsContainerJSON = validArrayForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:FIX_VERSIONS_FIELD]);
+			if (fixVersionsContainerJSON) {
+				NSMutableArray *fixVersions = [NSMutableArray array];
+				for (NSDictionary *fixVersionJSON in fixVersionsContainerJSON) {
+					MNSVersion *version = [MNSVersionBuilder buildWithJSONObject:validDictionary(fixVersionJSON) error:error];
+					[fixVersions addObject:version];
+				}
+				issue.fixVersions = fixVersions;
+			}
+			
             //AFFECTEDVERSIONS
-            NSArray *affectedVersionsContainerJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:AFFECTS_VERSIONS_FIELD]);
-            NSMutableArray *affectedVersions = [NSMutableArray array];
-            for (NSDictionary *affectedVersionJSON in affectedVersionsContainerJSON) {
-                MNSVersion *version = [MNSVersionBuilder buildWithJSONObject:validDictionary(affectedVersionJSON) error:error];
-                [affectedVersions addObject:version];
-            }
-            issue.affectedVersions = affectedVersions;
-            
+            NSArray *affectedVersionsContainerJSON = validArrayForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:AFFECTS_VERSIONS_FIELD]);
+			if (affectedVersionsContainerJSON) {
+				NSMutableArray *affectedVersions = [NSMutableArray array];
+				for (NSDictionary *affectedVersionJSON in affectedVersionsContainerJSON) {
+					MNSVersion *version = [MNSVersionBuilder buildWithJSONObject:validDictionary(affectedVersionJSON) error:error];
+					[affectedVersions addObject:version];
+				}
+				issue.affectedVersions = affectedVersions;
+			}
+			
             //COMPONENTS
-            NSArray *componentsContainerJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:COMPONENTS_FIELD]);
-            NSMutableArray *components = [NSMutableArray array];
-            for (NSDictionary *componentJSON in componentsContainerJSON) {
-                MNSBasicComponent *component = [MNSBasicComponentBuilder buildWithJSONObject:validDictionary(componentJSON) error:error];
-                [components addObject:component];
-            }
-            issue.components = components;
-            
+            NSArray *componentsContainerJSON = validArrayForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:COMPONENTS_FIELD]);
+			if (componentsContainerJSON) {
+				NSMutableArray *components = [NSMutableArray array];
+				for (NSDictionary *componentJSON in componentsContainerJSON) {
+					MNSBasicComponent *component = [MNSBasicComponentBuilder buildWithJSONObject:validDictionary(componentJSON) error:error];
+					[components addObject:component];
+				}
+				issue.components = components;
+			}
+			
             //TIMETRACKING
-            NSDictionary *timeTrackingJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:TIMETRACKING_FIELD]);
-            if (timeTrackingJSON.count > 0)
+            NSDictionary *timeTrackingJSON = validDictionaryForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:TIMETRACKING_FIELD]);
+			if (timeTrackingJSON.count > 0) {
                 issue.timeTracking = [MNSTimeTrackingBuilder buildWithJSONObject:timeTrackingJSON error:error];
-            
+			}
+			
             //SUBTASKS
-            NSArray *subtasksContainerJSON = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:SUBTASKS_FIELD]);
-            NSMutableArray *subtasks = [NSMutableArray array];
-            for (NSDictionary *subtaskJSON in subtasksContainerJSON) {
-                MNSSubtask *subtask = [MNSSubtaskBuilder buildWithJSONObject:validDictionary(subtaskJSON) error:error]; 
-                [subtasks addObject:subtask];
-            }
-            issue.subtasks = subtasks;
-            
+            NSArray *subtasksContainerJSON = validArrayForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:SUBTASKS_FIELD]);
+			if (subtasksContainerJSON) {
+				NSMutableArray *subtasks = [NSMutableArray array];
+				for (NSDictionary *subtaskJSON in subtasksContainerJSON) {
+					MNSSubtask *subtask = [MNSSubtaskBuilder buildWithJSONObject:validDictionary(subtaskJSON) error:error];
+					[subtasks addObject:subtask];
+				}
+				issue.subtasks = subtasks;
+			}
+			
             //CHANGELOG
             issue.changelog = [issueBuilderFeed changelog];
             
             //LABELS
-			NSArray *labels = objectFromDicForkey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:LABELS_FIELD]);
+			NSArray *labels = validArrayForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:LABELS_FIELD]);
 			issue.labels = labels;
         }
         
