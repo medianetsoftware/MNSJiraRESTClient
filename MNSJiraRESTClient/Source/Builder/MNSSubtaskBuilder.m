@@ -40,10 +40,10 @@
             
             NSString *summary = objectFromDicForkey(fieldsJSON, kSummary);
             
-            NSDictionary *statusJSON = objectFromDicForkey(fieldsJSON, kStatus);
+            NSDictionary *statusJSON = validDictionaryForKey(fieldsJSON, kStatus);
             MNSStatus *status = [MNSStatusBuilder buildWithJSONObject:statusJSON error:error];
             
-            NSDictionary *issuetypeJSON = objectFromDicForkey(fieldsJSON, kIssuetype);
+            NSDictionary *issuetypeJSON = validDictionaryForKey(fieldsJSON, kIssuetype);
             MNSIssueType *issueType = [MNSIssueTypeBuilder buildWithJSONObject:issuetypeJSON error:error];
             
             subtask = [[MNSSubtask alloc] initWithIssueKey:key issueURL:issueURL summary:summary issueType:issueType status:status];
