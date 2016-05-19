@@ -22,4 +22,6 @@
 
 + (NSDate *)dateFromString:(NSString *)dateString;
 
++ (NSDate *)shortDateFromString:(NSString *)dateString;
+
 @end

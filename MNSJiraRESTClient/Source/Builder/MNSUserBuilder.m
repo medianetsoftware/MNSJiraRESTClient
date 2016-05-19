@@ -34,13 +34,15 @@
             NSString *timeZone = objectFromDicForkey(source, kTimeZone);
             NSString *emailAddress = objectFromDicForkey(source, kEmailAddress);
             NSDictionary *avatarURLs = validDictionaryForKey(source, kAvatarURLs);
-            NSDictionary *groupsDictionary = objectFromDicForkey(source, kGroups);
-            MNSExpandableProperty *groups = [MNSExpandablePropertyBuilder buildWithJSONObject:groupsDictionary error:error keyString:kExpandablePropertyKeyString];
             user = [[MNSUser alloc] initWithUrl:basicUser.selfUrl name:basicUser.name displayName:basicUser.displayName];
             user.timeZone = timeZone;
             user.emailAddress =  emailAddress;
-            user.avatarURLs = avatarURLs;
-            user.groups = groups;
+			user.avatarURLs = avatarURLs;
+			NSDictionary *groupsDictionary = validDictionaryForKey(source, kGroups);
+			if (groupsDictionary) {
+				MNSExpandableProperty *groups = [MNSExpandablePropertyBuilder buildWithJSONObject:groupsDictionary error:error keyString:kExpandablePropertyKeyString];
+				user.groups = groups;
+			}
         }else {
             *error = [NSError errorWithDomain:@"UserBuilder error" code:0 userInfo:nil];
         }

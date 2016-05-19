@@ -24,10 +24,16 @@
 
 // 2014-01-28T14:28:59.922+0100
 + (NSDate *)dateFromString:(NSString *)dateString {
-
 	NSDateFormatter *df = [[NSDateFormatter alloc] init];
 	[df setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS+zzzz"];
+	[df setTimeZone:[NSTimeZone systemTimeZone]];
+	[df setLocale:[NSLocale systemLocale]];
+	return [df dateFromString:dateString];
+}
 
++ (NSDate *)shortDateFromString:(NSString *)dateString {
+	NSDateFormatter *df = [[NSDateFormatter alloc] init];
+	[df setDateFormat:@"yyyy-MM-dd"];
 	[df setTimeZone:[NSTimeZone systemTimeZone]];
 	[df setLocale:[NSLocale systemLocale]];
 	return [df dateFromString:dateString];

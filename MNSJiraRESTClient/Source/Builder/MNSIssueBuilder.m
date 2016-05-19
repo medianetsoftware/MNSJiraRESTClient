@@ -28,11 +28,11 @@
 #import "MNSCommentBuilder.h"
 #import "MNSBasicIssueBuilder.h"
 #import "MNSAttachmentBuilder.h"
-#import "MNSBasicIssueTypeBuilder.h"
-#import "MNSBasicPriorityBuilder.h"
+#import "MNSIssueTypeBuilder.h"
+#import "MNSPriorityBuilder.h"
 #import "MNSBasicResolutionBuilder.h"
 
-#import "MNSBasicUserBuilder.h"
+#import "MNSUserBuilder.h"
 #import "MNSComment.h"
 #import "MNSIssueLink.h"
 #import "MNSIssueLinkBuilder.h"
@@ -48,6 +48,7 @@
 #import "MNSTimeTrackingBuilder.h"
 #import "MNSSubtask.h"
 #import "MNSSubtaskBuilder.h"
+#import "MNSStatusBuilder.h"
 
 @interface MNSIssueBuilder ()
 @end
@@ -101,7 +102,7 @@
             
             //ISSUETYPE
 			if (validDictionaryForKey(issueBuilderFeed.fields,kIssuetype)) {
-                issue.issueType = [MNSBasicIssueTypeBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields,kIssuetype ) error:error];
+                issue.issueType = [MNSIssueTypeBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields,kIssuetype ) error:error];
 			}
 			
             //CREATIONDATE
@@ -111,11 +112,14 @@
             issue.updateDate = [MNSBuilderTools dateFromString:objectFromDicForkey(issueBuilderFeed.fields, kUpdateDate)];
             
             //DUEDATE
-            issue.dueDate = [MNSBuilderTools dateFromString:objectFromDicForkey(issueBuilderFeed.fields, kDueDate)];
-            
+			NSString *dueDate = validStringForkey(issueBuilderFeed.fields, kDuedate);
+			if (dueDate) {
+				issue.dueDate = [MNSBuilderTools shortDateFromString:dueDate];
+			}
+			
             //PRIORITY
 			if (validDictionaryForKey(issueBuilderFeed.fields, kPriority)) {
-                issue.priority = [MNSBasicPriorityBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kPriority) error:error];
+                issue.priority = [MNSPriorityBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kPriority) error:error];
 			}
 			
             //RESOLUTION
@@ -125,12 +129,12 @@
 			
             //ASSIGNEE
 			if (validDictionaryForKey(issueBuilderFeed.fields, kAssignee)) {
-                issue.assignee = [MNSBasicUserBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kAssignee) error:error];
+                issue.assignee = [MNSUserBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kAssignee) error:error];
 			}
 			
             //REPORTER
 			if (validDictionaryForKey(issueBuilderFeed.fields, kReporter)) {
-                issue.reporter = [MNSBasicUserBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kReporter) error:error];
+                issue.reporter = [MNSUserBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kReporter) error:error];
 			}
 			
             //ISSUELINKS
@@ -223,8 +227,13 @@
             //LABELS
 			NSArray *labels = validArrayForKey(issueBuilderFeed.fields, [MNSIssueFieldID issueFieldIDString:LABELS_FIELD]);
 			issue.labels = labels;
+			
+			//STATUS
+			if (validDictionaryForKey(issueBuilderFeed.fields, kStatus)) {
+				issue.status = [MNSStatusBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kStatus) error:error];
+			}
         }
-        
+		
     }
     @catch (NSException *exception) {
         *error = [NSError errorWithDomain:@"IssuelBuilder error:Exception" code:0 userInfo:nil];

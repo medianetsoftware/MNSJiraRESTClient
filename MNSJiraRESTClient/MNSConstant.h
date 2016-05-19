@@ -90,7 +90,7 @@ FOUNDATION_EXTERN NSString *const kResolution;
 FOUNDATION_EXTERN NSString *const kAttechment;
 FOUNDATION_EXTERN NSString *const kReporter;
 FOUNDATION_EXTERN NSString *const kAssignee;
-FOUNDATION_EXTERN NSString *const kDueDate;
+FOUNDATION_EXTERN NSString *const kDuedate;
 FOUNDATION_EXTERN NSString *const kTransitionsUri;
 FOUNDATION_EXTERN NSString *const kPriority;
 FOUNDATION_EXTERN NSString *const kFieldtype;

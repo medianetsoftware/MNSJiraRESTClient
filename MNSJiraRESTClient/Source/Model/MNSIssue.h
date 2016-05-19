@@ -18,12 +18,12 @@
 
 #import "MNSBasicIssue.h"
 
-#import "MNSBasicStatus.h"
-#import "MNSBasicIssueType.h"
+#import "MNSStatus.h"
+#import "MNSIssueType.h"
 #import "MNSUser.h"
 #import "MNSBasicVotes.h"
 #import "MNSBasicWatchers.h"
-#import "MNSBasicPriority.h"
+#import "MNSPriority.h"
 #import "MNSTimeTracking.h"
 #import "MNSBasicResolution.h"
 
@@ -32,7 +32,7 @@
 
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, strong) id project;
-@property (nonatomic, strong) MNSBasicStatus *status;
+@property (nonatomic, strong) MNSStatus *status;
 
 @property (nonatomic, copy) NSString *description;
 
@@ -46,11 +46,11 @@
 
 @property (nonatomic, strong) NSArray *issueFields;
 
-@property (nonatomic, strong) MNSBasicIssueType *issueType;
+@property (nonatomic, strong) MNSIssueType *issueType;
 
-@property (nonatomic, strong) MNSBasicUser *reporter;
+@property (nonatomic, strong) MNSUser *reporter;
 
-@property (nonatomic, strong) MNSBasicUser *assignee;
+@property (nonatomic, strong) MNSUser *assignee;
 
 @property (nonatomic, strong) NSDate *creationDate;
 
@@ -66,7 +66,7 @@
  @property (nonatomic, strong) NSArray* affectedVersions;
  @property (nonatomic, strong) NSArray* components;
 
-@property (nonatomic, strong) MNSBasicPriority *priority;
+@property (nonatomic, strong) MNSPriority *priority;
 
 @property (nonatomic, strong) MNSTimeTracking *timeTracking;
 @property (nonatomic, strong) NSArray *subtasks;
