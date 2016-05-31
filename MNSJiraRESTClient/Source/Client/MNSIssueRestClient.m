@@ -59,6 +59,23 @@ static NSString *const kURLPathIssueCreateMeta = @"/issue/createmeta";
     }];
 }
 
+-(void)updateIssue:(MNSIssueInput *)issueInput withIssueId:(NSString *)issueId success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
+	NSString* issueURL = [self.baseUri stringByAppendingString:kURLPathIssue];
+	issueURL = [issueURL stringByAppendingFormat:@"/%@", issueId];
+	NSDictionary* body = [NSDictionary dictionaryWithObject:[issueInput dictionaryVersion]
+													 forKey:@"fields"];
+	
+	[self putUrl:issueURL bodyJSONObject:body success:^(id response) {
+		if (success) {
+			success(response);
+		}
+	} fail:^(NSError *error) {
+		if (fail) {
+			fail(error);
+		}
+	}];
+}
+
 -(void)getCreateIssueMetadataWithOptions:(MNSGetCreateIssueMetadataOptions *)options success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
     NSString* issueURL = [self.baseUri stringByAppendingString:kURLPathIssueCreateMeta];
