@@ -72,6 +72,8 @@
 - (void)setReporter:(MNSBasicUser *)basicUser;
 - (void)setReporterName:(NSString *)name;
 
+- (void)setOriginalEstimateMinutes:(NSInteger)timeInMinutes;
+
 
 
 - (MNSFieldInput *)fieldForId:(NSString *)key;
