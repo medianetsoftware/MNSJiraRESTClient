@@ -127,6 +127,8 @@
 		07CB725918AA3E3F00D4806C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBC717189928620099B936 /* Foundation.framework */; };
 		07CB725A18AA3E3F00D4806C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBC71B189928620099B936 /* UIKit.framework */; };
 		07CB725D18AA3E3F00D4806C /* libMNSJiraRESTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB724A18AA3E3F00D4806C /* libMNSJiraRESTClient.a */; };
+		0C92EE0F1CFC45CE0054E527 /* MNSTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C92EE0E1CFC45CE0054E527 /* MNSTransition.m */; };
+		0C92EE121CFC47750054E527 /* MNSTransitionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C92EE111CFC47750054E527 /* MNSTransitionBuilder.m */; };
 		625FBDF999107A7CACF096A2 /* libPods-MNSJiraRESTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B1746BA9F4F3021FC73D4C /* libPods-MNSJiraRESTClient.a */; };
 		DBBE0D8562774E77C4502889 /* libPods-MNSJiraRESTClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF0311AF2A7562140429F19 /* libPods-MNSJiraRESTClientTests.a */; };
 /* End PBXBuildFile section */
@@ -381,6 +383,10 @@
 		0742517918ACE11B00501318 /* MNSRequestAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSRequestAuthenticator.m; path = MNSJiraRESTClient/Source/Auth/MNSRequestAuthenticator.m; sourceTree = SOURCE_ROOT; };
 		07CB724A18AA3E3F00D4806C /* libMNSJiraRESTClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMNSJiraRESTClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CB725718AA3E3F00D4806C /* MNSJiraRESTClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNSJiraRESTClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C92EE0D1CFC45CE0054E527 /* MNSTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSTransition.h; path = MNSJiraRESTClient/Source/Model/MNSTransition.h; sourceTree = SOURCE_ROOT; };
+		0C92EE0E1CFC45CE0054E527 /* MNSTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSTransition.m; path = MNSJiraRESTClient/Source/Model/MNSTransition.m; sourceTree = SOURCE_ROOT; };
+		0C92EE101CFC47750054E527 /* MNSTransitionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNSTransitionBuilder.h; path = MNSJiraRESTClient/Source/Builder/MNSTransitionBuilder.h; sourceTree = SOURCE_ROOT; };
+		0C92EE111CFC47750054E527 /* MNSTransitionBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNSTransitionBuilder.m; path = MNSJiraRESTClient/Source/Builder/MNSTransitionBuilder.m; sourceTree = SOURCE_ROOT; };
 		0CBBC717189928620099B936 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CBBC719189928620099B936 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0CBBC71B189928620099B936 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -565,6 +571,8 @@
 				0742513618ACE0FA00501318 /* MNSVisibility.m */,
 				0742513718ACE0FA00501318 /* MNSWorklog.h */,
 				0742513818ACE0FA00501318 /* MNSWorklog.m */,
+				0C92EE0D1CFC45CE0054E527 /* MNSTransition.h */,
+				0C92EE0E1CFC45CE0054E527 /* MNSTransition.m */,
 			);
 			name = Model;
 			path = Source/Model;
@@ -670,6 +678,8 @@
 				0742508D18ACE0B700501318 /* MNSVersionBuilder.m */,
 				0742508E18ACE0B700501318 /* MNSWorklogBuilder.h */,
 				0742508F18ACE0B700501318 /* MNSWorklogBuilder.m */,
+				0C92EE101CFC47750054E527 /* MNSTransitionBuilder.h */,
+				0C92EE111CFC47750054E527 /* MNSTransitionBuilder.m */,
 			);
 			name = Builder;
 			path = Client;
@@ -951,6 +961,7 @@
 				0742514F18ACE0FA00501318 /* MNSGetCreateIssueMetadataOptions.m in Sources */,
 				074250D318ACE0D100501318 /* MNSProjectRolesRestClient.m in Sources */,
 				0742509718ACE0B700501318 /* MNSBasicUserBuilder.m in Sources */,
+				0C92EE0F1CFC45CE0054E527 /* MNSTransition.m in Sources */,
 				074250D618ACE0D100501318 /* MNSUserRestClient.m in Sources */,
 				074250A118ACE0B700501318 /* MNSFieldSchemaBuilder.m in Sources */,
 				0742517718ACE10900501318 /* MNSVersionInput.m in Sources */,
@@ -1039,6 +1050,7 @@
 				0742509A18ACE0B700501318 /* MNSBuilderTools.m in Sources */,
 				074250AB18ACE0B700501318 /* MNSProjectRoleBuilder.m in Sources */,
 				0742516518ACE0FA00501318 /* MNSVersionRelatedIssuesCount.m in Sources */,
+				0C92EE121CFC47750054E527 /* MNSTransitionBuilder.m in Sources */,
 				074250AE18ACE0B700501318 /* MNSSearchResultBuilder.m in Sources */,
 				0742514018ACE0FA00501318 /* MNSBasicProjectRole.m in Sources */,
 				0742515218ACE0FA00501318 /* MNSIssueFieldID.m in Sources */,

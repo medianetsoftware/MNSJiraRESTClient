@@ -31,6 +31,7 @@
 #import "MNSIssueTypeBuilder.h"
 #import "MNSPriorityBuilder.h"
 #import "MNSBasicResolutionBuilder.h"
+#import "MNSTransitionBuilder.h"
 
 #import "MNSUserBuilder.h"
 #import "MNSComment.h"
@@ -232,6 +233,9 @@
 			if (validDictionaryForKey(issueBuilderFeed.fields, kStatus)) {
 				issue.status = [MNSStatusBuilder buildWithJSONObject:objectFromDicForkey(issueBuilderFeed.fields, kStatus) error:error];
 			}
+			
+			//TRANSITIONS
+			issue.transitions = [MNSTransitionBuilder buildWithJSONObject:issueBuilderFeed.transitions error:error];
         }
 		
     }

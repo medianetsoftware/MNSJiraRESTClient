@@ -3,7 +3,7 @@
 
 
 # What?
-Open source library under LGPLv3 license,  that facilites access to [Atlassian´s](https://www.atlassian.com/) [Jira](https://www.atlassian.com/software/jira) [Rest API](https://docs.atlassian.com/jira/REST/latest/), for software developed for iOS and Mac OS.
+Open source library under LGPLv3 license,  that facilites access to [Atlassian´s](https://www.atlassian.com/) [Jira](https://www.atlassian.com/software/jira) [Rest API](https://docs.atlassian.com/jira/REST/latest/), for software developed for iOS.
 
 # Why?
 Nowadays, Atlassian´s Jira plataform is widely used for software management and issue tracking. This library has been build focusing on offer an easy access for applications based on Apple systems to the public API.

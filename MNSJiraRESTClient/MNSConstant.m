@@ -51,6 +51,7 @@ NSString *const kFields = @"fields";
 NSString *const kSummary = @"summary";
 NSString *const kStatus = @"status";
 NSString *const kIssuetype = @"issuetype";
+NSString *const kIssueTypes = @"issueTypes";
 NSString *const kDirection = @"direction";
 NSString *const kUpdateAuthor = @"updateAuthor";
 NSString *const kComment = @"comment";

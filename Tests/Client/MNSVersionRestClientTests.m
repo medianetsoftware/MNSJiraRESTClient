@@ -68,11 +68,13 @@
     
     MNSVersionInput *versionInput = [[MNSVersionInput alloc] initWithProjectKey:kProjectKey description:kCreateVersionDescription name:kCreateVersionName isArchived:NO isReleased:YES releaseDate:[NSDate date]];
     
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    __block MNSVersion *versionDto;
-    
+	dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+	__block MNSVersion *versionDto;
+	__block NSString *deleteVersionURL;
+	
     [_jiraRestClient.versionRestClient createVersion:versionInput Success:^(MNSVersion *version) {
         versionDto = version;
+		deleteVersionURL = version.selfUrl;
         dispatch_semaphore_signal(semaphore);
     } fail:^(NSError *error) {
         dispatch_semaphore_signal(semaphore);
@@ -83,6 +85,8 @@
     while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     }
+	
+	[self deleteVersion:deleteVersionURL];
     
     XCTAssertNotNil(versionDto, @"versionDTO is nil!");
 }
@@ -109,30 +113,6 @@
     
     XCTAssertNotNil(versionDto, @"versionDTO is nil!");
 }
-
-- (void)testDeleteVersion
-{
-    
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-	
-    [_jiraRestClient.versionRestClient removeVersion:kDeleteVersionURL urlmoveFixIssuesToVersionUri:nil urlmoveAffectedIssuesToVersionUri:nil Success:^(id response) {
-        
-        BOOL correct = YES;
-        XCTAssertTrue(correct, @"remove correct!!");
-        
-        dispatch_semaphore_signal(semaphore);
-        
-    } fail:^(NSError *error) {
-        dispatch_semaphore_signal(semaphore);
-        XCTFail(@"Error: %@", error.localizedDescription);
-    }];
-    
-    while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    }
-    
-}
-
 
 - (void)testRelatedIssuesCount{
     
@@ -224,5 +204,29 @@
     XCTAssertNotNil(versionDto, @"versionDTO is nil!");
 }
 
+
+#pragma mark - Private helpers
+
+- (void)deleteVersion:(NSString *)deleteVersionURL
+{
+	dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+	
+	[_jiraRestClient.versionRestClient removeVersion:deleteVersionURL urlmoveFixIssuesToVersionUri:nil urlmoveAffectedIssuesToVersionUri:nil Success:^(id response) {
+		
+		BOOL correct = YES;
+		XCTAssertTrue(correct, @"remove correct!!");
+		
+		dispatch_semaphore_signal(semaphore);
+		
+	} fail:^(NSError *error) {
+		dispatch_semaphore_signal(semaphore);
+		XCTFail(@"Error: %@", error.localizedDescription);
+	}];
+	
+	while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
+		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+	}
+	
+}
 
 @end

@@ -31,6 +31,7 @@
 
 @property (nonatomic, strong) NSArray *expandos;
 @property (nonatomic, strong) NSDictionary *fields;
+@property (nonatomic, strong) NSArray *transitions;
 
 + (MNSIssueBuilderFeed *)createFromValidIssueSource:(id)source error:(NSError **)error;
 

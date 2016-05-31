@@ -43,7 +43,6 @@
 
 - (void)testGetComponentByURL
 {
-	
     NSString *projectURL = kComponentURL;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     __block MNSComponent *componentDto;
@@ -69,10 +68,12 @@
     MNSComponentInput *componentInput = [[MNSComponentInput alloc] initWithName:kComponentName1 description:nil leadUsername:kComponentLeadUsername assigneetype:PROJECT_DEFAULT];
     
 	dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    __block MNSComponent *componentDto;
-    
+	__block MNSComponent *componentDto;
+	__block NSString *componentURLToRemove;
+	
     [_jiraRestClient.componentRestClient createComponentWithProjectKey:kProjectKey componentInput:componentInput success:^(MNSComponent *acomponent) {
         componentDto = acomponent;
+		componentURLToRemove = acomponent.selfUrl;
         dispatch_semaphore_signal(semaphore);
     } fail:^(NSError *error) {
         dispatch_semaphore_signal(semaphore);
@@ -82,6 +83,8 @@
     while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     }
+	
+	[self removeComponent:componentURLToRemove];
     
     XCTAssertNotNil(componentDto, @"componentDTO is nil!");
 }
@@ -109,29 +112,6 @@
     XCTAssertNotNil(componentDto, @"componentDTO is nil!");
 }
 
-- (void)testRemoveComponent
-{
-	
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    
-    [_jiraRestClient.componentRestClient removeComponent:kRemoveComponentURL moveIssueToComponentUrl:nil success:^(id response) {
-        
-        BOOL correct = YES;
-        XCTAssertTrue(correct, @"remove correct!!");
-        
-        dispatch_semaphore_signal(semaphore);
-        
-    } fail:^(NSError *error) {
-        dispatch_semaphore_signal(semaphore);
-        XCTFail(@"Error: %@", error.localizedDescription);
-    }];
-    
-    while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    }
-    
-}
-
 - (void)testRelatedIssueCounts{
     
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
@@ -152,15 +132,29 @@
     }
     
     XCTAssertNotNil(number, @"number is nil!");
-	
-    
 }
 
+#pragma mark - Private helpers
 
-
-
-
-
-
+- (void)removeComponent:(NSString *)componentURL
+{
+	dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+	
+	[_jiraRestClient.componentRestClient removeComponent:componentURL moveIssueToComponentUrl:nil success:^(id response) {
+		
+		BOOL correct = YES;
+		XCTAssertTrue(correct, @"remove correct!!");
+		
+		dispatch_semaphore_signal(semaphore);
+		
+	} fail:^(NSError *error) {
+		dispatch_semaphore_signal(semaphore);
+		XCTFail(@"Error: %@", error.localizedDescription);
+	}];
+	
+	while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
+		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+	}
+}
 
 @end

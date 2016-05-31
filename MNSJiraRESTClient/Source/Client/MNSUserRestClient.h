@@ -28,4 +28,6 @@
 
 - (void)getUserByURLString:(NSString *)urlString success:(void (^)(MNSUser *userDTO))success fail:(MNSRestClientFailBlock)fail;
 
+- (void)getAssignableUsersByProjectKey:(NSString*)projectKey success:(void (^)(NSArray *users))success fail:(MNSRestClientFailBlock)fail;
+
 @end

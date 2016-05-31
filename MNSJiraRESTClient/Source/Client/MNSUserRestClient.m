@@ -19,7 +19,9 @@
 #import "MNSUserBuilder.h"
 
 static NSString *const kUserURLPrefix = @"/user";
+static NSString *const kAssignableUsersURLPrefix = @"/assignable/search";
 static NSString *const kUsernameAttribute = @"username";
+static NSString *const kProjectAttribute = @"project";
 static NSString *const kExpandAttribute = @"expand";
 
 @implementation MNSUserRestClient
@@ -86,6 +88,34 @@ static NSString *const kExpandAttribute = @"expand";
                  fail(error);
              }
          }];
+}
+
+- (void)getAssignableUsersByProjectKey:(NSString*)projectKey success:(void (^)(NSArray *users))success fail:(MNSRestClientFailBlock)fail {
+	
+	NSString *assignableUsersURL = [_userURLString stringByAppendingString:kAssignableUsersURLPrefix];
+	NSMutableDictionary *parametersInURL = [NSMutableDictionary dictionary];
+	[parametersInURL setObject:projectKey forKey:kProjectAttribute];
+	
+	[self getUrl:assignableUsersURL
+ parametersInURL:parametersInURL
+		 success:^(id response) {
+			 
+			 NSError* error;
+			 NSArray *assignableUsers = [MNSUserBuilder buildWithJSONObject:response error:&error];
+			 
+			 if (success && [error.domain length] == 0) {
+				 success(assignableUsers);
+			 }
+			 else{
+				 if(fail)
+					 fail(error);
+			 }
+		 }
+			fail:^(NSError *error) {
+				if (fail) {
+					fail(error);
+				}
+			}];
 }
 
 @end

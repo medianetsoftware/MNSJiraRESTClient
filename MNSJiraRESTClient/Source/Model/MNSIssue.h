@@ -72,6 +72,7 @@
 @property (nonatomic, strong) NSArray *subtasks;
 @property (nonatomic, strong) NSArray *changelog;
 @property (nonatomic, strong) NSArray *labels;
+@property (nonatomic, strong) NSArray *transitions;
 
 + (MNSIssue *)createWithBasicIssue:(MNSBasicIssue *)basicIssue;
 - (id)initWithBasicIssue:(MNSBasicIssue *)basicIssue;

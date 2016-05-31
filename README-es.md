@@ -3,7 +3,7 @@
 
 
 # ¿Qué?
-Una librería en código abierto bajo licencia LGPLv3, que facilita el acceso a la API Rest del producto [Jira](https://www.atlassian.com/software/jira) de [Atlassian](https://www.atlassian.com/) para desarrollos de software sobre iOS o Mac OS.
+Una librería en código abierto bajo licencia LGPLv3, que facilita el acceso a la API Rest del producto [Jira](https://www.atlassian.com/software/jira) de [Atlassian](https://www.atlassian.com/) para desarrollos de software sobre iOS.
 
 # ¿Por qué?
 Actualmente la plataforma Jira de Atlassian tiene un amplio uso en la gestión de de incidencias de software. Esta librería se ha realizado con el objetivo de dar un acceso fácil a su API Pública para aplicaciones basadas en sistemas Apple.

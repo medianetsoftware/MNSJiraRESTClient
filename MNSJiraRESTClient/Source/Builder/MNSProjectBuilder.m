@@ -99,7 +99,7 @@ static NSString *const k48x48AvatarImageKey = @"48x48";
         [projectDto setExpand:[sourceDic objectForKey:kExpand]];
         [projectDto setIdentifier:[[sourceDic objectForKey:kID] intValue]];
         
-        NSArray *issueTypesInDic = [sourceDic objectForKey:kIssuetype];
+        NSArray *issueTypesInDic = [sourceDic objectForKey:kIssueTypes];
         NSMutableArray *issueTypesForDto= [[NSMutableArray alloc] init];
         
         for (NSDictionary *dic in issueTypesInDic){
