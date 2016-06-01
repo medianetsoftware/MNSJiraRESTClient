@@ -17,6 +17,8 @@
 //  along with MNSJiraRESTClient.  If not, see <http://www.gnu.org/licenses/>.
 #import "MNSGenericRestClient.h"
 #import "MNSIssueInput.h"
+#import "MNSTransition.h"
+
 #import "MNSGetCreateIssueMetadataOptions.h"
 #import "MNSServerInfo.h"
 #import "MNSIssue.h"
@@ -35,7 +37,9 @@ typedef void (^ServerInfoIssueRestClientSuccessBlock)(MNSServerInfo *serverinfo)
 
 - (void)createIssue:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
-- (void)updateIssue:(MNSIssueInput *)issueInput withIssueId:(NSString *)issueId success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+- (void)updateIssue:(NSString *)issueId withIssueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+
+- (void)updateIssue:(NSString *)issueId withStatusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
 - (void)getCreateIssueMetadataWithOptions:(MNSGetCreateIssueMetadataOptions *)options success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
