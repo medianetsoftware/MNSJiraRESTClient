@@ -37,9 +37,9 @@ typedef void (^ServerInfoIssueRestClientSuccessBlock)(MNSServerInfo *serverinfo)
 
 - (void)createIssue:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
-- (void)updateIssue:(NSString *)issueId withIssueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+- (void)updateIssue:(MNSIssue *)issue withIssueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
-- (void)updateIssue:(NSString *)issueId withStatusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+- (void)updateIssue:(MNSIssue *)issue withStatusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
 - (void)getCreateIssueMetadataWithOptions:(MNSGetCreateIssueMetadataOptions *)options success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 

@@ -61,8 +61,8 @@ static NSString *const kURLPathIssueUpdateStatus = @"/issue/%@/transitions?expan
     }];
 }
 
-- (void)updateIssue:(NSString *)issueId withIssueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-	NSString* issueURL = [self.baseUri stringByAppendingFormat:kURLPathIssueUpdate, issueId];
+- (void)updateIssue:(MNSIssue *)issue withIssueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
+	NSString* issueURL = [self.baseUri stringByAppendingFormat:kURLPathIssueUpdate, issue.key];
 	NSDictionary* body = [NSDictionary dictionaryWithObject:[issueInput dictionaryVersion]
 													 forKey:@"fields"];
 	
@@ -77,8 +77,8 @@ static NSString *const kURLPathIssueUpdateStatus = @"/issue/%@/transitions?expan
 	}];
 }
 
--(void)updateIssue:(NSString *)issueId withStatusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
-	NSString *issueURL = [self.baseUri stringByAppendingFormat:kURLPathIssueUpdateStatus, issueId];
+-(void)updateIssue:(MNSIssue *)issue withStatusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
+	NSString *issueURL = [self.baseUri stringByAppendingFormat:kURLPathIssueUpdateStatus, issue.key];
 	
 	NSDictionary* body = @{@"transition": @{@"id":transition.identifier}};
 	
