@@ -18,6 +18,7 @@
 #import "MNSGenericRestClient.h"
 #import "MNSIssueInput.h"
 #import "MNSTransition.h"
+#import "MNSResolution.h"
 
 #import "MNSGetCreateIssueMetadataOptions.h"
 #import "MNSServerInfo.h"
@@ -37,9 +38,11 @@ typedef void (^ServerInfoIssueRestClientSuccessBlock)(MNSServerInfo *serverinfo)
 
 - (void)createIssue:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
-- (void)updateIssue:(MNSIssue *)issue withIssueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+- (void)updateIssue:(MNSIssue *)issue issueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
-- (void)updateIssue:(MNSIssue *)issue withStatusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+- (void)updateIssue:(MNSIssue *)issue statusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+
+- (void)updateIssue:(MNSIssue *)issue statusTransition:(MNSTransition *)transition resolution:(MNSResolution *)resolution success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
 - (void)getCreateIssueMetadataWithOptions:(MNSGetCreateIssueMetadataOptions *)options success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 

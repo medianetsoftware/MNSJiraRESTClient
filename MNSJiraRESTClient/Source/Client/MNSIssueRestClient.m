@@ -61,7 +61,7 @@ static NSString *const kURLPathIssueUpdateStatus = @"/issue/%@/transitions?expan
     }];
 }
 
-- (void)updateIssue:(MNSIssue *)issue withIssueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
+- (void)updateIssue:(MNSIssue *)issue issueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
 	NSString* issueURL = [self.baseUri stringByAppendingFormat:kURLPathIssueUpdate, issue.key];
 	NSDictionary* body = [NSDictionary dictionaryWithObject:[issueInput dictionaryVersion]
 													 forKey:@"fields"];
@@ -77,10 +77,19 @@ static NSString *const kURLPathIssueUpdateStatus = @"/issue/%@/transitions?expan
 	}];
 }
 
--(void)updateIssue:(MNSIssue *)issue withStatusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
+-(void)updateIssue:(MNSIssue *)issue statusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
+	[self updateIssue:issue statusTransition:transition resolution:nil success:success fail:fail];
+}
+
+-(void)updateIssue:(MNSIssue *)issue statusTransition:(MNSTransition *)transition resolution:(MNSResolution *)resolution success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
 	NSString *issueURL = [self.baseUri stringByAppendingFormat:kURLPathIssueUpdateStatus, issue.key];
 	
-	NSDictionary* body = @{@"transition": @{@"id":transition.identifier}};
+	NSMutableDictionary* body = [@{@"transition": @{@"id":transition.identifier}} mutableCopy];
+	
+	if (resolution) {
+		NSDictionary *resolutionBody = @{@"resolution" : @{@"name": resolution.name}};
+		[body setObject:resolutionBody forKey:@"fields"];
+	}
 	
 	[self postUrl:issueURL bodyJSONObject:body success:^(id response) {
 		if (success) {
