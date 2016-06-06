@@ -1097,6 +1097,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FF716B07A1FA1C3436184E4 /* Pods-MNSJiraRESTClient.debug.xcconfig */;
 			buildSettings = {
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1112,6 +1113,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 203FAFEA3DF5487E896E7E46 /* Pods-MNSJiraRESTClient.release.xcconfig */;
 			buildSettings = {
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
 				PRODUCT_NAME = MNSJiraRESTClient;
@@ -1128,6 +1130,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1149,6 +1152,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNSJiraRESTClient/MNSJiraRESTClient-Prefix.pch";
 				INFOPLIST_FILE = "Tests/MNSJiraRESTClientTests-Info.plist";

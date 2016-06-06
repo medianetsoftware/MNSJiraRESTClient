@@ -16,7 +16,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with MNSJiraRESTClient.  If not, see <http://www.gnu.org/licenses/>.
 
-NS_ENUM(NSInteger, MNSIssueFieldIDType)
+typedef NS_ENUM(NSInteger, MNSIssueFieldIDType)
 {
 	AFFECTS_VERSIONS_FIELD,
 	ASSIGNEE_FIELD,
@@ -54,6 +54,6 @@ NS_ENUM(NSInteger, MNSIssueFieldIDType)
 
 + (BOOL)existID:(NSString *)stringID;
 
-+ (NSString *)issueFieldIDString:(enum MNSIssueFieldIDType)issueFieldIDType;
++ (NSString *)issueFieldIDString:(MNSIssueFieldIDType)issueFieldIDType;
 
 @end

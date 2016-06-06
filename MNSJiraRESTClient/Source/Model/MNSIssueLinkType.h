@@ -16,7 +16,7 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with MNSJiraRESTClient.  If not, see <http://www.gnu.org/licenses/>.
 
-NS_ENUM(NSInteger, MNSIssueLinkTypeDirection)
+typedef NS_ENUM(NSInteger, MNSIssueLinkTypeDirection)
 {
 	MNSIssueLinkTypeDirectionUnknown = 0,
 	MNSIssueLinkTypeDirectionOutbound = 1,
@@ -27,10 +27,10 @@ NS_ENUM(NSInteger, MNSIssueLinkTypeDirection)
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *description;
-@property (assign, nonatomic) enum MNSIssueLinkTypeDirection direction;
+@property (assign, nonatomic) MNSIssueLinkTypeDirection direction;
 
-- (id)initWithName:(NSString *)name description:(NSString *)description direction:(enum MNSIssueLinkTypeDirection)direction;
+- (id)initWithName:(NSString *)name description:(NSString *)description direction:(MNSIssueLinkTypeDirection)direction;
 
-+ (enum MNSIssueLinkTypeDirection)directionWithString:(NSString *)directionString;
++ (MNSIssueLinkTypeDirection)directionWithString:(NSString *)directionString;
 
 @end
