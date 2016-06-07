@@ -36,6 +36,9 @@
             NSInteger remainingEstimateMinutes = [remainingEstimateSeconds integerValue] / 60;
             NSInteger timeSpentMinutes = [timeSpentSeconds integerValue] / 60;
             timeTracking = [[MNSTimeTracking alloc] initWithOriginalEstimateMinutes:originalEstimateMinutes remainingEstimateMinutes:remainingEstimateMinutes timeSpentMinutes:timeSpentMinutes];
+			timeTracking.originalEstimate = objectFromDicForkey(source, kOriginalEstimate);
+			timeTracking.remainingEstimate = objectFromDicForkey(source, kRemainingEstimate);
+			timeTracking.timeSpent = objectFromDicForkey(source, kTimeSpent);
         }else {
             *error = [NSError errorWithDomain:@"TimeTrackingBuilder error" code:0 userInfo:nil];
 

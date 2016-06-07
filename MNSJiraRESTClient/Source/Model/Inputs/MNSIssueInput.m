@@ -188,8 +188,8 @@
 	[self setFieldInput:[MNSFieldInput createWithValue:complexField forId:@"priority"]];
 }
 
-- (void)setOriginalEstimateMinutes:(NSInteger)timeInMinutes {
-	MNSComplexIssueInputFieldValue *complexField = [MNSComplexIssueInputFieldValue createWithValue:[NSNumber numberWithInteger:timeInMinutes * 60] forKey:@"originalEstimateSeconds"];
+- (void)setOriginalEstimate:(NSString *)originalEstimate {
+	MNSComplexIssueInputFieldValue *complexField = [MNSComplexIssueInputFieldValue createWithValue:originalEstimate forKey:@"originalEstimate"];
 	[self setFieldInput:[MNSFieldInput createWithValue:complexField forId:@"timetracking"]];
 }
 

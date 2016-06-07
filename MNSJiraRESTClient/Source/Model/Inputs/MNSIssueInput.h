@@ -72,7 +72,7 @@
 - (void)setReporter:(MNSBasicUser *)basicUser;
 - (void)setReporterName:(NSString *)name;
 
-- (void)setOriginalEstimateMinutes:(NSInteger)timeInMinutes;
+- (void)setOriginalEstimate:(NSString *)originalEstimate;
 
 
 

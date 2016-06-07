@@ -21,6 +21,9 @@
 @property (assign, nonatomic) NSInteger originalEstimateMinutes;
 @property (assign, nonatomic) NSInteger remainingEstimateMinutes;
 @property (assign, nonatomic) NSInteger timeSpentMinutes;
+@property (copy, nonatomic) NSString *originalEstimate;
+@property (copy, nonatomic) NSString *remainingEstimate;
+@property (copy, nonatomic) NSString *timeSpent;
 
 - (id)initWithOriginalEstimateMinutes:(NSInteger)originalEstimateMinutes remainingEstimateMinutes:(NSInteger)remainingEstimateMinutes timeSpentMinutes:(NSInteger)timeSpentMinutes;
 
