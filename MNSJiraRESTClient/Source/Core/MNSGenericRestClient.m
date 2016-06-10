@@ -68,6 +68,10 @@
 	}
 }
 
+-(void)postFileUrl:(NSString *)urlString fileData:(NSData *)data fileName:(NSString *)fileName success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
+	[self doMultipartRequestWithURLString:urlString fileData:data fileName:fileName parametersInURL:nil success:success failure:fail];
+}
+
 #pragma mark - PUT
 
 - (void)putUrl:(NSString *)urlString bodyJSONObject:(id)bodyJSONObject success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
@@ -126,10 +130,7 @@
 		[request setHTTPBody:body];
 	}
 	
-	NSURL *url = [NSURL URLWithString:urlString];
-	if ([url.scheme isEqualToString:@"https"] && _securityPolicy != nil) {
-		[_manager setSecurityPolicy:_securityPolicy];
-	}
+	[self setSecurityPolicyWithURLString:urlString];
 	
 	NSURLSessionDataTask *dataTask = [_manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
 		if(error) {
@@ -141,12 +142,41 @@
 	[dataTask resume];
 }
 
-- (void)cleanCookies {
-	NSString *urlDomain = @"medianet.atlassian.net";
-	for (NSHTTPCookie *cookie in[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
-		if ([[cookie domain] rangeOfString:urlDomain].location != NSNotFound) {
-			[[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
-		}
+-(void)doMultipartRequestWithURLString:(NSString *)urlString fileData:(NSData *)fileData fileName:(NSString *)fileName parametersInURL:(NSDictionary *)parametersInURL
+							   success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure
+{
+	NSMutableURLRequest *request = [_requestSerializer multipartFormRequestWithMethod:@"POST" URLString:urlString parameters:parametersInURL
+															constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+																[formData appendPartWithFileData:fileData name:@"file" fileName:fileName mimeType:@"image/jpeg"];
+															} error:nil];
+	
+	NSLog(@"%@ to: %@", @"POST", request.URL.absoluteString);
+	
+	[request setValue:@"no-check" forHTTPHeaderField:@"X-Atlassian-Token"];
+	
+	NSLog(@"REQUEST HEADERS:: %@", [request allHTTPHeaderFields]);
+	
+	[self setSecurityPolicyWithURLString:urlString];
+	
+	NSURLSessionUploadTask *uploadTask;
+	uploadTask = [_manager uploadTaskWithStreamedRequest:request
+												progress:nil
+									   completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+										   if (error) {
+											   failure(error);
+										   }
+										   else {
+											   success(responseObject);
+										   }
+									   }];
+	[uploadTask resume];
+}
+
+
+-(void)setSecurityPolicyWithURLString:(NSString *)urlString {
+	NSURL *url = [NSURL URLWithString:urlString];
+	if ([url.scheme isEqualToString:@"https"] && _securityPolicy != nil) {
+		[_manager setSecurityPolicy:_securityPolicy];
 	}
 }
 

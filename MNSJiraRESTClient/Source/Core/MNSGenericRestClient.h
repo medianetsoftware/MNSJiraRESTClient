@@ -38,6 +38,7 @@ typedef void (^MNSRestClientFailBlock)(NSError *error);
 
 - (void)postUrl:(NSString *)urlString bodyJSONObject:(id)bodyJSONObject success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 - (void)postUrl:(NSString *)urlString bodyJSONObject:(id)bodyJSONObject parametersInURL:(NSDictionary *)parametersInURL success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+- (void)postFileUrl:(NSString *)urlString fileData:(NSData *)data fileName:(NSString *)fileName success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
 - (void)putUrl:(NSString *)urlString bodyJSONObject:(id)bodyJSONObject success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 - (void)putUrl:(NSString *)urlString bodyJSONObject:(id)bodyJSONObject parametersInURL:(NSDictionary *)parametersInURL success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
