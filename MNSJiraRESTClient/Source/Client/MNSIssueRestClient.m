@@ -46,14 +46,21 @@ static NSString *const kURLPathIssueUpdateStatus = @"/issue/%@/transitions?expan
 }
 
 
--(void)createIssue:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{
+-(void)createIssue:(MNSIssueInput *)issueInput success:(MNSIssueClientGetIssueBlock)success fail:(MNSRestClientFailBlock)fail{
     NSString* issueURL = [self.baseUri stringByAppendingString:kURLPathIssue];
     NSDictionary* body = [NSDictionary dictionaryWithObject:[issueInput dictionaryVersion]
                                                      forKey:@"fields"];
     [self postUrl:issueURL bodyJSONObject:body success:^(id response) {
-        if (success) {
-            success(response);
-        }
+		NSError* error;
+		MNSIssue* issue = [MNSIssueBuilder buildWithJSONObject:response error:&error];
+		if (success && [error.domain length] == 0) {
+			success(issue);
+		}
+		else{
+			if (fail){
+				fail (error);
+			}
+		}
     } fail:^(NSError *error) {
         if (fail) {
             fail(error);

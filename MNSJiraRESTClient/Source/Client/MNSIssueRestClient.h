@@ -36,7 +36,7 @@ typedef void (^ServerInfoIssueRestClientSuccessBlock)(MNSServerInfo *serverinfo)
 
 - (id)initWithBaseUri:(NSString *)baseUri authenticator:(MNSRequestAuthenticator *)authenticator sessionRestClient:(MNSSessionRestClient*)sessionrestClient metadataRestClient:(MNSMetadataRestClient*)metadataRestClient;
 
-- (void)createIssue:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+- (void)createIssue:(MNSIssueInput *)issueInput success:(MNSIssueClientGetIssueBlock)success fail:(MNSRestClientFailBlock)fail;
 
 - (void)updateIssue:(MNSIssue *)issue issueInput:(MNSIssueInput *)issueInput success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
