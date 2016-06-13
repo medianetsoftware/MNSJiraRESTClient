@@ -25,6 +25,7 @@ static NSString *const kURLPathIssue = @"/issue";
 static NSString *const kURLPathIssueCreateMeta = @"/issue/createmeta";
 static NSString *const kURLPathIssueUpdate = @"/issue/%@";
 static NSString *const kURLPathIssueUpdateStatus = @"/issue/%@/transitions?expand=transitions.fields";
+static NSString *const kURLPathIssueAttachments = @"/issue/%@/attachments";
 
 @interface MNSIssueRestClient () {
 	MNSSessionRestClient *_sessionRestClient;
@@ -107,6 +108,23 @@ static NSString *const kURLPathIssueUpdateStatus = @"/issue/%@/transitions?expan
 			fail(error);
 		}
 	}];
+}
+
+- (void)updloadImage:(UIImage *)image imageName:(NSString *)imageName issue:(MNSIssue *)issue success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
+	NSString *attachmentURL = [self.baseUri stringByAppendingFormat:kURLPathIssueAttachments, issue.key];
+	
+	NSData *imageData = UIImageJPEGRepresentation(image, 0.8);
+	
+	[self postFileUrl:attachmentURL fileData:imageData fileName:imageName
+			  success:^(id response) {
+				  if (success) {
+					  success(response);
+				  }
+			  } fail:^(NSError *error) {
+				  if (fail) {
+					  fail(error);
+				  }
+			  }];
 }
 
 -(void)getCreateIssueMetadataWithOptions:(MNSGetCreateIssueMetadataOptions *)options success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail{

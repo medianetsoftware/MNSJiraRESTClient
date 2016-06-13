@@ -44,6 +44,8 @@ typedef void (^ServerInfoIssueRestClientSuccessBlock)(MNSServerInfo *serverinfo)
 
 - (void)updateIssue:(MNSIssue *)issue statusTransition:(MNSTransition *)transition resolution:(MNSResolution *)resolution success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
+- (void)updloadImage:(UIImage *)image imageName:(NSString *)imageName issue:(MNSIssue *)issue success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
+
 - (void)getCreateIssueMetadataWithOptions:(MNSGetCreateIssueMetadataOptions *)options success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail;
 
 
