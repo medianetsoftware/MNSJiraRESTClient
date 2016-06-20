@@ -22,7 +22,7 @@
 #import "MNSIssueType.h"
 #import "MNSBasicComponent.h"
 #import "MNSBasicPriority.h"
-
+#import "MNSIssue.h"
 
 @interface MNSIssueInput : NSObject
 
@@ -74,6 +74,9 @@
 
 - (void)setOriginalEstimate:(NSString *)originalEstimate;
 
+- (void)setParentKey:(NSString *)parentKey;
+- (void)setParentId:(NSString *)parentId;
+- (void)setParent:(MNSIssue *)parent;
 
 
 - (MNSFieldInput *)fieldForId:(NSString *)key;

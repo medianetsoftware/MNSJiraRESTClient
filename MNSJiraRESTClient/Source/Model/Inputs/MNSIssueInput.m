@@ -202,6 +202,20 @@
 	[self setFieldInput:[MNSFieldInput createWithValue:complexField forId:@"reporter"]];
 }
 
+- (void)setParentKey:(NSString *)parentKey {
+	MNSComplexIssueInputFieldValue *complexField = [MNSComplexIssueInputFieldValue createWithValue:parentKey forKey:@"key"];
+	[self setFieldInput:[MNSFieldInput createWithValue:complexField forId:@"parent"]];
+}
+
+- (void)setParentId:(NSString *)parentId {
+	MNSComplexIssueInputFieldValue *complexField = [MNSComplexIssueInputFieldValue createWithValue:parentId forKey:@"id"];
+	[self setFieldInput:[MNSFieldInput createWithValue:complexField forId:@"parent"]];
+}
+
+- (void)setParent:(MNSIssue *)parent {
+	[self setParentKey:parent.key];
+}
+
 #pragma mark setFields
 
 - (void)setFieldInput:(MNSFieldInput *)fieldInput {
