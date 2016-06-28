@@ -40,8 +40,7 @@
             [issueType setIconUrl:[sourceDic objectForKey:kIconUrl]];
             [issueType setName:[sourceDic objectForKey:kName]];
             [issueType setSubTask:[[sourceDic objectForKey:kSubtask] boolValue]];
-            
-            
+			[issueType setFields:[sourceDic objectForKey:kFields]];            
         }
         else {
             *error = [NSError errorWithDomain:@"IssueTypeBuilder error" code:0 userInfo:nil];

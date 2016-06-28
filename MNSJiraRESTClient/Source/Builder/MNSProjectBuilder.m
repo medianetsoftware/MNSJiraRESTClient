@@ -25,6 +25,7 @@
 #import "MNSVersion.h"
 #import "MNSBasicUserBuilder.h"
 #import "MNSVersionBuilder.h"
+#import "MNSIssueTypeBuilder.h"
 
 static NSString *const k16x16AvatarImageKey = @"16x16";
 static NSString *const k24x24AvatarImageKey = @"24x24";
@@ -99,20 +100,15 @@ static NSString *const k48x48AvatarImageKey = @"48x48";
         [projectDto setExpand:[sourceDic objectForKey:kExpand]];
         [projectDto setIdentifier:[[sourceDic objectForKey:kID] intValue]];
         
-        NSArray *issueTypesInDic = [sourceDic objectForKey:kIssueTypes];
+		NSArray *issueTypesInDic = [sourceDic objectForKey:kIssueTypes] ? [sourceDic objectForKey:kIssueTypes] : [sourceDic objectForKey:kIssueTypesMeta];
         NSMutableArray *issueTypesForDto= [[NSMutableArray alloc] init];
         
         for (NSDictionary *dic in issueTypesInDic){
-            MNSIssueType *issueType = [[MNSIssueType alloc] init];
-            [issueType setDescription:[dic objectForKey:kDescription]];
-            [issueType setIconUrl:[dic objectForKey:kIconUrl]];
-            [issueType setIdentifier:[dic objectForKey:kID]];
-            [issueType setName:[dic objectForKey:kName]];
-            [issueType setSelfUrl:[dic objectForKey:kSelfURL]];
-            [issueType setSubTask:[[dic objectForKey:kSubtask] boolValue]];
-            [issueTypesForDto addObject:issueType];
+			NSError *error;
+			MNSIssueType *issueType = [MNSIssueTypeBuilder buildWithJSONObject:dic error:&error];
+			[issueTypesForDto addObject:issueType];
         }
-        
+		
         [projectDto setIssueTypes:issueTypesForDto];
         
         [projectDto setKey:[sourceDic objectForKey:kKey]];

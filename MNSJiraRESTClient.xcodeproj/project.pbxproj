@@ -129,8 +129,8 @@
 		07CB725D18AA3E3F00D4806C /* libMNSJiraRESTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB724A18AA3E3F00D4806C /* libMNSJiraRESTClient.a */; };
 		0C92EE0F1CFC45CE0054E527 /* MNSTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C92EE0E1CFC45CE0054E527 /* MNSTransition.m */; };
 		0C92EE121CFC47750054E527 /* MNSTransitionBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C92EE111CFC47750054E527 /* MNSTransitionBuilder.m */; };
-		625FBDF999107A7CACF096A2 /* libPods-MNSJiraRESTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B1746BA9F4F3021FC73D4C /* libPods-MNSJiraRESTClient.a */; };
-		DBBE0D8562774E77C4502889 /* libPods-MNSJiraRESTClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF0311AF2A7562140429F19 /* libPods-MNSJiraRESTClientTests.a */; };
+		9D353ED089FB05AFA3989CEA /* libPods-MNSJiraRESTClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7901954177EE8836C570FB0F /* libPods-MNSJiraRESTClientTests.a */; };
+		BD884382C761DE553BD7AA62 /* libPods-MNSJiraRESTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B05DC97CED675A610479FE /* libPods-MNSJiraRESTClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -391,13 +391,12 @@
 		0CBBC719189928620099B936 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0CBBC71B189928620099B936 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0CBBC736189928620099B936 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		152F2E9890828C32178193A6 /* Pods-MNSJiraRESTClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClientTests/Pods-MNSJiraRESTClientTests.debug.xcconfig"; sourceTree = "<group>"; };
-		203FAFEA3DF5487E896E7E46 /* Pods-MNSJiraRESTClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClient/Pods-MNSJiraRESTClient.release.xcconfig"; sourceTree = "<group>"; };
-		7FF716B07A1FA1C3436184E4 /* Pods-MNSJiraRESTClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClient/Pods-MNSJiraRESTClient.debug.xcconfig"; sourceTree = "<group>"; };
-		83B1746BA9F4F3021FC73D4C /* libPods-MNSJiraRESTClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNSJiraRESTClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		90E41E1B120A47928556F251 /* libPods-MNSJiraRestObjectiveCClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNSJiraRestObjectiveCClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF0311AF2A7562140429F19 /* libPods-MNSJiraRESTClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNSJiraRESTClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7943130D87CF2A55D12265A /* Pods-MNSJiraRESTClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClientTests/Pods-MNSJiraRESTClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A85C6780D30754F15C64D1B /* Pods-MNSJiraRESTClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClient/Pods-MNSJiraRESTClient.release.xcconfig"; sourceTree = "<group>"; };
+		5306AF452B6B5F29C43BE3D4 /* Pods-MNSJiraRESTClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClient/Pods-MNSJiraRESTClient.debug.xcconfig"; sourceTree = "<group>"; };
+		6D1906654F7A6D6FAE1EE85E /* Pods-MNSJiraRESTClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClientTests/Pods-MNSJiraRESTClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		73B05DC97CED675A610479FE /* libPods-MNSJiraRESTClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNSJiraRESTClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7901954177EE8836C570FB0F /* libPods-MNSJiraRESTClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNSJiraRESTClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A587DA588FBE09B623136F8E /* Pods-MNSJiraRESTClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNSJiraRESTClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNSJiraRESTClientTests/Pods-MNSJiraRESTClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,7 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07CB724B18AA3E3F00D4806C /* Foundation.framework in Frameworks */,
-				625FBDF999107A7CACF096A2 /* libPods-MNSJiraRESTClient.a in Frameworks */,
+				BD884382C761DE553BD7AA62 /* libPods-MNSJiraRESTClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,13 +417,24 @@
 				07CB725A18AA3E3F00D4806C /* UIKit.framework in Frameworks */,
 				07CB725D18AA3E3F00D4806C /* libMNSJiraRESTClient.a in Frameworks */,
 				07CB725918AA3E3F00D4806C /* Foundation.framework in Frameworks */,
-				DBBE0D8562774E77C4502889 /* libPods-MNSJiraRESTClientTests.a in Frameworks */,
+				9D353ED089FB05AFA3989CEA /* libPods-MNSJiraRESTClientTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025429A4A5377EEBAD50869E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5306AF452B6B5F29C43BE3D4 /* Pods-MNSJiraRESTClient.debug.xcconfig */,
+				2A85C6780D30754F15C64D1B /* Pods-MNSJiraRESTClient.release.xcconfig */,
+				A587DA588FBE09B623136F8E /* Pods-MNSJiraRESTClientTests.debug.xcconfig */,
+				6D1906654F7A6D6FAE1EE85E /* Pods-MNSJiraRESTClientTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		075AA49B189963A800239D75 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,7 +702,7 @@
 				0CBBC73C189928620099B936 /* MNSJiraRESTClientTests */,
 				0CBBC716189928620099B936 /* Frameworks */,
 				0CBBC715189928620099B936 /* Products */,
-				F3B32E0E25DD316E48A7A3C5 /* Pods */,
+				025429A4A5377EEBAD50869E /* Pods */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -713,9 +723,8 @@
 				0CBBC719189928620099B936 /* CoreGraphics.framework */,
 				0CBBC71B189928620099B936 /* UIKit.framework */,
 				0CBBC736189928620099B936 /* XCTest.framework */,
-				90E41E1B120A47928556F251 /* libPods-MNSJiraRestObjectiveCClientTests.a */,
-				83B1746BA9F4F3021FC73D4C /* libPods-MNSJiraRESTClient.a */,
-				AAF0311AF2A7562140429F19 /* libPods-MNSJiraRESTClientTests.a */,
+				73B05DC97CED675A610479FE /* libPods-MNSJiraRESTClient.a */,
+				7901954177EE8836C570FB0F /* libPods-MNSJiraRESTClientTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -779,17 +788,6 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
-		F3B32E0E25DD316E48A7A3C5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7FF716B07A1FA1C3436184E4 /* Pods-MNSJiraRESTClient.debug.xcconfig */,
-				203FAFEA3DF5487E896E7E46 /* Pods-MNSJiraRESTClient.release.xcconfig */,
-				152F2E9890828C32178193A6 /* Pods-MNSJiraRESTClientTests.debug.xcconfig */,
-				C7943130D87CF2A55D12265A /* Pods-MNSJiraRESTClientTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -797,11 +795,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07CB726618AA3E3F00D4806C /* Build configuration list for PBXNativeTarget "MNSJiraRESTClient" */;
 			buildPhases = (
-				96E49A05EE0E17F8024CD463 /* Check Pods Manifest.lock */,
+				B814DBF2F013287DAA45772D /* [CP] Check Pods Manifest.lock */,
 				07CB724618AA3E3F00D4806C /* Sources */,
 				07CB724718AA3E3F00D4806C /* Frameworks */,
 				07CB724818AA3E3F00D4806C /* CopyFiles */,
-				E25010830E22FA53420C232E /* Copy Pods Resources */,
+				BD3748113E377E9C99506274 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -816,12 +814,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07CB726918AA3E3F00D4806C /* Build configuration list for PBXNativeTarget "MNSJiraRESTClientTests" */;
 			buildPhases = (
-				67EBD819F227BFBD922859FD /* Check Pods Manifest.lock */,
+				62E5F3C1A15E0E2536419E69 /* [CP] Check Pods Manifest.lock */,
 				07CB725318AA3E3F00D4806C /* Sources */,
 				07CB725418AA3E3F00D4806C /* Frameworks */,
 				07CB725518AA3E3F00D4806C /* Resources */,
-				6629A0D3D99F42FF956682ED /* Embed Pods Frameworks */,
-				5431555BA62AE1EBC14D3DC1 /* Copy Pods Resources */,
+				C791DEF4C3497339D7DFD8C9 /* [CP] Embed Pods Frameworks */,
+				FA7E7598881A120AFDE71D3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -873,29 +871,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5431555BA62AE1EBC14D3DC1 /* Copy Pods Resources */ = {
+		62E5F3C1A15E0E2536419E69 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MNSJiraRESTClientTests/Pods-MNSJiraRESTClientTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6629A0D3D99F42FF956682ED /* Embed Pods Frameworks */ = {
+		B814DBF2F013287DAA45772D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD3748113E377E9C99506274 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MNSJiraRESTClient/Pods-MNSJiraRESTClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C791DEF4C3497339D7DFD8C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,49 +931,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MNSJiraRESTClientTests/Pods-MNSJiraRESTClientTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		67EBD819F227BFBD922859FD /* Check Pods Manifest.lock */ = {
+		FA7E7598881A120AFDE71D3A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		96E49A05EE0E17F8024CD463 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E25010830E22FA53420C232E /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MNSJiraRESTClient/Pods-MNSJiraRESTClient-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MNSJiraRESTClientTests/Pods-MNSJiraRESTClientTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1095,7 +1093,7 @@
 /* Begin XCBuildConfiguration section */
 		07CB726718AA3E3F00D4806C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FF716B07A1FA1C3436184E4 /* Pods-MNSJiraRESTClient.debug.xcconfig */;
+			baseConfigurationReference = 5306AF452B6B5F29C43BE3D4 /* Pods-MNSJiraRESTClient.debug.xcconfig */;
 			buildSettings = {
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1111,7 +1109,7 @@
 		};
 		07CB726818AA3E3F00D4806C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 203FAFEA3DF5487E896E7E46 /* Pods-MNSJiraRESTClient.release.xcconfig */;
+			baseConfigurationReference = 2A85C6780D30754F15C64D1B /* Pods-MNSJiraRESTClient.release.xcconfig */;
 			buildSettings = {
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1123,7 +1121,7 @@
 		};
 		07CB726A18AA3E3F00D4806C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 152F2E9890828C32178193A6 /* Pods-MNSJiraRESTClientTests.debug.xcconfig */;
+			baseConfigurationReference = A587DA588FBE09B623136F8E /* Pods-MNSJiraRESTClientTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1145,7 +1143,7 @@
 		};
 		07CB726B18AA3E3F00D4806C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7943130D87CF2A55D12265A /* Pods-MNSJiraRESTClientTests.release.xcconfig */;
+			baseConfigurationReference = 6D1906654F7A6D6FAE1EE85E /* Pods-MNSJiraRESTClientTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

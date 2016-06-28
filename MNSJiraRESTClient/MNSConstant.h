@@ -54,6 +54,7 @@ FOUNDATION_EXTERN NSString *const kSummary;
 FOUNDATION_EXTERN NSString *const kStatus;
 FOUNDATION_EXTERN NSString *const kIssuetype;
 FOUNDATION_EXTERN NSString *const kIssueTypes;
+FOUNDATION_EXTERN NSString *const kIssueTypesMeta;
 FOUNDATION_EXTERN NSString *const kDirection;
 FOUNDATION_EXTERN NSString *const kUpdateAuthor;
 FOUNDATION_EXTERN NSString *const kComment;

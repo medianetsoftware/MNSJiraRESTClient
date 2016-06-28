@@ -22,5 +22,6 @@
 
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *iconUrl;
+@property (nonatomic, strong) NSDictionary *fields;
 
 @end

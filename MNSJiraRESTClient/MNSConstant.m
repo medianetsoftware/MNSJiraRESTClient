@@ -52,6 +52,7 @@ NSString *const kSummary = @"summary";
 NSString *const kStatus = @"status";
 NSString *const kIssuetype = @"issuetype";
 NSString *const kIssueTypes = @"issueTypes";
+NSString *const kIssueTypesMeta = @"issuetypes";
 NSString *const kDirection = @"direction";
 NSString *const kUpdateAuthor = @"updateAuthor";
 NSString *const kComment = @"comment";
