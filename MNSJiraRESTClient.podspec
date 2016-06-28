@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = "MNSJiraRESTClient"
-  s.version          = '1.1.11'
+  s.version          = '1.1.12'
   s.summary          = "Facilites access to JIRA REST API"
   s.homepage         = "http://www.medianet.es"
   s.license          = 'GNU'
   s.author           = { "MediaNet" => "comercial@medianet.es" }
-  s.source           = { :git => "https://github.com/medianetsoftware/MNSJiraRESTClient.git", :tag => '1.1.11' }
+  s.source           = { :git => "https://github.com/medianetsoftware/MNSJiraRESTClient.git", :tag => '1.1.12' }
   s.social_media_url = 'http://www.medianet.es'
 
   s.platform     = :ios, '7.0'
