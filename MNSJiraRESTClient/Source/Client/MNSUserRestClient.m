@@ -19,6 +19,7 @@
 #import "MNSUserBuilder.h"
 
 static NSString *const kUserURLPrefix = @"/user";
+static NSString *const kSearchURLPrefix = @"/search";
 static NSString *const kAssignableUsersURLPrefix = @"/assignable/search";
 static NSString *const kUsernameAttribute = @"username";
 static NSString *const kProjectAttribute = @"project";
@@ -90,13 +91,26 @@ static NSString *const kExpandAttribute = @"expand";
          }];
 }
 
+- (void)searchUsersWithUsername:(NSString*)username success:(void (^)(NSArray *users))success fail:(MNSRestClientFailBlock)fail {
+	
+	NSString *usersSeachURL = [_userURLString stringByAppendingString:kSearchURLPrefix];
+	NSMutableDictionary *parametersInURL = [NSMutableDictionary dictionary];
+	[parametersInURL setObject:username forKey:kUsernameAttribute];
+	
+	[self getUsersWithURLString:usersSeachURL parametersInURL:parametersInURL success:success fail:fail];
+}
+
 - (void)getAssignableUsersByProjectKey:(NSString*)projectKey success:(void (^)(NSArray *users))success fail:(MNSRestClientFailBlock)fail {
 	
 	NSString *assignableUsersURL = [_userURLString stringByAppendingString:kAssignableUsersURLPrefix];
 	NSMutableDictionary *parametersInURL = [NSMutableDictionary dictionary];
 	[parametersInURL setObject:projectKey forKey:kProjectAttribute];
 	
-	[self getUrl:assignableUsersURL
+	[self getUsersWithURLString:assignableUsersURL parametersInURL:parametersInURL success:success fail:fail];
+}
+
+- (void)getUsersWithURLString:(NSString*)urlString parametersInURL:(NSDictionary *)parametersInURL success:(void (^)(NSArray *users))success fail:(MNSRestClientFailBlock)fail {
+	[self getUrl:urlString
  parametersInURL:parametersInURL
 		 success:^(id response) {
 			 
