@@ -85,11 +85,11 @@ static NSString *const kURLPathIssueAttachments = @"/issue/%@/attachments";
 	}];
 }
 
--(void)updateIssue:(MNSIssue *)issue statusTransition:(MNSTransition *)transition success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
-	[self updateIssue:issue statusTransition:transition resolution:nil success:success fail:fail];
+-(void)updateStatusTransition:(MNSTransition *)transition issue:(MNSIssue *)issue success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
+	[self updateStatusTransition:transition resolution:nil issue:issue success:success fail:fail];
 }
 
--(void)updateIssue:(MNSIssue *)issue statusTransition:(MNSTransition *)transition resolution:(MNSResolution *)resolution success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
+-(void)updateStatusTransition:(MNSTransition *)transition resolution:(MNSResolution *)resolution issue:(MNSIssue *)issue success:(MNSRestClientSuccessBlock)success fail:(MNSRestClientFailBlock)fail {
 	NSString *issueURL = [self.baseUri stringByAppendingFormat:kURLPathIssueUpdateStatus, issue.key];
 	
 	NSMutableDictionary* body = [@{@"transition": @{@"id":transition.identifier}} mutableCopy];
